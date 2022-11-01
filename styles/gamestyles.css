@@ -1,0 +1,33 @@
+  /*text-shadow: 2px 2px rgb(0, 0, 0);*, *::before, *::after {*/
+body {
+        padding: 10;
+        margin: 10;
+        /*display: flex;*/
+        font-family: Helvetica, sans-serif;
+    }
+
+h1  {
+        box-sizing: border-box;
+        font: size 8px;
+        font-family: Helvetica, sans-serif;
+    }
+
+p   {
+        box-sizing: border-box;
+        font: size 8px;
+        font-family: Helvetica, sans-serif;
+    }
+
+p   {
+        box-sizing: border-box;
+        font: size 8px;
+        font-family: Helvetica, sans-serif;
+    }
+
+
+.btn:hover {
+        border-color: #0000ff;
+    }
+
+
+

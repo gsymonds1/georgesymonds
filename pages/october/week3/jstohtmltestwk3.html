@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <!--linking to css file-->
+        <link rel="stylesheet" href="/styles/maintheme.css">
+    <title>Week3</title>
+    <!--Topic-->
+    <h1>Dynamically generating HTML with JavaScript:</h1>
+    <p><!--home 'header'-->
+        <a href="/index.html"> Home</a></p>
+    </head>
+
+
+
+
+
+    <body>
+
+    </body>
+
+
+    <!--Dynamically generating HTML with JavaScript:-->
+<script>
+    function createTag(tag,content){                
+        const thetag = document.createElement(tag);    
+        thetag.innerHTML = content;                   
+        document.body.appendChild(thetag);      
+    }
+    createTag("h1", "h1 content"); 
+    createTag("h3", "h3 content"); 
+    createTag("p", "paragraph content"); 
+    createTag("div", "div content");
+</script>
+
+
+
+
+<!--Dynamically generating Da Red Ciccless:-->
+<style>    
+    div{        
+        border:1px solid red;        
+        width:100px;        
+        height:100px;        
+        position:absolute;        
+        top: 200px;        
+        left:50%;  
+        transform:rotate(0deg); 
+        transform: skew(20deg,20deg);
+    }
+
+ </style>
+        
+     
+
+    <script>
+        function createTag(mytag, mycontent, mystyle){                
+        const tag = document.createElement(mytag);    
+        tag.setAttribute("style", mystyle);     
+        tag.innerHTML = mycontent;                   
+        document.body.appendChild(tag);      
+    }
+
+    let d=0;
+    for(let i=0;i<20;i++){    
+      d=i*5;  
+        style = "transform:rotate("+d+"deg);"; 
+      createTag("div", "x", style);
+    }
+
+    let d2=0;
+    for(let i=0;i<20;i++){    
+      d2=i*5;  
+        style = "transform:rotate("+d+"deg);"; 
+      createTag("div", "x", style);
+    }
+
+
+    </script>
+</html>

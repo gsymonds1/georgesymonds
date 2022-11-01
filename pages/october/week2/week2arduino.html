@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    
+
+
+<head>
+    <!--linking to css file-->
+    <link rel="stylesheet" href="/styles/maintheme.css">
+<title>Page Title</title>
+</head>
+<h1>Visual Coding and Physical Computing</h1>
+
+<p><!--home 'header'-->
+    <a href="/index.html"> Home</a>
+    <br>
+    
+    this is the paragraph, and that is SOS morse code on an arduino board 
+    <video width="320" height="240" controls>
+        <source src="/videos/sosBlink.MOV" type="video/mp4">
+        Your browser does not support the video tag.</p>  
+    <br>
+    <p>// C++ code<br><em>
+        //
+        void setup()
+        {
+          pinMode(LED_BUILTIN, OUTPUT);
+        }
+        
+        void loop()
+        {
+          
+          for (int i = 0; i < 3; i++) {
+            digitalWrite(LED_BUILTIN, HIGH);
+          delay(200); // Wait for 1000 millisecond(s)
+          digitalWrite(LED_BUILTIN, LOW);
+          delay(500); // Wait for 1000 millisecond(s)
+         }
+          
+            for (int i = 0; i < 3; i++) {
+            digitalWrite(LED_BUILTIN, HIGH);
+          delay(1000); // Wait for 1000 millisecond(s)
+          digitalWrite(LED_BUILTIN, LOW);
+          delay(500); // Wait for 1000 millisecond(s)
+         }
+          for (int i = 0; i < 3; i++) {
+            digitalWrite(LED_BUILTIN, HIGH);
+          delay(200); // Wait for 1000 millisecond(s)
+          digitalWrite(LED_BUILTIN, LOW);
+          delay(500); // Wait for 1000 millisecond(s)
+         }
+          
+          delay(1000);
+          
+        }
+    </em></p>
+
+
+
+    <p>
+    and that is double circuit left right blink setup
+    <video width="320" height="240" controls>
+        <source src="/videos/leftRight.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+    
+</p>
+
+
+<body>
+
+
+</body>
+
+
+</html>

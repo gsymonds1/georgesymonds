@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <!--linking to css file-->
+        <link rel="stylesheet" href="/styles/maintheme.css">
+    <title>Week3</title>
+    <!--Topic-->
+    <h1>Week 3 Arduino Tests: User Inputs</h1>
+    <p><!--home 'header'-->
+        <a href="/index.html"> Home</a></p>
+    </head>
+
+
+
+
+<!--text+videos:-->
+    <body>
+      <p>
+        Today we played around user inputs into the board, here I used a potentiometer to control the analogue output into a lightbulb <video width="320" height="240" controls>
+          <source src="/videos/windinput.MOV" type="video/mp4">
+          Your browser does not support the video tag.</p>
+        <br><p>
+
+        <em>// C++ code for dail light control
+        <br>
+          //
+          int analogValue = 0;
+
+          void setup()
+          {
+            pinMode(A0, INPUT);
+            pinMode(11, OUTPUT);
+            Serial.begin(9600);
+          }
+
+          void loop()
+          {
+            analogValue = analogRead(A0);
+            analogWrite(11, map(analogValue, 0, 1023, 0, 255));
+            Serial.println(analogValue);
+            delay(10); // Delay a little bit to improve simulation performance
+          }
+        </em>
+        </p>
+      </p>
+      <p>
+        Then I used a button to toggle the output <video width="320" height="240" controls>
+          <source src="/videos/buttontggle.MOV" type="video/mp4">
+          Your browser does not support the video tag.</p>
+          <p><em>// C++ code
+            //
+            int analogValue = 0;
+            
+            int buttonPress = 0;
+            
+            void setup()
+            {
+              pinMode(2, INPUT);
+              pinMode(11, OUTPUT);
+              pinMode(10, OUTPUT);
+            }
+            
+            void loop()
+            {
+              buttonPress = digitalRead(2);
+              if (buttonPress == HIGH) {
+                digitalWrite(11, HIGH);
+                digitalWrite(10, LOW);
+            
+              } else {
+                delay(10);
+                digitalWrite(10, HIGH);
+                digitalWrite(11, LOW);
+                delay(10);
+              }
+              delay(10); // Delay a little bit to improve simulation performance
+            }</em></p>
+
+
+          <br>
+          <p>Then I used a used the pontentiometer to toggle the output of 5 lightbulbs <video width="320" height="240" controls>
+            <source src="/videos/5lightwind.MOV" type="video/mp4">
+            Your browser does not support the video tag.</p>
+            <p>
+              <em>// C++ code
+                    //
+                    int analogValue = 0;
+
+                    void setup()
+                    {
+                      pinMode(A0, INPUT);
+                      pinMode(11, OUTPUT);
+                      pinMode(10, OUTPUT);
+                      pinMode(5, OUTPUT);
+                      pinMode(6, OUTPUT);
+                      Serial.begin(9600);
+                    }
+
+                    void loop()
+                    {
+                      analogValue = analogRead(A0);
+                      
+                      //analogWrite(11, map(analogValue, 0, 1023, 0, 255));
+                      digitalWrite(11, HIGH);
+                    if (analogValue > 250) {
+                        digitalWrite(10, HIGH);
+                      } else{
+                        digitalWrite(10, LOW);
+                      }
+                      if (analogValue > 550) {
+                        digitalWrite(5, HIGH);
+                      } else{
+                        digitalWrite(5, LOW);
+                      }
+                      if (analogValue > 800) {
+                        digitalWrite(6, HIGH);
+                      } else{
+                        digitalWrite(6, LOW);
+                      }
+
+
+
+                      Serial.println(analogValue);
+                      delay(10); // Delay a little bit to improve simulation performance
+}</em>
+            </p>
+    </body>
+
+
+
+</html>

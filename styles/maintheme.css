@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(255, 255, 255);
+    padding: 10;
+    margin: 10;  
+    
+   
+
+  }
+  
+  h1 {
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+   font-family: Helvetica, sans-serif;
+   font: size 20px;
+   /*text-shadow: 2px 2px rgb(0, 0, 0);*/
+
+
+  }
+
+  p {
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+    font: size 8px;
+    font-family: Helvetica, sans-serif;
+    
+
+  }
+
+  li {
+    font: size 8px;
+    font-family: Helvetica, sans-serif;
+    margin-left: 10px;
+  }
+
+  footer {
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-family: Helvetica, sans-serif;
+    margin-left: 10px;
+    font: size 10px;
+    
+  }
+  
+.specialText { 
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+    font: size 40px;
+    font-family: Helvetica, sans-serif;
+
+}
