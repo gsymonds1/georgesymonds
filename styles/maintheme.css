@@ -2,6 +2,7 @@ body {
     background-color: rgb(255, 255, 255);
     padding: 10;
     margin: 10;  
+    scroll-behavior: smooth;
     
    
 

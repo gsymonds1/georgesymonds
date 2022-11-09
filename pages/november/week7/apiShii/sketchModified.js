@@ -58,7 +58,7 @@ function setup() {
     }
     
     //cloud drawin
-    for (let i = 0; i<6; i++) {
+    for (let i = 0; i<20; i++) {
       smokeColour = color(255,255,255);
       smokeColour.setAlpha(random(100,200));
       fill(smokeColour)
