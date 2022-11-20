@@ -10,6 +10,12 @@ let slider;
 let addButton;
 let trainButton;
 
+let varx = 0;
+let midpoint = 0;
+let rotationCorrection = 0;
+let videoWidth = 0;
+let videoHeight = 0;
+
 function modelReady() {
   console.log('Model is ready!!!');
 }
@@ -39,7 +45,7 @@ function gotResults(error, result) {
 }
 
 function setup() {
-  createCanvas(320, 270);
+  createCanvas(320, 370);
   video = createCapture(VIDEO);
   video.hide();
   background(0);
@@ -73,11 +79,45 @@ function setup() {
 function draw() {
   background(0);
   image(video, 0, 0, 320, 240);
+  videoWidth = 320;
+  videoHeight = 240;
+
   rectMode(CENTER);
-  fill(0, 0, 255);
-  rect(value * width, value *height / 2, 50, 50,25);
+
+  varx = value * width;
+
+  //calculating rotation degrees neccesary
+  midpoint = 150;
+  rotationCorrection = varx - midpoint;
+
+  if (rotationCorrection)
+
+
+
+
+  //ontarget detection
+  fill(0, 255, 0);
+  if (varx > 120 && varx <180 ) {
+    //SHOOT
+    fill(255, 0, 0);
+
+    //output to arduino here
+  }
+
+  
+  
+  line(varx, videoHeight/2, videoWidth/2, videoHeight/2);
+
+  rect(varx, videoHeight / 2, 10, 10,25);
+  
+  
 
   fill(255);
   textSize(16);
-  text(value, 10, height - 10);
+ 
+  //target pos on screen
+  text("varX: "+varx, 10, height - 50);
+  text("rotationCorrection: "+rotationCorrection, 10, height - 30);
+  text("val: "+value, 10, height - 10);
+  line(width/2, 0, width/2, height);
 }

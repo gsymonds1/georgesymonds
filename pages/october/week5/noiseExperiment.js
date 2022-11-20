@@ -9,6 +9,7 @@ function setup() {
 }
 
 function draw() {
+
   background(0, 10);
   
   noFill();
