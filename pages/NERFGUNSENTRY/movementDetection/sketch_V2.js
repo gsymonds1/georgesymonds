@@ -26,6 +26,7 @@ function setup() {
     video = createCapture(VIDEO);
     video.size(width, 270); //dimension of cathing spots
     // video.hide(); // Hide the video element, and just show the canvas
+    console.log("setupcomplete")
     faceapi = ml5.faceApi(video, detection_options, modelReady)
     textAlign(LEFT);
 }
@@ -37,6 +38,7 @@ function modelReady() {
     console.log('ready!')
     console.log(faceapi)
     faceapi.detect(gotResults)
+    
 
 }
 
@@ -45,11 +47,12 @@ function gotResults(err, result) {
         console.log(err)
         return
     }
-    // console.log(result)
+
+     console.log(result)
     detections = result;
 
     // background(220);
-    
+    background(10);
     image(video, 0,0, 350, 270) //dimension of second traced video
     if (detections) {
         if (detections.length > 0) {
