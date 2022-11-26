@@ -5,6 +5,11 @@ let camWidth;
 let camHeight;
 let xvar = 0;
 
+//for connecting to arduino
+let port;
+let connectBtn;
+let brightness =0; //light test
+
 
 
 // by default all options are set to true
@@ -29,6 +34,15 @@ function setup() {
     console.log("setupcomplete")
     faceapi = ml5.faceApi(video, detection_options, modelReady)
     textAlign(LEFT);
+
+    //connecting to arduino
+    port = createSerial();
+    // any other ports can be opened via a dialog after
+    // user interaction (see connectBtnClick below)
+    connectBtn = createButton('Connect to Arduino');
+    connectBtn.position(20, 20);
+    connectBtn.mousePressed(connectBtnClick);
+
 }
 
 
@@ -93,11 +107,30 @@ function setupguideslines(){
 
     stroke(255,255,0);
     //175
+    brightness = 0;
     if (xvar > 170 && xvar < 180){
         stroke(255,0,0);
         //SHOOT HERE -> send to p5
+
+        brightness = 255;
+        
     }
-    rect((xvar)-7,(camHeight/2)-7,14,14);//target point
+
+    if(frameCount%10==0){
+        port.write(brightness+'\n'); //finish with a newline character for Arduino recieving
+       console.log(brightness);
+    }
+
+    // changes button label based on connection status
+    if (!port.opened()) {
+        connectBtn.html('Connect to Arduino');
+      } else {
+        connectBtn.html('Disconnect');
+      }
+
+
+
+    rect((xvar)-7,(camHeight/2)-7,14,14);//target point  (modify this to tagret largest sqaure)
 
     push();
     stroke (0)
@@ -165,10 +198,12 @@ function drawPart(feature, closed){
 }
 
 
-/*
-function draw(){
+function connectBtnClick() {
+    if (!port.opened()) {
+      port.open('Arduino', 57600);
+    } else {
+      port.close();
+    }
     
-    console.log("draw");
-
-}
-*/
+  
+  }

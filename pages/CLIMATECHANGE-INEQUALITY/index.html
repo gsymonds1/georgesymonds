@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
+
 <head>
-<meta charset=utf-8 />
-<title>A simple map</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
-<style>
-  body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Change Inequality</title>
+  <!--linking to css file-->
+  <link rel="stylesheet" href="/styles/maintheme.css">
+  <script src="/p5/p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <h1> Climate Change Inequality:</h1>
+  
 </head>
+<!-- <DRAWING SETUP> -->
 <body>
-<div id='map'></div>
-<script>
-L.mapbox.accessToken = '<pk.eyJ1IjoiZ3N5bW9uZHMiLCJhIjoiY2xhcjMydzdmMXA0cDNybWlrZTY5aGl0MiJ9.AiNggT-YKCb65k9Yv8e_xw>';
-var map = L.mapbox.map('map')
-    .setView([40, -74.50], 9)
-    .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
-</script>
+  <main>
+    <p><a href="/index.html"> Home</a>
+      <br>
+      <br>Shown through comparing rising average temperatures(1959-2022): <script src="sketch.js"></script>
+    </p>
+    <br>
+    
+  </main>
 </body>
+
 </html>
