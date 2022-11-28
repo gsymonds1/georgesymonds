@@ -9,12 +9,13 @@
   x = 200;
   y = 100;
 
-  
+  //variable assignment for later
   let temperatures = [];
   let xcoord = [];
   let ycoord = [];
   let country = [];
 
+  let tempArrayNo; //API Urls (min + max temperature by country)
   let ukUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=54.76&longitude=-2.70&start_date=1959-01-01&end_date=2022-11-19&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
   let canadaUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=60.11&longitude=-113.64&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
   let algeriaUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=28.00&longitude=3.00&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
@@ -27,13 +28,19 @@
   let austrailaUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=-25.00&longitude=135.00&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
   let drcongoUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=-2.50&longitude=23.50&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
   let mexicoUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=23.00&longitude=-102.00&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
-  
+  let japanUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=35.69&longitude=139.75&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
+  let argentinaUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=-34.00&longitude=-64.00&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
+  let indiaUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=22.00&longitude=79.00&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
+  let libyaUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=28.00&longitude=17.00&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
+  let southafricaUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=-29.00&longitude=24.00&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
+  let columbiaUrl = "https://archive-api.open-meteo.com/v1/era5?latitude=4.00&longitude=-73.25&start_date=1959-01-01&end_date=2022-11-20&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FLondon";
+ 
   let Countryhash = 0;
   let slider;
   let zeroFiller;
 
 function preload(){
-  //UK Data
+  //Loading JSOOOOOON
   ukJson = loadJSON(ukUrl);
   canadaJson = loadJSON(canadaUrl);
   algeriaJson = loadJSON(algeriaUrl);
@@ -46,7 +53,14 @@ function preload(){
   austrailaJson = loadJSON(austrailaUrl);
   drcongoJson = loadJSON(drcongoUrl);
   mexicoJson = loadJSON(mexicoUrl);
+  japanJson = loadJSON(japanUrl);
+  argentinaJson = loadJSON(argentinaUrl);
+  indiaJson = loadJSON(indiaUrl);
+  libyaJson = loadJSON(libyaUrl);
+  southafricaJson = loadJSON(southafricaUrl);
+  columbiaJson = loadJSON(columbiaUrl);
 
+  
 
 
   img = loadImage('Newworldmap_grayscale.svg');
@@ -62,7 +76,7 @@ function setup() {
   img.resize(width, height);
   image(img, 0, 0);
 
-  slider = createSlider(1, 12, 0);
+  slider = createSlider(1, 12, 0); //month selection
   slider.position(width/2, 190);
   slider.style('width', '300px');
   
@@ -81,9 +95,9 @@ function draw() {
   //  yr-mm-dd
   //1959-01-01
  
-  
   //console.log(ukJson.daily.time.indexOf("1961-09-27")); //get index no
-  //the different variables between countries
+
+  //Setting the different variables between countries
   if (Countryhash == 0){ //UK
     console.log("success" + Countryhash);
     //translate(400,-50) //Coords Translation Matrix
@@ -115,7 +129,7 @@ function draw() {
   } else if (Countryhash == 4){ //Indonesia
     console.log("success" + Countryhash);
     //translate(800,200) //Coords Translation Matrix
-    xcoord[Countryhash] = 800;
+    xcoord[Countryhash] = 900;
     ycoord[Countryhash] = 200;
     country[Countryhash] = "Indonesia";
     drawgraphINDONESIA();
@@ -168,7 +182,49 @@ function draw() {
     ycoord[Countryhash] = 75;
     country[Countryhash] = "Mexico";
     drawgraphMEXICO();
-
+  } else if (Countryhash == 12){ //Japan
+    console.log("success" + Countryhash);
+    //translate//Coords Translation Matrix
+    xcoord[Countryhash] = 900;
+    ycoord[Countryhash] = 75;
+    country[Countryhash] = "Japan";
+    drawgraphJAPAN();
+  } else if (Countryhash == 13){ //Argentina
+    console.log("success" + Countryhash);
+    //translate//Coords Translation Matrix
+    xcoord[Countryhash] = 200;
+    ycoord[Countryhash] = 325;
+    country[Countryhash] = "Argentina";
+    drawgraphARGENTINA();
+  } else if (Countryhash == 14){ //India
+    console.log("success" + Countryhash);
+    //translate(600,75) //Coords Translation Matrix
+    xcoord[Countryhash] = 700;
+    ycoord[Countryhash] = 75;
+    country[Countryhash] = "India";
+    drawgraphINDIA();
+  } else if (Countryhash == 15){ //Libya
+    console.log("success" + Countryhash);
+    //translate(600,75) //Coords Translation Matrix
+    xcoord[Countryhash] = 500;
+    ycoord[Countryhash] = 75;
+    country[Countryhash] = "Libya";
+    drawgraphLIBYA();
+  } else if (Countryhash == 16){ //South Africa
+    console.log("success" + Countryhash);
+    //translate(600,75) //Coords Translation Matrix
+    xcoord[Countryhash] = 500;
+    ycoord[Countryhash] = 325;
+    country[Countryhash] = "South Africa";
+    drawgraphSOUTHAFRICA();
+  } else if (Countryhash == 17){ //Columbia
+    console.log("success" + Countryhash);
+    //translate(600,75) //Coords Translation Matrix
+    xcoord[Countryhash] = 100;
+    ycoord[Countryhash] = 200;
+    country[Countryhash] = "Columbia";
+    drawgraphCOLUMBIA();
+  
   } else {
     Countryhash = 0;
     draw();
@@ -177,7 +233,7 @@ function draw() {
 }
 
 
-
+//I Coudn't make an array saving each JSON, so I had to make a function for each country's graph (different JSON files) so yeah theres some repition in code up a ahead :'(
 function drawgraphUK() {
   let xShift = 0;
   let tempArrayNo = 0;
@@ -205,7 +261,7 @@ function drawgraphUK() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -239,7 +295,7 @@ function drawgraphCANADA() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -273,7 +329,7 @@ function drawgraphALGERIA() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -307,7 +363,7 @@ function drawgraphIRAQ() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -341,7 +397,7 @@ function drawgraphINDONESIA() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -375,7 +431,7 @@ function drawgraphBRAZIL() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -409,7 +465,7 @@ function drawgraphRUSSIA() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -443,7 +499,7 @@ function drawgraphUSA() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -511,7 +567,7 @@ function drawgraphAUSTRAILIA() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -545,7 +601,7 @@ function drawgraphDRCONGO() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -579,7 +635,75 @@ function drawgraphMEXICO() {
     //text(daTemperature,x+(xShift*100),y+20);
     temperatures[tempArrayNo] = daTemperature;
 
-    console.log(daTemperature+","+daDate+","+annualDay+","+tempArrayNo);
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
+
+    xShift++;
+    tempArrayNo++;
+    
+  }
+  drawDaGraph();
+} 
+
+function drawgraphJAPAN() {
+  let xShift = 0;
+  let tempArrayNo = 0;
+  
+  for (let i = 1959; i <= 2022; i++){ //run though year by year
+    
+    daMonth = slider.value();// 1,2,3,4,5,6,7,8,9
+    let zeroFiller = "";
+    if (daMonth <= 9) {
+      zeroFiller = "0";
+    }
+
+    annualDay = (japanJson.daily.time.indexOf(i+"-"+zeroFiller+daMonth+"-01")); //gets the first of every year
+    //console.log(annualDay); //get index no 0,365,731, etc...
+
+    fill(0);
+
+
+    daDate = japanJson.daily.time[annualDay];
+    //text(daDate,x+(xShift*100),y);  
+
+    daTemperature = (japanJson.daily.temperature_2m_max[annualDay]);
+    //text(daTemperature,x+(xShift*100),y+20);
+    temperatures[tempArrayNo] = daTemperature;
+
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
+
+    xShift++;
+    tempArrayNo++;
+    
+  }
+  drawDaGraph();
+} 
+
+function drawgraphARGENTINA() {
+  let xShift = 0;
+  let tempArrayNo = 0;
+  
+  for (let i = 1959; i <= 2022; i++){ //run though year by year
+    
+    daMonth = slider.value();// 1,2,3,4,5,6,7,8,9
+    let zeroFiller = "";
+    if (daMonth <= 9) {
+      zeroFiller = "0";
+    }
+
+    annualDay = (argentinaJson.daily.time.indexOf(i+"-"+zeroFiller+daMonth+"-01")); //gets the first of every year
+    //console.log(annualDay); //get index no 0,365,731, etc...
+
+    fill(0);
+
+
+    daDate = argentinaJson.daily.time[annualDay];
+    //text(daDate,x+(xShift*100),y);  
+
+    daTemperature = (argentinaJson.daily.temperature_2m_max[annualDay]);
+    //text(daTemperature,x+(xShift*100),y+20);
+    temperatures[tempArrayNo] = daTemperature;
+
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
 
     xShift++;
     tempArrayNo++;
@@ -589,6 +713,145 @@ function drawgraphMEXICO() {
 } 
 
 
+function drawgraphINDIA() {
+  let xShift = 0;
+  let tempArrayNo = 0;
+  
+  for (let i = 1959; i <= 2022; i++){ //run though year by year
+    
+    daMonth = slider.value();// 1,2,3,4,5,6,7,8,9
+    let zeroFiller = "";
+    if (daMonth <= 9) {
+      zeroFiller = "0";
+    }
+
+    annualDay = (indiaJson.daily.time.indexOf(i+"-"+zeroFiller+daMonth+"-01")); //gets the first of every year
+    //console.log(annualDay); //get index no 0,365,731, etc...
+
+    fill(0);
+
+
+    daDate = indiaJson.daily.time[annualDay];
+    //text(daDate,x+(xShift*100),y);  
+
+    daTemperature = (indiaJson.daily.temperature_2m_max[annualDay]);
+    //text(daTemperature,x+(xShift*100),y+20);
+    temperatures[tempArrayNo] = daTemperature;
+
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
+
+    xShift++;
+    tempArrayNo++;
+    
+  }
+  drawDaGraph();
+} 
+
+
+function drawgraphLIBYA() {
+  let xShift = 0;
+  let tempArrayNo = 0;
+  
+  for (let i = 1959; i <= 2022; i++){ //run though year by year
+    
+    daMonth = slider.value();// 1,2,3,4,5,6,7,8,9
+    let zeroFiller = "";
+    if (daMonth <= 9) {
+      zeroFiller = "0";
+    }
+
+    annualDay = (libyaJson.daily.time.indexOf(i+"-"+zeroFiller+daMonth+"-01")); //gets the first of every year
+    //console.log(annualDay); //get index no 0,365,731, etc...
+
+    fill(0);
+
+
+    daDate = libyaJson.daily.time[annualDay];
+    //text(daDate,x+(xShift*100),y);  
+
+    daTemperature = (libyaJson.daily.temperature_2m_max[annualDay]);
+    //text(daTemperature,x+(xShift*100),y+20);
+    temperatures[tempArrayNo] = daTemperature;
+
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
+
+    xShift++;
+    tempArrayNo++;
+    
+  }
+  drawDaGraph();
+} 
+
+
+function drawgraphSOUTHAFRICA() {
+  let xShift = 0;
+  let tempArrayNo = 0;
+  
+  for (let i = 1959; i <= 2022; i++){ //run though year by year
+    
+    daMonth = slider.value();// 1,2,3,4,5,6,7,8,9
+    let zeroFiller = "";
+    if (daMonth <= 9) {
+      zeroFiller = "0";
+    }
+
+    annualDay = (southafricaJson.daily.time.indexOf(i+"-"+zeroFiller+daMonth+"-01")); //gets the first of every year
+    //console.log(annualDay); //get index no 0,365,731, etc...
+
+    fill(0);
+
+
+    daDate = southafricaJson.daily.time[annualDay];
+    //text(daDate,x+(xShift*100),y);  
+
+    daTemperature = (southafricaJson.daily.temperature_2m_max[annualDay]);
+    //text(daTemperature,x+(xShift*100),y+20);
+    temperatures[tempArrayNo] = daTemperature;
+
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
+
+    xShift++;
+    tempArrayNo++;
+    
+  }
+  drawDaGraph();
+} 
+
+function drawgraphCOLUMBIA() {
+  let xShift = 0;
+  let tempArrayNo = 0;
+  
+  for (let i = 1959; i <= 2022; i++){ //run though year by year
+    
+    daMonth = slider.value();// 1,2,3,4,5,6,7,8,9
+    let zeroFiller = "";
+    if (daMonth <= 9) {
+      zeroFiller = "0";
+    }
+
+    annualDay = (columbiaJson.daily.time.indexOf(i+"-"+zeroFiller+daMonth+"-01")); //gets the first of every year
+    //console.log(annualDay); //get index no 0,365,731, etc...
+
+    fill(0);
+
+
+    daDate = columbiaJson.daily.time[annualDay];
+    //text(daDate,x+(xShift*100),y);  
+
+    daTemperature = (columbiaJson.daily.temperature_2m_max[annualDay]);
+    //text(daTemperature,x+(xShift*100),y+20);
+    temperatures[tempArrayNo] = daTemperature;
+
+    console.log("daTemperature: "+daTemperature+", daDate: "+daDate+", annualDays: "+annualDay+", tempArrayNo: "+tempArrayNo);
+
+    xShift++;
+    tempArrayNo++;
+    
+  }
+  drawDaGraph();
+} 
+
+// Here: Take the variables from the previous country's fucntion, and use them to graph a graph, then move to the next country till all r done
 function drawDaGraph() {//do this 100 by 100 
   text("Month:" + daMonth,width/2,20);
   noFill();
@@ -623,44 +886,13 @@ function drawDaGraph() {//do this 100 by 100
   g += 0.001;
   Countryhash++
 
-
+  
   endShape();
 
 }
 
+//refresh the canvas when changing the month
 function mouseReleased(){
   background(220);
   image(img, 0, 0);
-
-  
- 
 }
-
-
-
-/*
-  noFill();
-  beginShape();
-  for(let i = 0; i < width/xstep; i ++) {
-    //fill (255);
-    factor = i/10;
-    ypos = map(noise(factor), 0, 1, 0, height)
-    strokeWeight(1);
-    stroke(random(255));
-    //rect(x, y , xdimension, ydimension)
-    //rect(xpos + (xstep*i),ypos, xstep, xstep);
-    vertex(xpos + (xstep*i),ypos)
-
-  }
-
-  g += 0.001;
-
-
-  endShape();
-  */
-
-
-
-
-
-
