@@ -8,7 +8,7 @@ let xvar = 0;
 //for connecting to arduino
 let port;
 let connectBtn;
-let brightness =0; //light test
+let triggerPulse =0; //if on shoot
 
 
 
@@ -18,6 +18,9 @@ const detection_options = {
     withDescriptors: false,
 }
 
+//detecting largest face
+detectedfaceXwidth = [];
+detectedfaceXpos = [];
 
 function setup() {
     createCanvas(350, 370);
@@ -83,6 +86,7 @@ function gotResults(err, result) {
 function drawBox(detections){
     for(let i = 0; i < detections.length; i++){
         const alignedRect = detections[i].alignedRect;
+        console.log(detections[i]);
         const x = alignedRect._box._x
         const y = alignedRect._box._y
         const boxWidth = alignedRect._box._width
@@ -93,9 +97,37 @@ function drawBox(detections){
         strokeWeight(2);
         
         stroke(255,0,0);
-        rect(x, y, boxWidth, boxHeight); //damainrect
+        rect(x, y, boxWidth, boxHeight); //da rectsangles on faces
+        push();
+            fill (10);
+            text(alignedRect._box._width,x,y); //print head width
+        pop();
 
-        xvar = x+(boxWidth/2) //saves the last x value of target to xvar
+
+
+        //xvar = x+(boxWidth/2) //saves the last x value of target to xvar
+        
+        xvar = alignedRect._box._x+(boxWidth/2) //
+        
+        if (detections.length >1){
+            console.log("MULTIPLE TARGETS DECTECTED");
+
+            for (t = 0; t < detections.length; t++){  //get size of all faces save 2 array
+                detectedfaceXwidth[t] = detections[t].alignedRect._box._width
+                detectedfaceXpos[t] = detections[t].alignedRect._box._x
+            }
+
+            //get largest array
+            var max = Math.max(...detectedfaceXwidth);
+
+            const bigHeadIndex = detectedfaceXwidth.indexOf(max);
+            console.log("biggest head: "+bigHeadIndex+ ": " + detectedfaceXwidth[bigHeadIndex]); // 👉️ 3
+            xvar = detections[bigHeadIndex].alignedRect._box._x+(boxWidth/2)
+
+        }
+
+        
+
     }
 
     
@@ -106,19 +138,18 @@ function setupguideslines(){
     
 
     stroke(255,255,0);
-    //175
-    brightness = 0;
+    
+    triggerPulse = 0;
     if (xvar > 170 && xvar < 180){
         stroke(255,0,0);
         //SHOOT HERE -> send to p5
 
-        brightness = 255;
-        
+        triggerPulse = 1;
     }
 
-    if(frameCount%10==0){
-        port.write(brightness+'\n'); //finish with a newline character for Arduino recieving
-       console.log(brightness);
+    if(frameCount%10==0){ //writing output to arduino
+        port.write(triggerPulse+'\n'); //finish with a newline character for Arduino recieving
+       console.log(triggerPulse);
     }
 
     // changes button label based on connection status
@@ -130,14 +161,14 @@ function setupguideslines(){
 
 
 
-    rect((xvar)-7,(camHeight/2)-7,14,14);//target point  (modify this to tagret largest sqaure)
+    rect((xvar)-7,(camHeight/2)-7,14,14);//target point  (modify this to tagret largest sqaure)  - link to largest square
 
     push();
     stroke (0)
     
     line(camWidth/2,0,camWidth/2,camHeight); //x-y!,x-y! midpoint
 
-    line(xvar,camHeight/2,camWidth/2,camHeight/2);//coreection line
+    line(xvar,camHeight/2,camWidth/2,camHeight/2);//correction line
 
     pop();
 

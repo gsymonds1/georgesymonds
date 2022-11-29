@@ -3,10 +3,18 @@
 
 Servo servo;
 
+
+  int armedLED = 10;
+  int triggerLED = 11;
+
+
 void setup() {
   Serial.begin(115200);
-  pinMode(9, OUTPUT);
   pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+
+
+
 }
 
 
@@ -15,7 +23,15 @@ void loop() {
   // Read serial input: if triggered should be 255
   if (Serial.available() > 0) { //if serial is available
       // this would be the place to use the incoming value to drive an output
-      int val = Serial.parseInt(); //convert the String to an int (255)
+      int val = Serial.parseInt(); //convert the String to an int (0 or 1)
+
+      if (val = 1){
+        digitalWrite(armedLED, LOW);
+        digitalWrite(triggerLED, HIGH);
+      } else if (val = 0){
+        digitalWrite(triggerLED, LOW);
+        digitalWrite(armedLED, HIGH);
+      }
   
       analogWrite(9, val); //output light on at ~9
 
