@@ -43,7 +43,7 @@ function setup() {
     // any other ports can be opened via a dialog after
     // user interaction (see connectBtnClick below)
     connectBtn = createButton('Connect to Arduino');
-    connectBtn.position(20, 20);
+    connectBtn.position(10, 450);
     connectBtn.mousePressed(connectBtnClick);
 
 }
@@ -140,24 +140,14 @@ function setupguideslines(){
     stroke(255,255,0);
     
     triggerPulse = 0;
-    if (xvar > 170 && xvar < 180){
+    if (xvar > 160 && xvar < 190){
         stroke(255,0,0);
         //SHOOT HERE -> send to p5
 
         triggerPulse = 1;
     }
 
-    if(frameCount%10==0){ //writing output to arduino
-        port.write(triggerPulse+'\n'); //finish with a newline character for Arduino recieving
-       console.log(triggerPulse);
-    }
-
-    // changes button label based on connection status
-    if (!port.opened()) {
-        connectBtn.html('Connect to Arduino');
-      } else {
-        connectBtn.html('Disconnect');
-      }
+    
 
 
 
@@ -178,9 +168,28 @@ function setupguideslines(){
     stroke (100);
     fill(255);
     text ("xVar = "+ xvar,10,camHeight + 20);
-    text ("x(r).Correction = "+ (175 - xvar),10,camHeight + 40);
+
+    let rCorrection = parseInt(175 - xvar);
+
+    text ("x(r).Correction = "+ rCorrection,10,camHeight + 40);
     pop();
     
+
+
+    if(frameCount%10==0){ //writing output to arduino
+        port.write(triggerPulse+","+rCorrection+'\n'); //finish with a newline character for Arduino recieving
+       console.log("Serial Print: "+triggerPulse+","+rCorrection);
+    }
+
+    // changes button label based on connection status
+    if (!port.opened()) {
+        connectBtn.html('Connect to Arduino');
+      } else {
+        connectBtn.html('Disconnect');
+    }
+
+
+
     faceapi.detect(gotResults);
 }
 
