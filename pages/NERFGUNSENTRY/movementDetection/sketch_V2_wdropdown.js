@@ -1,5 +1,6 @@
 let faceapi;
 let video;
+var capture;
 let detections;
 let camWidth;
 let camHeight;
@@ -29,6 +30,96 @@ let drop = false;
 let itemY = [];
 var deviceList = [];
 
+function preload() {
+    navigator.mediaDevices.enumerateDevices().then(getDevices);
+}
+
+class List {
+
+  constructor(x, y, w, h, itemH, txtSize) {
+    this.x = 0;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.itemH = itemH;
+    this.txtSize = txtSize;
+    this.arrwX = this.x + this.w;
+    this.arrwY = this.y;
+    this.arrwH = this.h;
+  }
+
+  openVideoInput (videoSelected) {
+    var constraints = {
+    video: {
+    deviceId: {
+      exact: deviceList[videoSelected].id
+      },
+    }
+  };
+  video = createCapture(constraints);
+  video.size(width, 270)
+  faceapi = ml5.faceApi(video, detection_options, modelReady);   //tried to add here but  no work
+}
+
+press(mx, my) {
+    // arrow touches
+    if ((mx >= this.arrwX) && (mx <= this.arrwX+this.arrwH) && (my >= this.arrwY) && (my <= this.arrwY+this.arrwH)) {
+      if (drop == true) {
+        drop = false;
+      } else {
+        drop = true;
+      }
+    } // list touches
+    if (drop) {
+      if (deviceList.length > 0) {
+        for (let j = 0; j < deviceList.length; j++) {
+          if ((mx >= this.x) && (mx <= this.x + this.w) && (my >= itemY[j] ) && (my <= itemY[j] + this.itemH)) {
+            selectedItem = j;
+            console.log("selectedItem :", selectedItem);
+            list.openVideoInput(selectedItem);
+            drop = false;
+          }
+        }
+      }
+    }
+}
+  
+displayFieldString(title) {
+    fill(255); // background color
+    rect(this.x, this.y, this.w, this.h);
+    fill(0); // text color
+    textSize(this.txtSize);
+    text(title, this.x + 10, this.y + this.txtSize);
+}
+  
+display() {
+    if (selectedItem == -1) {
+      this.displayFieldString("Select video input:");
+    } else {
+      this.displayFieldString(deviceList[selectedItem].label);
+    }
+    // arrow
+    fill(255); // arrow background color
+    rect(this.arrwX, this.arrwY, this.arrwH, this.arrwH);
+    fill(0, 255, 0); // arrow color
+    triangle(this.arrwX+5, this.arrwY+5, this.arrwX+this.arrwH-5, this.arrwY+5, this.arrwX+this.arrwH/2, this.arrwY+this.arrwH-5);
+    // listItems
+    if ((deviceList.length > 0) && (drop)) {
+      for (let j = 0; j < deviceList.length; j++) {
+        itemY[j] = (this.y + this.h) + j*this.itemH;
+        fill(255);
+        rect(this.x, itemY[j], this.w, this.itemH);
+        fill(0);
+        textSize(this.txtSize);
+        text(deviceList[j].label, this.x + 10, itemY[j] + this.txtSize);
+      }
+    }
+    if (!drop) {
+      rect(this.x, this.y + this.h, this.w, 0);
+    }
+}
+  }
+
 
 function setup() {
     createCanvas(350, 370);
@@ -36,6 +127,9 @@ function setup() {
 
     camWidth = 350;
     camHeight = 270;
+
+
+    
     
     // load up your video
     video = createCapture(VIDEO);
@@ -53,6 +147,7 @@ function setup() {
     connectBtn.position(10, 450);
     connectBtn.mousePressed(connectBtnClick);
 
+    list = new List(30, 30, 320, 24, 24, 16);
 }
 
 
@@ -141,7 +236,9 @@ function drawBox(detections){
 }
 
 function setupguideslines(){
-    
+ 
+
+    list.display(); //wecbcam selection
     
 
     stroke(255,255,0);
@@ -253,4 +350,25 @@ function connectBtnClick() {
     }
     
   
-  }
+}
+
+
+function getDevices(devices) {
+
+    for (let i = 0; i < devices.length; ++i) {
+      let deviceInfo = devices[i];
+      //Only get videodevices and push them into deviceList
+      if (deviceInfo.kind == 'videoinput') {
+        deviceList.push( {
+        label:deviceInfo.label,
+          id:deviceInfo.deviceId
+        }
+        );
+      }
+    }
+}
+
+function mousePressed() {
+    list.press(mouseX, mouseY);
+    
+}

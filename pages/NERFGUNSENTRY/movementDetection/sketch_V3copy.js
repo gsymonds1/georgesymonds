@@ -1,5 +1,6 @@
 let faceapi;
 let video;
+var capture;
 let detections;
 let camWidth;
 let camHeight;
@@ -30,6 +31,15 @@ let itemY = [];
 var deviceList = [];
 
 
+function preload() {
+    constraints2 = {
+          video: {
+              deviceId: "532c4c19fd96c288b62437723ba73ed96c3d3acb7885c844f6a33e6107c9380e",
+             
+          }
+    }
+}
+
 function setup() {
     createCanvas(350, 370);
     background(10);
@@ -38,11 +48,14 @@ function setup() {
     camHeight = 270;
     
     // load up your video
-    video = createCapture(VIDEO);
-    video.size(width, 270); //dimension of cathing spots
+
+
+
+    capture = createCapture(constraints2);
+    capture.size(width, 270); //dimension of cathing spots
     // video.hide(); // Hide the video element, and just show the canvas
     console.log("setupcomplete")
-    faceapi = ml5.faceApi(video, detection_options, modelReady)
+    faceapi = ml5.faceApi(capture, detection_options, modelReady)
     textAlign(LEFT);
 
     //connecting to arduino
@@ -77,7 +90,7 @@ function gotResults(err, result) {
 
     // background(220);
     background(10);
-    image(video, 0,0, 350, 270) //dimension of second traced video
+    image(capture, 0,0, 350, 270) //dimension of second traced video
     if (detections) {
         if (detections.length > 0) {
             // console.log(detections)

@@ -29,6 +29,8 @@ int triggerLED = 11;
 int triggerServo = 9;
 int motorServo = 5;
 int rotationServo = 3;
+//direction
+int currentRotation = 90;
 
 
 
@@ -54,6 +56,9 @@ void setup() {
     delay(1000);
     analogWrite(triggerLED, 0);
 
+  //face straight ahead
+  servo3.write(currentRotation);
+
 
 }
 
@@ -73,36 +78,38 @@ void loop() {
       int val01 = atoi(subStr(serialbuf, ",", 1)); // recieve the 1st value and convert it to integer
       int val02 = atoi(subStr(serialbuf, ",", 2));
      
-    //Output message
+      //Output message
 
-    servo3.write(map(val02,-90,90,5,175));
+      //servo3.write(map(val02,-90,90,5,175));
 
+      if (val01 == 1 ){ ///ONTARGET
+        analogWrite(armedLED, 0);
+        analogWrite(triggerLED, 255);  //RED
 
-    if (val01 == 1 ){ ///ONTARGET
-      analogWrite(armedLED, 0);
-      analogWrite(triggerLED, 255);  //RED
+        servo2.write(180);
 
-      servo2.write(180);
+        //delay(700);
+        servo.write(180);
 
-      delay(700);
-      servo.write(180);
-
-
-
-
-    } else { ///OFFTARGET
-      servo2.write(0);
-      servo.write(0);
-      analogWrite(triggerLED, 0);
-      analogWrite(armedLED, 255); //YELLOW
+      } else { ///OFFTARGET
+        servo2.write(0);
+        servo.write(0);
+        analogWrite(triggerLED, 0);
+        analogWrite(armedLED, 255); //YELLOW
+      }
       
-    }
-
-
-    //ROTATION SERVO 0 to 180
-
-
-
+      //while (val02 >15 || val02 < -15)
+      //{
+        if (val02 > 15){
+          currentRotation = currentRotation +10;
+           servo3.write(currentRotation);
+        }
+        if (val02 < -15){
+          currentRotation = currentRotation -10;
+          servo3.write(currentRotation);
+        }
+      //}
+      
     //below is for servo
     }
   //serial available then in here
@@ -135,10 +142,6 @@ void loop() {
   }
   delay(15);    
   */
-
-
-
-
 
 
 }
