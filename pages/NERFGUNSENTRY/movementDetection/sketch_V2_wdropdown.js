@@ -144,7 +144,7 @@ function setup() {
     // any other ports can be opened via a dialog after
     // user interaction (see connectBtnClick below)
     connectBtn = createButton('Connect to Arduino');
-    connectBtn.position(10, 450);
+    connectBtn.position(10, 630);
     connectBtn.mousePressed(connectBtnClick);
 
     list = new List(30, 30, 320, 24, 24, 16);
