@@ -11,7 +11,6 @@ let connectBtn;
 let triggerPulse =0; //if on shoot
 
 
-
 // by default all options are set to true
 const detection_options = {
     withLandmarks: true,
@@ -54,8 +53,6 @@ function setup() {
     connectBtn.mousePressed(connectBtnClick);
 
 }
-
-
 
 
 function modelReady() {
@@ -131,19 +128,12 @@ function drawBox(detections){
             console.log("biggest head: "+bigHeadIndex+ ": " + detectedfaceXwidth[bigHeadIndex]); // 👉️ 3
             xvar = detections[bigHeadIndex].alignedRect._box._x+(boxWidth/2)
 
-        }
-
-        
-
+        } 
     }
-
-    
 }
 
 function setupguideslines(){
     
-    
-
     stroke(255,255,0);
     
     triggerPulse = 0;
@@ -153,10 +143,6 @@ function setupguideslines(){
 
         triggerPulse = 1;
     }
-
-    
-
-
 
     rect((xvar)-7,(camHeight/2)-7,14,14);//target point  (modify this to tagret largest sqaure)  - link to largest square
 
@@ -182,7 +168,6 @@ function setupguideslines(){
     pop();
     
 
-
     if(frameCount%10==0){ //writing output to arduino
         port.write(triggerPulse+","+rCorrection+'\n'); //finish with a newline character for Arduino recieving
        console.log("Serial Print: "+triggerPulse+","+rCorrection);
@@ -196,10 +181,8 @@ function setupguideslines(){
     }
 
 
-
     faceapi.detect(gotResults);
 }
-
 
 
 function drawLandmarks(detections){
@@ -251,6 +234,4 @@ function connectBtnClick() {
     } else {
       port.close();
     }
-    
-  
-  }
+}
