@@ -1,38 +1,84 @@
-var circles = [];
-var number = 40;
-var size = 20;
-var bsize = 20;
-var box = Array(600/bsize)
+let circles = [];
+let number = 100;
+let size = 10;
 
-yFriction = 0.999;
-xFriction = 0.999;
+let chosenOne = 0
+
+
+let slider;
+let val = 20;
+
+
+let drawLoopNo = 0;
+
+
+yFriction = 0.99;
+xFriction = 0.99;
+
+
 
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(1300, 1000);
+   
+    //background(0,0,255);
+    slider = createSlider(0, 555, 20);
+    slider.position(10, 1500);
+    slider.style('width', '250px');
+    
+    
 
-    for(let i=0; i<number; i++){
-      // pos, velocity, accerleration
-      circles[i] = new Circle(createVector(random(100,500),300),createVector(random(-1,1),0),createVector(0,0.1));
-    }
+  setCircles();
 }
 
 
-function draw(){
-  background(205,5);
-  strokeWeight(20);
 
-  for(ball of circles){
-    ball.show();
-    ball.move();
-    ball.wall();
-    ball.gravity();
-    ball.friction();
-    ball.collide();
+function setCircles() {
+  let val = slider.value();
+  
+  for(let i=0; i<val; i++){
+    // pos, velocity, accerleration
+    circles[i] = new Circle(createVector(random(0,600),random(0,600)),createVector(random(0,0),0),createVector(0,0.1));
   }
 
+}
 
-  //yVel = yVel * yFriction;
 
+
+
+/* function spawnCircles(){} */
+
+
+
+function draw(){
+  //setCircles();
+  background(230,20);
+  let sliderVal = slider.value();
+
+
+  text(sliderVal,100,100) //display ball count
+  strokeWeight(size);
+  
+  //check to see if theres more circles in circles[] array than in sliderValie, IF there is remove them (so val = circles)
+  if (circles.length > sliderVal) {
+    circles.splice(0, 1);
+  }
+
+  for(let i = 0; i < circles.length; i++) {
+    
+    circles[i].show();
+    circles[i].move();
+    circles[i].wall();
+    circles[i].gravity();
+    circles[i].friction();
+    circles[i].collide();
+  }
+  
+  
+  //rerunning the creation of balls (as found it setup() if slider gets editting)
+  slider.input(setCircles);
+
+  drawLoopNo = drawLoopNo + 1;
+  //setCircles();
 }
 
 class Circle{
@@ -43,7 +89,17 @@ class Circle{
   }
 
   show(){
+    
+    stroke(0,0,255)
+
+    //text(chosenOne,100,100)
+   // if (chosenOne > 10) {
+   //   stroke(0,0,200);
+   // }
+
     point(this.p.x,this.p.y);
+   // chosenOne = chosenOne+1
+    
   }
 
   move(){
@@ -53,26 +109,27 @@ class Circle{
   }
 
   wall(){
-    if (this.p.y>600-size/2 || this.p.y<0-size/2){
-      this.v.y = this.v.y*-1;
+    if (this.p.y>=600-size/2 || this.p.y<0-size/2){
       this.p.y = constrain(this.p.y,0+size/2,600+size/2);
+      this.v.y = this.v.y*-1;
     }
-
-    if (this.p.x>600-size/2 || this.p.x<0-size/2){
-      this.v.x = this.v.x*-1;
+  
+    if (this.p.x>=600-size/2 || this.p.x<=0-size/2){
       this.p.x = constrain(this.p.x,0+size/2,600+size/2);
+      this.v.x = this.v.x*-1;
     }
   }
 
   gravity(){
-    this.v.y = this.v.y +0.5
+    if (this.p.y <500) {
+    this.v.y = this.v.y +0.8
+    }
   }
 
-  friction(){
-    //vari assignment
+  friction(){ // Constant friction slowing down the balls X n Y Velocity (simulating air resistance)
+   //yVel = yVel * yFriction;
     this.v.y = this.v.y * yFriction;
     this.v.x = this.v.x * xFriction;
-
   }
 
   collide(){
@@ -92,8 +149,11 @@ class Circle{
         v2 = p5.Vector.dot(dir, circles[i].v);
         dir.mult(v1 - v2);
         this.v.sub(dir);
-        circles[i].v.add(dir)
+        circles[i].v.add(dir);
+        noStroke();
+        text(i, 600, this.p.y-50);
       }
     }
   }
 }
+
