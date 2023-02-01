@@ -1,4 +1,4 @@
-//GRAPH
+//GRAPH variable assignment
 let table;
 let numRows;
 let numCols;
@@ -9,35 +9,35 @@ let GMSL = [] //Global Mean Sea Level
 let diagramX;
 let diagramY;
 
-//Bridge
-let oldBallrepresentitveValue = 10
-let ballrepresentitveValue = 10
+//Bridge - connecting what happens in the graph to effect the Balls 
+let oldBallrepresentitveValue = -170
+let ballrepresentitveValue = -170
 
 
-//BALLS
+//BALLS variable assignment
 let circles = [];
 let number = 100;
 let Ballsize = 30;
 
 let chosenOne = 0
 
-
 let slider;
 let val = 20;
 
-
 let drawLoopNo = 0;
-
 
 yFriction = 0.99;
 xFriction = 0.99;
 
-function preload(){
-  table = loadTable("assets/sealevel.csv","csv","header"); 
+
+
+function preload(){ //getting the csv up
+  table = loadTable("assets/sealevel2.csv","csv","header"); 
 }
 
 
-function setup() {
+
+function setup() { 
 //GRAPH
   createCanvas(windowWidth, windowHeight);
   //getting info of csv
@@ -58,16 +58,16 @@ function setup() {
     slider.position(10, 1500);
     slider.style('width', '250px');
     
-    
-
   setCircles();
   
 }
 
+
+
 //BALLS
 function setCircles() {
   //let val = slider.value();
-  let val = ballrepresentitveValue; ///ien 17
+  let val = map(ballrepresentitveValue,-184,83,1,400); ///ien 17
   
   for(let i=0; i<val; i++){
     // pos, velocity, accerleration
@@ -77,20 +77,21 @@ function setCircles() {
 }
 
 
+
+
 let size = [];
 function draw() {
-  background(240);
+  background(240,10);
 //GRAPH
   chartInfo();
-
-  diagramX = width/4*3-90;  
-  diagramY = height/2;
+  diagramX = width/4*3-90;  //the chart position on screen (everything mapped to these)
+  diagramY = height/2;      // same^
   let radius = width/5 - 100;
-  let ang = 360/numRows;
+  let ang = 360/numRows; //the angle between each line/point
 
   for (let i = 0;i<numRows;i++){       //access every rosw of GMSL
     //size[i] = map(GMSL[i],-3.5,79.5,0,205); 
-    size[i] = map(GMSL[i],dataMin,dataMax,0,205); 
+    size[i] = map(GMSL[i],dataMin,dataMax,0,255); 
     let pointX = (size[i]+radius)*cos(radians(ang*i))+diagramX;
     let pointY = (size[i]+radius)*sin(radians(ang*i))+diagramY;
     
@@ -102,21 +103,25 @@ function draw() {
       strokeWeight(0.5);
       stroke('blue');
     } else {
-      strokeWeight(0.1);
+      strokeWeight(0.05);
     stroke('black');
       }
+
+      
     line(cirX,cirY,pointX,pointY)
     
+    
+
     //hover interaction
     //draw data points
     let dataSize = 8;
     let dis = dist(mouseX,mouseY,pointX,pointY)
-    if (dis<7){ // IF mouse is hovered over a data point
+    if (dis<2){ // IF mouse is hovered over a data point
       fill('red')
       dataSize = 16;
       noStroke();
       circle(pointX,pointY,dataSize);
-    //print(i)
+    
       //show Information
       textAlign(CENTER)
       textSize(18)
@@ -130,7 +135,9 @@ function draw() {
     } else {
       fill('blue');
       noStroke();
-      circle(pointX,pointY,dataSize);
+      if (i % 12 ===0){
+      
+      circle(pointX,pointY,dataSize);}
     }
     text(ballrepresentitveValue,200,200)
   }
@@ -144,7 +151,7 @@ function draw() {
   
   //check to see if theres more circles in circles[] array than in sliderValie, IF there is remove them (so val = circles)
   //if (circles.length > sliderVal) {
-  if (circles.length > ballrepresentitveValue) {
+  if (circles.length > map(ballrepresentitveValue,-184,83,1,400)) {
     circles.splice(0, 1);
   }
 
@@ -158,17 +165,12 @@ function draw() {
     circles[i].collide();
   }
   
-  
-  //rerunning the creation of balls (as found it setup() if slider gets editting)
-  //slider.input(setCircles);
-
+  //Rerunning the creation of balls (as found it setup() if a different info-point is selceted)
   if (ballrepresentitveValue != oldBallrepresentitveValue){
     setCircles()
   }
   
-
   drawLoopNo = drawLoopNo + 1;
-  //setCircles();
 
 
 }
@@ -182,7 +184,7 @@ function chartInfo(){
  text("Global Average Absolute Sea Level Change, 1993-2014",width/5,height/5,width/4);
 }
 
-//GRAPH
+//GRAPH SHIIIIIi - just finding the highest and lowest value in dataset n saving it
 let dataMin = 0; 
 let dataMax = 0;
 function minMax(){ //to normalise data height later
@@ -197,38 +199,28 @@ function minMax(){ //to normalise data height later
             dataMin = table.getNum(i,1); 
         }
     }
-    print(dataMin+","+dataMax)
+    console.log(dataMin+","+dataMax)
 }
 
-//BALLS
+//BALLS BALLS BALLS Here is where the magic happens
 class Circle{
   constructor(p,v,a){
-    this.p=p;
-    this.v=v;
-    this.a=a;
+    this.p=p; //Point Ball Position on screen (X , Y)
+    this.v=v; //Velocity Left/Right Movement Speed (effects current point^)
+    this.a=a; //Acceration Left/Right Acceration Rate (effects current velocity^)   yeah we got physics here mate
   }
 
-  show(){
-    
-    stroke(0,0,255)
-
-    //text(chosenOne,100,100)
-   // if (chosenOne > 10) {
-   //   stroke(0,0,200);
-   // }
-
+  show(){ //Da Function for showing the ball
+    stroke(0,0,255,50)
     point(this.p.x,this.p.y);
-   // chosenOne = chosenOne+1
-    
   }
 
-  move(){
+  move(){ //Da Function for updating balls position based on movement
     this.v.add(this.a);
     this.p.add(this.v);
-    
   }
 
-  wall(){
+  wall(){ //Da Function for making sure dem balls dont go off the screen >:-)
     if (this.p.y>=height-Ballsize/2 || this.p.y<0-Ballsize/2){
       this.p.y = constrain(this.p.y,0+Ballsize/2,height+Ballsize/2);
       this.v.y = this.v.y*-1;
@@ -240,27 +232,26 @@ class Circle{
     }
   }
 
-  gravity(){
+  gravity(){ //Da Function for always having a downwards force
     if (this.p.y <500) {
     this.v.y = this.v.y +0.8
     }
   }
 
-  friction(){ // Constant friction slowing down the balls X n Y Velocity (simulating air resistance)
-   //yVel = yVel * yFriction;
+  friction(){ // //Da Function fo Constant friction slowing down the balls X n Y Velocity (simulating air resistance)
     this.v.y = this.v.y * yFriction;
     this.v.x = this.v.x * xFriction;
   }
 
-  collide(){
+  collide(){ //Da Function for what da Balls do when they hit into oneanother (calculates the trajectory it bounes off in)
     let dir
     let dist
     let v1
     let v2
-    for(let i = 0; i<circles.length; i++){
+    for(let i = 0; i<circles.length; i++){ // 
       dir = p5.Vector.sub(circles[i].p,this.p);
       dist = dir.mag();
-      if (dist <= Ballsize){ 
+      if (dist <= Ballsize){  // IF one ball is touching another ball 👀
         dir.normalize();
         let correction = size - dist;
         this.p.sub(p5.Vector.mult(dir, correction/2));
@@ -271,7 +262,7 @@ class Circle{
         this.v.sub(dir);
         circles[i].v.add(dir);
         noStroke();
-        text(i, 600, this.p.y-50);
+        //text(i, 600, this.p.y-50);
       }
     }
   }
