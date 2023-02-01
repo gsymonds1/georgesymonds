@@ -81,7 +81,7 @@ function setCircles() {
 
 let size = [];
 function draw() {
-  background(240,10);
+  background(240);
 //GRAPH
   chartInfo();
   diagramX = width/4*3-90;  //the chart position on screen (everything mapped to these)
@@ -149,11 +149,12 @@ function draw() {
   text(sliderVal,100,100) //display ball count
   strokeWeight(Ballsize);
   
-  //check to see if theres more circles in circles[] array than in sliderValie, IF there is remove them (so val = circles)
-  //if (circles.length > sliderVal) {
-  if (circles.length > map(ballrepresentitveValue,-184,83,1,400)) {
-    circles.splice(0, 1);
-  }
+  //DELETING old circles if there too many (after changing data point)
+  //for (let s =1;s<ballrepresentitveValue;i++){ 
+    if (circles.length > map(ballrepresentitveValue,-184,83,1,400)) {
+      circles.splice(0, 1);
+    }
+ // }
 
   for(let i = 0; i < circles.length; i++) {
     
