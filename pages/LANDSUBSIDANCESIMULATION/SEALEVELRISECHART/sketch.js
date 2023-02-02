@@ -39,7 +39,7 @@ function preload(){ //getting the csv up
 
 function setup() { 
 //GRAPH
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight-169);
   //getting info of csv
   numRows = table.getRowCount();
   numCols = table.getColumnCount();
@@ -67,7 +67,7 @@ function setup() {
 //BALLS
 function setCircles() {
   //let val = slider.value();
-  let val = map(ballrepresentitveValue,-184,83,1,400); ///ien 17
+  let val = map(ballrepresentitveValue,-184,83,1,300); ///ien 17
   
   for(let i=0; i<val; i++){
     // pos, velocity, accerleration
@@ -81,12 +81,12 @@ function setCircles() {
 
 let size = [];
 function draw() {
-  background(240);
+  background(240,10);
 //GRAPH
   chartInfo();
   diagramX = width/4*3-90;  //the chart position on screen (everything mapped to these)
   diagramY = height/2;      // same^
-  let radius = width/5 - 100;
+  let radius = width/6 - 100; //set Radius of Big Circle
   let ang = 360/numRows; //the angle between each line/point
 
   for (let i = 0;i<numRows;i++){       //access every rosw of GMSL
@@ -151,7 +151,7 @@ function draw() {
   
   //DELETING old circles if there too many (after changing data point)
   //for (let s =1;s<ballrepresentitveValue;i++){ 
-    if (circles.length > map(ballrepresentitveValue,-184,83,1,400)) {
+    if (circles.length > map(ballrepresentitveValue,-184,83,1,300)) {
       circles.splice(0, 1);
     }
  // }
@@ -180,7 +180,7 @@ function chartInfo(){
  textSize(18);
  textAlign(LEFT);
  fill('black');
- text("Global Average Absolute Sea Level Change, 1993-2014 from the US Environmental Protection Agency using data from CSIRO, 2015; NOAA, 2015. \n\nThis data contains “cumulative changes in sea level for the world’s oceans since 1880, based on a combination of long-term tide gauge measurements and recent satellite measurements. It shows average absolute sea level change, which refers to the height of the ocean surface, regardless of whether nearby land is rising or falling. Satellite data are based solely on measured sea level, while the long-term tide gauge data include a small correction factor because the size and shape of the oceans are changing slowly over time. (On average, the ocean floor has been gradually sinking since the last Ice Age peak, 20,000 years ago.)",width/5,height/4+30,width/4);
+ text("Global Average Absolute Sea Level Change, 1993-2014 from the US Environmental Protection Agency using data from CSIRO, 2015; NOAA, 2015. \n\nThis data contains “cumulative changes in sea level for the world’s oceans since 1880, based on a combination of long-term tide gauge measurements and recent satellite measurements. It shows average absolute sea level change, which refers to the height of the ocean surface, regardless of whether nearby land is rising or falling. Satellite data are based solely on measured sea level, while the long-term tide gauge data include a small correction factor because the size and shape of the oceans are changing slowly over time. (On average, the ocean floor has been gradually sinking since the last Ice Age peak, 20,000 years ago.)",width/5,height/5+150,width/4);
  textSize(18*2);
  text("Global Average Absolute Sea Level Change, 1993-2014",width/5,height/5,width/4);
 }
@@ -235,7 +235,7 @@ class Circle{
 
   gravity(){ //Da Function for always having a downwards force
     if (this.p.y <500) {
-    this.v.y = this.v.y +0.8
+    this.p.y = this.p.y *100
     }
   }
 
