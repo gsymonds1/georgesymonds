@@ -3,6 +3,10 @@ let table;
 let numRows;
 let numCols;
 
+
+
+
+
 let date = []
 let GMSL = [] //Global Mean Sea Level
 
@@ -17,7 +21,7 @@ let ballrepresentitveValue = -170
 //BALLS variable assignment
 let circles = [];
 let number = 100;
-let Ballsize = 30;
+let Ballsize = 40;
 
 let chosenOne = 0
 
@@ -39,7 +43,7 @@ function preload(){ //getting the csv up
 
 function setup() { 
 //GRAPH
-  createCanvas(windowWidth, windowHeight-169);
+  createCanvas(windowWidth, windowHeight);
   //getting info of csv
   numRows = table.getRowCount();
   numCols = table.getColumnCount();
@@ -54,9 +58,9 @@ function setup() {
   minMax();
 
 //BALLS
-  slider = createSlider(0, 555, 20);
-    slider.position(10, 1500);
-    slider.style('width', '250px');
+  //slider = createSlider(0, 555, 20);
+  //slider.position(10, 1500);
+  //slider.style('width', '250px');
     
   setCircles();
   
@@ -67,11 +71,11 @@ function setup() {
 //BALLS
 function setCircles() {
   //let val = slider.value();
-  let val = map(ballrepresentitveValue,-184,83,1,300); ///ien 17
+  let val = map(ballrepresentitveValue,-184,83,1,150); ///ien 17
   
   for(let i=0; i<val; i++){
     // pos, velocity, accerleration
-    circles[i] = new Circle(createVector(random((width/4*3-90),(width/4*3-90)),height/2),createVector(random(-2,2),0),createVector(0,0.1));
+    circles[i] = new Circle(createVector(width/2,height/2),createVector(random(-2,2),0),createVector(0,0.1));
   }
   oldBallrepresentitveValue = ballrepresentitveValue;
 }
@@ -81,17 +85,17 @@ function setCircles() {
 
 let size = [];
 function draw() {
-  background(240,10);
+  background(240);
 //GRAPH
   chartInfo();
-  diagramX = width/4*3-90;  //the chart position on screen (everything mapped to these)
+  diagramX = width/2;  //the chart position on screen (everything mapped to these)
   diagramY = height/2;      // same^
-  let radius = width/6 - 100; //set Radius of Big Circle
+  let radius = width/9; //set Radius of Big Circle
   let ang = 360/numRows; //the angle between each line/point
 
   for (let i = 0;i<numRows;i++){       //access every rosw of GMSL
     //size[i] = map(GMSL[i],-3.5,79.5,0,205); 
-    size[i] = map(GMSL[i],dataMin,dataMax,0,255); 
+    size[i] = map(GMSL[i],dataMin,dataMax,1,150); 
     let pointX = (size[i]+radius)*cos(radians(ang*i))+diagramX;
     let pointY = (size[i]+radius)*sin(radians(ang*i))+diagramY;
     
@@ -110,13 +114,19 @@ function draw() {
       
     line(cirX,cirY,pointX,pointY)
     
-    
+    if (i % 12 ===0){ //printing date stamps
+      noStroke();
+      textSize(10);
+      fill('black');
+      let dateShortend = date[i].slice(0,4)
+      text(dateShortend,pointX+10,pointY)
+    }
 
     //hover interaction
     //draw data points
     let dataSize = 8;
     let dis = dist(mouseX,mouseY,pointX,pointY)
-    if (dis<2){ // IF mouse is hovered over a data point
+    if (dis<0.8){ // IF mouse is hovered over a data point
       fill('red')
       dataSize = 16;
       noStroke();
@@ -126,8 +136,9 @@ function draw() {
       textAlign(CENTER)
       textSize(18)
     //print information
+      fill('blue')
+      text(date[i],diagramX,diagramY+70) //print date
       fill('black')
-      text(date[i],diagramX,diagramY+100) //print date
       textSize(18*3)
       text(GMSL[i] +"mm",diagramX,diagramY-20) //print Sea Level
       ballrepresentitveValue = GMSL[i];
@@ -136,22 +147,24 @@ function draw() {
       fill('blue');
       noStroke();
       if (i % 12 ===0){
-      
       circle(pointX,pointY,dataSize);}
     }
-    text(ballrepresentitveValue,200,200)
+
+    
+
+    //text(ballrepresentitveValue,200,200)
   }
 
 //BALLS
-  let sliderVal = slider.value();
+  //let sliderVal = slider.value();
 
-
-  text(sliderVal,100,100) //display ball count
+  textSize(12)
+  text(floor(map(ballrepresentitveValue,-184,83,1,150)),20,height/5) //display ball count
   strokeWeight(Ballsize);
   
   //DELETING old circles if there too many (after changing data point)
   //for (let s =1;s<ballrepresentitveValue;i++){ 
-    if (circles.length > map(ballrepresentitveValue,-184,83,1,300)) {
+    if (circles.length > map(ballrepresentitveValue,-184,83,1,150)) {
       circles.splice(0, 1);
     }
  // }
@@ -176,13 +189,33 @@ function draw() {
 
 }
 //GRAPH
-function chartInfo(){
- textSize(18);
+function chartInfo(){ //Printing all the info text
+ textSize(12);
  textAlign(LEFT);
  fill('black');
- text("Global Average Absolute Sea Level Change, 1993-2014 from the US Environmental Protection Agency using data from CSIRO, 2015; NOAA, 2015. \n\nThis data contains “cumulative changes in sea level for the world’s oceans since 1880, based on a combination of long-term tide gauge measurements and recent satellite measurements. It shows average absolute sea level change, which refers to the height of the ocean surface, regardless of whether nearby land is rising or falling. Satellite data are based solely on measured sea level, while the long-term tide gauge data include a small correction factor because the size and shape of the oceans are changing slowly over time. (On average, the ocean floor has been gradually sinking since the last Ice Age peak, 20,000 years ago.)",width/5,height/5+150,width/4);
- textSize(18*2);
- text("Global Average Absolute Sea Level Change, 1993-2014",width/5,height/5,width/4);
+ textStyle(NORMAL); 
+ text("Global Average Absolute Sea Level Change, 1993-2014 from the US Environmental Protection Agency using data from CSIRO, 2015; NOAA, 2015. \n\nThis data contains “cumulative changes in sea level for the world’s oceans” for every month between 1880-2014, based on a combination of long-term tide gauge measurements and recent satellite measurements. \n\nIt shows average absolute sea level change, which refers to the height of the ocean surface, regardless of whether nearby land is rising or falling. Satellite data are based solely on measured sea level, while the long-term tide gauge data include a small correction factor because the size and shape of the oceans are changing slowly over time. (On average, the ocean floor has been gradually sinking since the last Ice Age peak, 20,000 years ago.)",width/20,height/5*2.5,width/4);
+ textStyle(BOLD); 
+ text("Description:",width/20,height/5*2.4,width/4);
+ textSize(26);
+
+ text("Mapping Global Average Absolute Sea Level Change, 1993-2014",width/20,height/5,width/4);
+ textSize(12);
+ text("Data Interaction:",width/20,height/5*1.8,width/4);
+ textStyle(NORMAL); 
+ text("This diagram is interactive! Hover over any points on the circular graph to see the sea level change per year, with water particles to scale.",width/20,height/5*1.9,width/4);
+
+ textStyle(BOLD); 
+ textSize(12);
+ text("Findings:",width/20*15,height/5,width/4);
+ textStyle(NORMAL); 
+ text("- from satellite altimeter data,coastal + island sea-level measurements, and after correcting for glacial isostatic adjustment: \n\n The Global average sea level rise is estimated to be:\n\n3.2 ± 0.4 mm/year \n\nWith a Total Rise of:\n\n210mm (1880-2009)\n\n",width/20*15,height/5*1.2,width/4);
+ 
+ textStyle(BOLD); 
+ text("Data:",width/20*15,height/2,width/4);
+ textStyle(NORMAL); 
+ text("Name: CSIRO (Commonwealth Scientific and Industrial Research Organization) \n\nWeb: http://www.cmar.csiro.au/sealevel/GMSL_SG_2011_up.html",width/20*15,height/2*1.05,width/4);
+
 }
 
 //GRAPH SHIIIIIi - just finding the highest and lowest value in dataset n saving it
@@ -212,7 +245,7 @@ class Circle{
   }
 
   show(){ //Da Function for showing the ball
-    stroke(0,0,255,50)
+    stroke(0,0,255,8)
     point(this.p.x,this.p.y);
   }
 
@@ -234,8 +267,8 @@ class Circle{
   }
 
   gravity(){ //Da Function for always having a downwards force
-    if (this.p.y <500) {
-    this.p.y = this.p.y *100
+    if (this.p.y < height/2+200) {
+    this.v.y = this.v.y +1
     }
   }
 
