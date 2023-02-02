@@ -236,7 +236,7 @@ function minMax(){ //to normalise data height later
     console.log(dataMin+","+dataMax)
 }
 
-//BALLS BALLS BALLS Here is where the magic happens
+//BALLS BALLS BALLS Here is where the ball magic (physics) happens:
 class Circle{
   constructor(p,v,a){
     this.p=p; //Point Ball Position on screen (X , Y)
@@ -245,7 +245,7 @@ class Circle{
   }
 
   show(){ //Da Function for showing the ball
-    stroke(0,0,255,8)
+    stroke(0,0,255,12)
     point(this.p.x,this.p.y);
   }
 
@@ -255,12 +255,12 @@ class Circle{
   }
 
   wall(){ //Da Function for making sure dem balls dont go off the screen >:-)
-    if (this.p.y>=height-Ballsize/2 || this.p.y<0-Ballsize/2){
+    if (this.p.y>=height-Ballsize/2 || this.p.y<0-Ballsize/2){ //top/bottom wall
       this.p.y = constrain(this.p.y,0+Ballsize/2,height+Ballsize/2);
       this.v.y = this.v.y*-1;
     }
   
-    if (this.p.x>=width-Ballsize/2 || this.p.x<=0-Ballsize/2){
+    if (this.p.x>=width-Ballsize/2 || this.p.x<=0-Ballsize/2){ //left/right wall
       this.p.x = constrain(this.p.x,0+Ballsize/2,width+Ballsize/2);
       this.v.x = this.v.x*-1;
     }
