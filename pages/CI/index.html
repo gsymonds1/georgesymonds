@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critical Infrastructures</title>
+  <!--linking to css file-->
+  <link rel="stylesheet" href="/styles/maintheme.css">
+  <script src="p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <h1> Investigating & Interrogating the Cost of Living Poly-Crisis:</h1>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
+  
+</head>
+<!-- <DRAWING SETUP> -->
+<body>
+  <main>
+    <p><a href="/index.html"> Home</a>
+
+
+
+
+      <br> 
+      <br> George Symonds
+      <br> 
+      <br> Through Public Government Databases As Infrastructure
+
+      <br> In this page, I will be investigating the use of governmental datasets as infrastructure, the power of the media, and how data can be twisted to paint institutions in a self-beneficial light in relation to the cost of living crisis.
+      <br>
+      <br> It’s a multi-faceted topic that touches and is related lots of diferrent sectors in our world, so I had to intersectionally contextualise my data in research, looking at:
+      <br>
+      <br><ul>
+        <li>The Cost of Living Crisis</li>
+        <li>The Climate Crisis</li>
+        <li>The Power of Media’s Coverage</li>
+        <li>Social Inequality</li>
+        <li>Technological Development</li>
+        <li>Computational Systems</li>
+        <li>Economic Systems</li>
+        <li>Government Databases</li>
+        <li>Capitalism</li>
+        <li>Neoliberalism</li>
+      </ul>
+      <br><p>
+      <br><strong>The Research Database (Public for use):</strong>
+      Investigating & Interrogating the Cost of Living Poly-Crisis:
+     
+      
+      <div id='map' style='width: 100%; height: 600px; margin-top: -600px;'></div>
+      <iframe width="100%" height="600" src="https://miro.com/app/live-embed/uXjVOg9qpsk=/?moveToViewport=-20076,-16232,53270,24755&embedId=7599024442" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+<p>
+   
+    <br>
+    <br><br>
+    <br><strong>To what extent does the government exploit data and the media to serve its own self-interests?</strong>
+    <br><br>
+    <img src="/Images/lies.png" alt="sharpp" style="width: 40%; border: 0.5px solid;">
+  <br><br>
+  This is data obtained from ons.gov.uk regarding the inflation rate. The statement proudly proclaiming that inflation has “eased to a further 9.4% in April 2023” appears alarmingly disconnected from the actual realities of the cost of living in the UK. By focusing solely on percentage changes without providing the actual increases, the data fails to accurately represent the significant impact on individuals’ expenses. It is misleading to suggest that a 10% increase one month followed by a 9% increase the next month indicates a decrease in inflation by 1%. In reality, these successive increases amount to a staggering 19% rise over just two months. This manipulation of data obscures the true extent of the cost burden faced by individuals, and raises questions about the transparency and accuracy of the information provided.
+  <br><br><br>
+  <br><strong>The positive feedback loop of the cost of living crisis</strong>
+  <br><br>
+  As part of my public research database I’ll be creating my own original data. Specifically, I will be investigating:
+  <br><strong>The Increase of Prices in Independent Stores</strong>
+
+  <br><br>Why The Increase of Prices in Independent Stores? Because the rise in their prices is often a reaction to the cost of living crisis, unlike corporate monopolies driven by profit motives. 
+
+  <br>Analysing this data will shed light on the positive feedback loop of the cost of living crises, which is a phenomena which hasn’t been discussed much and I couldnt find ay existing data on it.
+
+  <br><br>The positive feedback loop of the cost-of-living crisis is a self-reinforcing cycle where rising costs perpetuate socio-economic inequalities. It impacts individuals, communities, and society, exacerbating economic vulnerability and widening existing disparities. Marginalised groups bear a disproportionate burden, facing limited access to affordable housing, healthcare, and other necessities. 
+<br>
+    <br>
+    <br>  <p style="text-align: center; color: blue;">
+      <strong><em>Rising costs</strong> → Financial strain on individuals and communities → Limited resources → Harder to afford basic needs → Increased inequality → Disproportionate impact on marginalized groups → Limited access to essentials → Reinforcement of disparities → <strong>Escalation of the cost of living crisis</em></strong>
+    </p>
+    <br><strong><em><p>My Data On The Increase of Prices in Independent Stores:</strong>
+
+      <br>
+      <table>
+        <tr>
+            <td>No</td>
+            <td>User Input</td>
+            <td>Establishment/Store</td>
+            <td>City/Town</td>
+            <td>Address</td>
+            <td>Postcode</td>
+            <td>Latitude</td>
+            <td>Longitude</td>
+            <td>Item/Service</td>
+            <td>Original Date (DD/MM/YYYY)</td>
+            <td>Year (OG YYYY)</td>
+            <td>Price (OG £)</td>
+            <td>Date (DD/MM/YYYY)</td>
+            <td>Year (Current YYYY)</td>
+            <td>Price (Current £)</td>
+            <td>% Increase</td>
+            <td>% Increase per year</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>George Symonds</td>
+            <td>Perfect Fried Chicken</td>
+            <td>London</td>
+            <td>287 Hornsey Rd, London N19 4HN</td>
+            <td>N19 4HN</td>
+            <td>51.5634872</td>
+            <td>-0.1185302</td>
+            <td>4 Wings &amp; Chips</td>
+            <td>11/1/21</td>
+            <td>2021</td>
+            <td>2</td>
+            <td>6/4/23</td>
+            <td>2023</td>
+            <td>2.5</td>
+            <td>25</td>
+            <td>12.5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>George Symonds</td>
+            <td>Patty Island</td>
+            <td>London</td>
+            <td>40 Camberwell Church St, London SE5 8QZ</td>
+            <td>SE5 8QZ</td>
+            <td>51.4738033</td>
+            <td>-0.0899506</td>
+            <td>1 Patty</td>
+            <td>10/19/22</td>
+            <td>2022</td>
+            <td>1</td>
+            <td>6/5/23</td>
+            <td>2023</td>
+            <td>1.5</td>
+            <td>50</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>George Symonds</td>
+            <td>Fav&#39;s Chicken and Indian Takeaway</td>
+            <td>London</td>
+            <td>265 Seven Sisters Rd, Finsbury Park, London N4 2DE</td>
+            <td>N4 2DE</td>
+            <td>51.56488</td>
+            <td>-0.10431</td>
+            <td>6 Wings &amp;Chips</td>
+            <td>12/1/21</td>
+            <td>2021</td>
+            <td>2</td>
+            <td>6/5/23</td>
+            <td>2023</td>
+            <td>4</td>
+            <td>100</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Stanley Lucas</td>
+            <td>Big J</td>
+            <td>Jersey</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Chip Butty </td>
+            <td>7/5/20</td>
+            <td>2020</td>
+            <td>3.99</td>
+            <td>12/28/22</td>
+            <td>2023</td>
+            <td>4.99</td>
+            <td>25.06265664</td>
+            <td>8.354218881</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Stanley Lucas</td>
+            <td>Food + Wine Shop </td>
+            <td>London</td>
+            <td>54 Westferry Road, Millwall, LONDON, E14 8LW</td>
+            <td></td>
+            <td>51.49884</td>
+            <td>-0.02607</td>
+            <td>32 Eggs</td>
+            <td>1/4/23</td>
+            <td>2023</td>
+            <td>4.99</td>
+            <td>5/5/23</td>
+            <td>2023</td>
+            <td>5.99</td>
+            <td>20.04008016</td>
+            <td>20.04008</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Ellie</td>
+            <td>Wakey Wakey</td>
+            <td>London</td>
+            <td>New Cross Road, London</td>
+            <td>SE14 6AS</td>
+            <td>51.47741</td>
+            <td>-0.05025</td>
+            <td>Katsu Burger</td>
+            <td>8/22/22</td>
+            <td>2022</td>
+            <td>8.95</td>
+            <td>6/1/23</td>
+            <td>2023</td>
+            <td>12.95</td>
+            <td>44.69273743</td>
+            <td>44.69273743</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Louie Thompson</td>
+            <td>Holloway Food Store</td>
+            <td>London</td>
+            <td>535 Holloway Rd, Archway, London N19 4BT, United Kingdom</td>
+            <td>N19 4BT</td>
+            <td>51.56219</td>
+            <td>-0.12603</td>
+            <td>Laundry Tablets</td>
+            <td>11/5/22</td>
+            <td>2022</td>
+            <td>3</td>
+            <td>6/5/23</td>
+            <td>2023</td>
+            <td>5.5</td>
+            <td>83.33333333</td>
+            <td>83.33333333</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Hash Rashid</td>
+            <td>Thorn Marine</td>
+            <td>Warrington</td>
+            <td></td>
+            <td>WA4 6LE</td>
+            <td></td>
+            <td></td>
+            <td>Sweet Mix Bag</td>
+            <td>9/4/12</td>
+            <td>2012</td>
+            <td>0.5</td>
+            <td>6/6/23</td>
+            <td>2023</td>
+            <td>2</td>
+            <td>300</td>
+            <td>27.27272727</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Hash Rashid</td>
+            <td>Deniz Market</td>
+            <td>London</td>
+            <td>Walthamstow, bounday road</td>
+            <td>E17</td>
+            <td>51.57604</td>
+            <td>-0.01629</td>
+            <td>Pringles</td>
+            <td>10/11/21</td>
+            <td>2021</td>
+            <td>1.99</td>
+            <td>6/5/23</td>
+            <td>2023</td>
+            <td>2.99</td>
+            <td>50.25125628</td>
+            <td>25.12562814</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Kourosh Simpkins</td>
+            <td>Bona Sourdough</td>
+            <td>London</td>
+            <td>25 Dartmouth Road</td>
+            <td>SE23 3HN</td>
+            <td>51.43823</td>
+            <td>-0.05414</td>
+            <td>Pizza Dip</td>
+            <td>1/15/23</td>
+            <td>2023</td>
+            <td>1</td>
+            <td>5/12/23</td>
+            <td>2023</td>
+            <td>1.5</td>
+            <td>50</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Arturo Polizzi</td>
+            <td>Lebanese Grill</td>
+            <td>London</td>
+            <td>173 New Kent Rd, London SE1 4AG</td>
+            <td>SE1 4AG</td>
+            <td>51.49442</td>
+            <td>-0.09008</td>
+            <td>1/2 boneless Chicken, salad &amp; chips</td>
+            <td>4/1/21</td>
+            <td>2021</td>
+            <td>5.99</td>
+            <td>6/1/23</td>
+            <td>2023</td>
+            <td>8.99</td>
+            <td>50.08347245</td>
+            <td>25.04173623</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Yoyo Wang</td>
+            <td>Panopus Printing PRS Ltd</td>
+            <td>London</td>
+            <td>13 Swan Yard, London N1 1SD</td>
+            <td>N1 1SD</td>
+            <td>51.54513</td>
+            <td>-0.10385</td>
+            <td>Publication printing</td>
+            <td>03/29/2019</td>
+            <td>2019</td>
+            <td>5</td>
+            <td>6/5/23</td>
+            <td>2023</td>
+            <td>8.99</td>
+            <td>79.8</td>
+            <td>19.95</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>daria cotocu</td>
+            <td>St James Supermarket london</td>
+            <td>London</td>
+            <td>191 Southwark Park Rd., London SE16 3TX, United Kingdom</td>
+            <td>SE16 3DX</td>
+            <td>51.49434</td>
+            <td>-0.05762</td>
+            <td>Yogurt</td>
+            <td>9/1/21</td>
+            <td>2021</td>
+            <td>2</td>
+            <td>6/6/23</td>
+            <td>2023</td>
+            <td>2.8</td>
+            <td>40</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Inaki Ramirez</td>
+            <td>Lebanese Falafel n Grill</td>
+            <td>London</td>
+            <td>183 Rotherhithe New Rd, London SE16 2BE, United Kingdom</td>
+            <td>SE16 2BE</td>
+            <td>51.49074</td>
+            <td>-0.05329</td>
+            <td>Chicken Shwama</td>
+            <td>4/1/22</td>
+            <td>2022</td>
+            <td>5</td>
+            <td>6/7/23</td>
+            <td>2023</td>
+            <td>6.5</td>
+            <td>30</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>sophie gherdan</td>
+            <td>Haco Hair Salon</td>
+            <td>London</td>
+            <td>3 Ravey Street, shoreditch, London EC2A 4Q</td>
+            <td></td>
+            <td>51.52468</td>
+            <td>-0.082</td>
+            <td>haircut + bleach</td>
+            <td>6/5/22</td>
+            <td>2022</td>
+            <td>300</td>
+            <td>6/5/23</td>
+            <td>2023</td>
+            <td>400</td>
+            <td>33.33333333</td>
+            <td>33.33333333</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Amara Junkins</td>
+            <td>Zeyno Supermarket</td>
+            <td>London</td>
+            <td>55 New N Rd, London N1 6JB, United Kingdom</td>
+            <td>N1 6FB</td>
+            <td>51.53834</td>
+            <td>-0.09204</td>
+            <td>Gum</td>
+            <td>8/1/22</td>
+            <td>2022</td>
+            <td>60</td>
+            <td>6/6/23</td>
+            <td>2023</td>
+            <td>85</td>
+            <td>41.66666667</td>
+            <td>41.66666667</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Kyna Jain</td>
+            <td>Nags Head Peckham</td>
+            <td>London</td>
+            <td>231 Rye Ln, London SE15 4TP</td>
+            <td>SE15 4TP</td>
+            <td>51.46776</td>
+            <td>-0.06684</td>
+            <td>Double courvoisier coke</td>
+            <td>10/1/22</td>
+            <td>2022</td>
+            <td>4.5</td>
+            <td>6/7/23</td>
+            <td>2023</td>
+            <td>6</td>
+            <td>33.33333333</td>
+            <td>33.33333333</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Ela Kazdal</td>
+            <td>Le Pain Quotidien</td>
+            <td>London</td>
+            <td>72-75 Marylebone High St, London </td>
+            <td>W1U 5JW</td>
+            <td>51.52123</td>
+            <td>-0.15213</td>
+            <td>Croque Monsieur</td>
+            <td>3/13/23</td>
+            <td>2023</td>
+            <td>13.5</td>
+            <td>6/6/23</td>
+            <td>2023</td>
+            <td>14.5</td>
+            <td>7.407407407</td>
+            <td>7.407407</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Aura Arif</td>
+            <td>Laura Nails</td>
+            <td>London</td>
+            <td>34 Crouch Hill,  Finsbuty Park </td>
+            <td>N4 4AU</td>
+            <td>51.5708</td>
+            <td>-0.11549</td>
+            <td>acrylic nails</td>
+            <td>7/1/22</td>
+            <td>2022</td>
+            <td>25</td>
+            <td>6/6/23</td>
+            <td>2023</td>
+            <td>40</td>
+            <td>60</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Aggie</td>
+            <td>Ugly dumpling </td>
+            <td>London</td>
+            <td>1 Newburgh St, Carnaby, London W1F 7RB, United Kingdom</td>
+            <td> W1F 7RB</td>
+            <td>51.51364</td>
+            <td>-0.13863</td>
+            <td>6 dumplings </td>
+            <td>6/6/22</td>
+            <td>2022</td>
+            <td>6.5</td>
+            <td>6/6/23</td>
+            <td>2023</td>
+            <td>7</td>
+            <td>7.692307692</td>
+            <td>7.692307692</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Kim</td>
+            <td>Y&amp;S- Mini Market </td>
+            <td>London</td>
+            <td>19 The Broadway, High Rd, London N22 6DS</td>
+            <td>N22 6DS</td>
+            <td>51.60689</td>
+            <td>-0.11135</td>
+            <td>Coriander </td>
+            <td>9/1/21</td>
+            <td>2021</td>
+            <td>0.7</td>
+            <td>6/6/23</td>
+            <td>2023</td>
+            <td>1.2</td>
+            <td>71.42857143</td>
+            <td>35.71428571</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Irene Liakhovenko</td>
+            <td>Mac Cosmetics</td>
+            <td>London</td>
+            <td>27 James St London WC2E 8PA England</td>
+            <td>WC2E 8PA</td>
+            <td>51.5126</td>
+            <td>-0.12373</td>
+            <td>Ruby Woo retro matte lipstick</td>
+            <td>11/30/21</td>
+            <td>2021</td>
+            <td>17.5</td>
+            <td>6/6/23</td>
+            <td>2023</td>
+            <td>20</td>
+            <td>14.28571429</td>
+            <td>7.142857143</td>
+        </tr>
+    </table>
+<p>
+    <br><p><strong>Contribute to this dataset <a href="https://docs.google.com/forms/d/13aKlBXHXQNj-1SJx15HsdR9K2o5aMgEJJbfkv2fYFqQ/edit">Here!</a></strong></p>
+    <br><br></em>
+    <p><br><strong>How I Could Develop My Dataset Further?</strong>
+      <br>
+      <br>Next I converted the percentage% change data in the government data to cumulative increase (Below) data (assuming jan-2013 is 1), which paints a very different picture of exponential growth.
+      <br><br>
+      <img src="/Images/cumulative.png" alt="sharpp" style="width: 40%; border: 0.5px solid;">
+      <br><br>From there I mapped my percentage% increases in independent stores on top of the government data (Right). I used their data as a starting point for the first recorded year), and forked off with my percentage increases.
+      <br><br>
+      <img src="/Images/mygrah.png" alt="sharpp" style="width: 40%; border: 0.5px solid;">
+      <br><br>As you can see the results were that the prices in independent stores have increased on a scale larger than what the government data has proposed the Increase of prices to be.
+      <br><br>
+      <br><br><strong>2D Visualisation of My Data:</strong>
+      <br>
+      <iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/gsymonds/clim8pmob00gk01qp6xoz6qp5.html?title=false&access_token=pk.eyJ1IjoiZ3N5bW9uZHMiLCJhIjoiY2xhcjMydzdmMXA0cDNybWlrZTY5aGl0MiJ9.AiNggT-YKCb65k9Yv8e_xw&zoomwheel=false#10.36/51.5212/-0.096" title="Untitled" style="border:none;"></iframe>
+      <br><img src="/Images/locationmap.png" alt="sharpp" style="width: 23%; border: 0.5px solid;">
+  
+      <br><br>Here I’ve mapped the data I’ve recorded onto a map (using mapbox). To visually show the rate of increase between different regions of London.
+      <br>
+      It seems like prices have increased at a larger rate at the outskirts of London compared to central. However I do not have enough data points to conclude any patterns, this probably happened for many reasons such as the stores selling different things instead of a correlation. I need more data to get anything useful out of this, but it’s still interesting.
+      <br><br><br><br>and that is where this project is at! I've attached all my collected data onto the miro reseach database for you to play around with yourself ☀️
+      
+    
+
+
+  </main>
+</p>
+</body>
+</html>
+
