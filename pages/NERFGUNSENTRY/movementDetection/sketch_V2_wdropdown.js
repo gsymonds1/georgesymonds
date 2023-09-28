@@ -224,10 +224,9 @@ function drawBox(detections){
 
             const bigHeadIndex = detectedfaceXwidth.indexOf(max);
             console.log("biggest head: "+bigHeadIndex+ ": " + detectedfaceXwidth[bigHeadIndex]); // 👉️ 3
+            //delay(100);
             xvar = detections[bigHeadIndex].alignedRect._box._x+(boxWidth/2)
-
         }
-
         
 
     }

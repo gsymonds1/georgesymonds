@@ -48,10 +48,12 @@ void setup() {
   servo.attach(triggerServo);
   servo2.attach(motorServo);
   
-    //led test
+    //led test blink on startup
   analogWrite(triggerLED, 255);  //10 written with 255
+  analogWrite(armedLED, 255);
   delay(1000);
   analogWrite(triggerLED, 0);
+  analogWrite(armedLED, 0);
 }
 
 void loop() {
@@ -91,9 +93,9 @@ void loop() {
     int intValue2 = value2.toInt();
   }
 
-  Serial.print(intValue1);
-  Serial.print(","); 
-  Serial.println(intValue2) ;
+  //Serial.print(intValue1);
+  //Serial.print(","); 
+  //Serial.println(intValue2) ;
 
   
 
@@ -128,12 +130,3 @@ void loop() {
 
 
 
-
-
-
-
-void triggerShoot(){
-
-  
-  
-}

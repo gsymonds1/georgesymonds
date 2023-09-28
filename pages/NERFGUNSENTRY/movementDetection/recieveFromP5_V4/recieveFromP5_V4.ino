@@ -31,7 +31,7 @@ int armedLED = 10;
 int triggerLED = 11;
 //SERVOS
 int triggerServo = 9;
-int motorServo = 5;
+int motorServo = 4;
 int rotationServo = 3;
 //direction
 int currentRotation = 90;
@@ -59,9 +59,12 @@ unsigned long previousMillis = 0;        // will store last time LED was updated
 const long interval = 1700;           // interval at which to blink (milliseconds)
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(57600);
   pinMode(10, OUTPUT);
   pinMode(11, OUTPUT);
+  pinMode(triggerServo, OUTPUT);
+  pinMode(motorServo, OUTPUT);
+  pinMode(rotationServo, OUTPUT);
 
   servo.attach(triggerServo);
   servo2.attach(motorServo);
@@ -69,12 +72,16 @@ void setup() {
 
   //led test
     analogWrite(triggerLED, 255);  //10 written with 255
+    analogWrite(armedLED, 255);
     delay(1000);
     analogWrite(triggerLED, 0);
+    analogWrite(armedLED, 0);
 
   //face straight ahead
-  servo3.write(currentRotation);
+  servo3.write(90);
 
+  servo2.write(0);
+  servo.write(100);
 
 }
 
@@ -96,45 +103,52 @@ void loop() {
      
       //Output message
 
-      //servo3.write(map(val02,-90,90,5,175));
-
       if (val01 == 1 ){ ///ONTARGET
         analogWrite(armedLED, 0);
         analogWrite(triggerLED, 255);  //RED
 
-        servo2.write(100);
+        delay(40);
+        servo2.write(100);//motorpower srvo
+        delay(40);
 
         triggerArmed= 1;
 
-        //delay(700);
-        //servo.write(180);
-
-      } else { ///OFFTARGET
-        servo2.write(0);
-        servo.write(100);
-        analogWrite(triggerLED, 0);
+      } else if (val01 == 0 ){ ///OFFTARGET
         analogWrite(armedLED, 255); //YELLOW
+        analogWrite(triggerLED, 0);
+        
+
+        //servo.write(100); //Trigger unarmed
+        delay(40);
+        servo2.write(0);//motorpower srvo
+        delay(40);
+
         triggerArmed= 0;
-        //currentRotation = 90;
-        //servo3.write(currentRotation);
+
       }
       
-      //while (val02 >15 || val02 < -15)
-      //{
-        if (val02 > 15){
-          currentRotation = currentRotation +10;
-           servo3.write(currentRotation);
-        }
-        if (val02 < -15){
-          currentRotation = currentRotation -10;
-          servo3.write(currentRotation);
-        }
+      //ROTATION CORRECTION
+      if (val02 > 20){
+        delay(20);
+        currentRotation = currentRotation +10;
+         servo3.write(currentRotation);
+         delay(80);
+      }
+      if (val02 < -20){
+        delay(20);
+        currentRotation = currentRotation -10;
+        servo3.write(currentRotation);
+        delay(80);
+      }
       //}
       
     //below is for servo
     }
   //serial available then in here
 
+  } else {
+    servo2.write(0);
+    servo.write(100);
   }
 
 
@@ -148,9 +162,9 @@ void loop() {
 
     // if the LED is off turn it on and vice-versa:
     if (triggerArmed == 1) {
-      trigger2State = 0;
+      trigger2State = 0; //FIRE
     } else {
-      trigger2State = 100;
+      //trigger2State = 100; //UNARMED
     }
 
     // set the LED with the ledState of the variable:
