@@ -41,6 +41,7 @@ p{
 .background-image {
     position: fixed;
     top: 0;
+    left: 0px;
     margin: 0;
     padding: 0;
     width: 100%; /* Adjust the width as needed */
@@ -140,8 +141,7 @@ p{
 
 .arrows{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        
         padding-top: 30vh; /* Adjust vertical padding if needed */
 
  }
@@ -152,6 +152,14 @@ p{
     /* Other styles as needed */
 }
 
+.arrow-two {
+    margin-left: 23px; /* Spacing for the second image */
+}
+
+.arrow-three {
+    position: absolute; /* or 'fixed' depending on your layout needs */
+  right: +100px;
+}
 
 
 
