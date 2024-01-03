@@ -1,5 +1,5 @@
-var id = '1V389rt574p0RbzM2nbrAq0pw-CRCR1hePuGPoBgZ3Z0';
-var sheet_name = 'Sheet1';
+var id = '1oMYFV6_H0zxxFOi5fflaVpqdKcdISluxAu1jw8YTk1w';
+var sheet_name = 'Sheet2';
 var key = "AIzaSyB5b_wv4yQMDoHTCDDZydcbYxLZ5ISrGbQ"
 var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + id + '/values/' + sheet_name + '?alt=json&key=' + key;
 
@@ -16,7 +16,7 @@ function processData(rows) {
     //content.innerHTML += "<small class='circleText'>" + row[0] + "</small>";
 
     content.innerHTML += "<div class='circleContainer'><small class='circleText'>" + row[0] + "</small></div>"; // circle
-    content.innerHTML += "<div class='contentContainer' style='float: left; width: calc(100% - 140px);'><h2>" + row[5] + "</h2><p>" + row[7] + "</p> <img src='" + row[10] + "' style='width: 50px; height: 50px; top: -100px;'> <br><br><br> </div>"; // title and description, logoimg
+    content.innerHTML += "<div class='contentContainer' style='float: left; width: calc(100% - 140px);'><h2><a href='" + row[11] + "' style='color: black; text-decoration: none;'>" + row[5] + "</a></h2><p>" + row[7] + "</p> <img src='" + row[10] + "' style='width: 50px; height: 50px; top: -100px;'> <br><br><br> </div>"; // title and description, logoimg
     
     // logo image under the description
 content.innerHTML += ""; // Adjust width and height as needed

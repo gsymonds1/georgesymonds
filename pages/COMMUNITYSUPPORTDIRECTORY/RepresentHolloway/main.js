@@ -16,7 +16,7 @@ function processData(rows) {
     //content.innerHTML += "<small class='circleText'>" + row[0] + "</small>";
 
     content.innerHTML += "<div class='circleContainer'><small class='circleText'>" + row[0] + "</small></div>"; // circle
-    content.innerHTML += "<div class='contentContainer' style='float: left; width: calc(100% - 140px);'><h2>" + row[5] + "</h2><p>" + row[7] + "</p> <img src='" + row[12] + "' style='width: 50px; height: 50px; top: -100px;'> <br><br><br> </div>"; // title and description, readmore
+    content.innerHTML += "<div class='contentContainer' style='float: left; width: calc(100% - 140px);'><h2><a href='" + row[13] + "' style='color: black; text-decoration: none;'>" + row[5] + "</a></h2><p>" + row[7] + "</p> <img src='" + row[12] + "' style='width: 50px; height: 50px; top: -100px;'> <br><br><br> </div>";
     
     // logo image under the description
 content.innerHTML += ""; // Adjust width and height as needed
@@ -32,21 +32,6 @@ content.innerHTML += ""; // Adjust width and height as needed
     
   });
 
-}
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
 }
 
 
