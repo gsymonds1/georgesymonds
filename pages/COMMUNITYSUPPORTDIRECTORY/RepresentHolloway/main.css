@@ -17,6 +17,20 @@ body{
     padding: 0vw;
 }
 
+.with_about {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 50px; /* Increase the padding to move the arrow to the left */
+        margin-right: -20px;
+    background: url('/Images/RepresentHolloway/buttonarrow.png') no-repeat right 50%; /* Custom arrow icon */
+    background-size: 18px; /* Adjust the size of the arrow */
+    background-position: 98%;
+}
+
+
+
+
 h1{
     line-height: normal;
 }
@@ -218,6 +232,8 @@ p, li, ol{
  }
 
  
-
+ .indent {
+    margin-left: 20px;
+  }
 
  
