@@ -54,27 +54,27 @@ p, li, ol{
 
 .background-image {
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0px;
     margin: 0;
     padding: 0;
     width: 100%; /* Adjust the width as needed */
     height: 100%;
-    background-image: url('/Images/RepresentHolloway/Hhd.png');
+    background-image: url('/Images/RepresentHolloway/hollowayvid.gif');
     background-size: cover;
     background-position: center center;
     z-index: -1;
-    opacity: 0.10;
+    opacity: 0.50;
   }
 
 
 .filterbuttonText {
+    margin-top: 105px;
     display: inline-block;
     margin-right: 10px; /* Adjust the space between the text and the button */
-    color: #707070;
-    line-height: 1; /* Ensures consistent vertical alignment */
-    padding: 0;
-    margin: 0;
+    color: #000000;
+    margin-bottom: 0px;
+    z-index: 9999;
 }
 
 .menu_section {
@@ -89,11 +89,11 @@ p, li, ol{
 
 .gradient {
    
-    top: -34px;
+    top: 0px;
     left: 0;
     width: 100%;
     height: calc(100vh / 2.3); /* Adjust the gradient height here */
-    background: linear-gradient(to bottom, #69FF0A, rgba(0, 255, 0, 0));
+    background: linear-gradient(to bottom, #21a84e, rgba(0, 255, 0, 0));
     z-index: -1; /* Ensure it's behind the content */
     border-color: none;
     position: fixed;
@@ -157,7 +157,7 @@ p, li, ol{
 .arrows{
         display: flex;
         
-        padding-top: 30vh; /* Adjust vertical padding if needed */
+        padding-top: 2vh; /* Adjust vertical padding if needed */
 
  }
 

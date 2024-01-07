@@ -22,7 +22,7 @@ function processData(rows) {
 content.innerHTML += ""; // Adjust width and height as needed
 
 
-    content.innerHTML += "<img src='" + row[11] + "' style='width: 23%; float: right; vertical-align: top; margin-top: -20vh; object-fit: cover; height: 100px; width: 100px;'> "; // image
+content.innerHTML += "<a href='" + row[13] + "'><img src='" + row[11] + "' style='width: 23%; float: right; vertical-align: top; margin-top: -20vh; object-fit: cover; height: 100px; width: 100px;'></a>";
 
     content.innerHTML += "<br><br>"
     //content.innerHTML += "<p>" + "Community/Group: " + row[8] + "</p>";
