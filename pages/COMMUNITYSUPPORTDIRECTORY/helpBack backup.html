@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Community Support Directory</title>
+	<link rel="stylesheet" type="text/css" href="RepresentHolloway/main.css">
+
+	<link rel="icon" href="/Images/RepresentHolloway/Hhd.png" type="image/png">
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78PVLNB943"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-78PVLNB943');
+</script>
+
+</head>
+
+<div class="background-image"></div>
+
+<body>
+	
+
+<!-- the headerbar -->
+	<header> 
+        
+    </header>
+    
+    <script>
+        // Set the default selection to 'about' only if not already on that page
+        document.addEventListener("DOMContentLoaded", function() {
+            var select = document.getElementById("menu");
+            if (window.location.pathname !== '/about/about.html') {
+                select.value = "about";
+                handleMenu(select);
+            }
+        });
+    
+        function handleMenu(select) {
+            var selectedValue = select.value;
+    
+            switch (selectedValue) {
+                
+                case 'about':
+                    //window.location.href = '/about/about.html'; // Change the URL accordingly
+                    break;
+                case 'cyberfeminism':
+                    window.location.href = 'about.html'; // Change the URL accordingly
+                    break;
+                
+                default:
+                    // Handle other cases or do nothing
+                    break;
+            }
+        }
+    </script>
+
+
+
+	<div id="title-area" class="fixed-title-area">
+		<div class="menu_section">
+            <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about buttonMain button100">
+                <option value="about">The Community Support Directory</option>
+                <option value="cyberfeminism">ABOUT</option>
+             
+            </select>
+            <div id="green_box"></div>
+        </div>
+		<!-- <h1>The Community Support Directory</h1> -->
+		<!-- <p>Community Services For You</p>
+		<p><a href="helpBack.html">Help Your Community</a></p> -->
+
+		<div class="buttonContainer">
+			<button onclick="location.href='index.html'" class="buttonMain buttonOff button50">Services For You</button>
+			<button onclick="location.href='helpBack.html'" class="buttonMain buttonOn button50">Support Your Community</button>
+		</div>
+
+		<input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search.." title="Type in a name" class="buttonMain button100">
+		
+		<!-- Add this input element for the search bar -->
+		<!-- <input type="text" id="searchInput" oninput="handleSearch()"> -->
+		
+				
+
+		<div class="gradient"></div>
+
+	</div>
+<!-- DA DESCRIPTION -->
+	<p class="filterbuttonText">Ways you can engage with our community, through supporting/volunteering at groups that aim for a better, equal, and inclusive Holloway.</p>
+<!-- DA ARROWS -->
+	<div id="container" class="arrows">
+		<img src="/Images/RepresentHolloway/arrowDown.png" alt="A 1" class="arrow-one">
+		<img src="/Images/RepresentHolloway/arrowDown.png" alt="A 2" class="arrow-two">
+		<img src="/Images/RepresentHolloway/arrowDown.png" alt="A 3" class="arrow-three">
+
+	</div>
+
+	<div id="container" class="table">
+		<!-- <hr> -->
+		<ul id="content"></ul>
+	</div>
+<!-- 
+	<div id="contributeButtonContainer"></div>
+		<div id="contributeButton">
+			<button onclick="window.open('https://docs.google.com/spreadsheets/d/1oMYFV6_H0zxxFOi5fflaVpqdKcdISluxAu1jw8YTk1w/edit?usp=sharing', '_blank')" class="buttonMain buttonOff button50">Contribute Your Community Services Here</button>
+		</div>
+	</div> -->
+	
+	<div id="bottom">
+		<a href="https://representholloway.wixsite.com/represent-holloway" target="_blank">
+			<button id="bot_open" class="btn btn-primary btn-rounded buttonMain buttonBlue">Contribute Your Community Service</button>
+		</a>
+	</div>
+
+</body>
+
+	<script type="text/javascript" src="RepresentHolloway/mainHelp.js"></script>
+
+</html>

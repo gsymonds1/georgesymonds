@@ -80,9 +80,10 @@
 			<button onclick="location.href='helpBack.html'" class="buttonMain buttonOn button50">Support Your Community</button>
 		</div>
 
-		<!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a name" class="buttonMain button100"> -->
+		<input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search.." title="Type in a name" class="buttonMain button100">
 		
-		
+		<!-- Add this input element for the search bar -->
+		<!-- <input type="text" id="searchInput" oninput="handleSearch()"> -->
 		
 				
 
@@ -115,8 +116,15 @@
 			<button id="bot_open" class="btn btn-primary btn-rounded buttonMain buttonBlue">Contribute Your Community Service</button>
 		</a>
 	</div>
+	<div id="bottom2">
+		<a href="https://representholloway.wixsite.com/represent-holloway" target="_blank">
+			<button id="bot_open" class="btn btn-primary btn-rounded buttonMain buttonBlue">About Us</button>
+		</a>
+	</div>
+	
 
 </body>
 
 	<script type="text/javascript" src="RepresentHolloway/mainHelp.js"></script>
+
 </html>

@@ -60,7 +60,7 @@ p, li, ol{
     padding: 0;
     width: 100%; /* Adjust the width as needed */
     height: 100%;
-    background-image: url('/Images/RepresentHolloway/hollowayvid23.gif');
+    background-image: url('/Images/RepresentHolloway/hollowayvid53.gif');
     background-size: cover;
     background-position: center center;
     z-index: -1;
@@ -69,7 +69,7 @@ p, li, ol{
 
 
 .filterbuttonText {
-    margin-top: 105px;
+    margin-top: 145px;
     display: inline-block;
     margin-right: 10px; /* Adjust the space between the text and the button */
     color: #000000;
@@ -126,6 +126,8 @@ p, li, ol{
     margin-bottom: 14px;
     border-radius: 23px;
     box-sizing: border-box; 
+    z-index: 1;
+    position:relative;
 }
 
 
@@ -206,19 +208,44 @@ p, li, ol{
 }
 
 
-#bottom button {
+#bottom button,
+#bottom2 button {
     position: fixed;
-    left: 5%;
     bottom: 2%;
     z-index: 1000;
     text-align: center;
     text-decoration: none;
-  }
+}
+
+#bottom button {
+    left: 2%;
+}
+
+#bottom2 button {
+    left: 50%;
+    transform: translateX(-50%); /* Center the button at 50% left position */
+}
+
+@media only screen and (max-width: 570px) {
+    /* Adjust the styling for smaller screens */
+    #bottom button {
+        left: 2%;
+    }
+
+    #bottom2 button {
+        left: 85%;
+        transform: translateX(-50%);
+    }
+}
+
 
 .buttonBlue{
     border-color: #0000ff;
     color: #0000ff;
+    border-width: 2px;
+    position: relative;
 }
+
 
 .circleContainer {
     float: left;
