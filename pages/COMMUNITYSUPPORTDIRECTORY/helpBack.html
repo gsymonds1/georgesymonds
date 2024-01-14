@@ -61,12 +61,6 @@
 
 	<div id="title-area" class="fixed-title-area">
 		<div class="menu_section">
-
-			
-
-
-
-
             <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about buttonMain button100">
                 <option value="about">The Community Support Directory</option>
                 <option value="cyberfeminism">ABOUT</option>
@@ -75,37 +69,47 @@
             <div id="green_box"></div>
         </div>
 
-		
-		<!-- <h1>The Community Support Directory</h1> -->
-		<!-- <p>Community Services For You</p>
-		<p><a href="helpBack.html">Help Your Community</a></p> -->
 
 		<div class="buttonContainer">
-			<button onclick="location.href='index.html'" class="buttonMain buttonOff button50">Services For You</button>
-			<button onclick="location.href='helpBack.html'" class="buttonMain buttonOn button50">Support Your Community</button>
+			<button onclick="location.href='index.html'" class="buttonMain buttonOff button50" style="margin-right: 10px;">Services For You</button>
+			<button onclick="location.href='helpBack.html'" class="buttonMain buttonOn button50" >Support Your Community</button>
 		</div>
 
 		<input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search.." title="Type in a name" class="buttonMain button100">
 		
 		<!-- Add this input element for the search bar -->
 		<!-- <input type="text" id="searchInput" oninput="handleSearch()"> -->
+		<div class="filter-container">
+			<p>Filter By Category:</p>
+			<select id="categoryDropdown" onchange="handleCategoryFilter(this)" class="with_about buttonMain button75">
+				<option value="">Filter by category:</option>
+				<option value="food">Food</option>
+				<option value="redevelopment/planning">Redevelopment/Planning</option>
+				<option value="health/well-being">Health/Well-being</option>
+				<option value="Exercise/Activities">Exercise/Activities</option>
+				<option value="Creative">Creative</option>
+				<option value="Technology">Technology</option>
+				<option value="Education">Education</option>
+				<option value="Social">Social</option>
+			</select>
+		</div>
 		
-		<select id="categoryDropdown" onchange="handleCategoryFilter(this)" class="with_about buttonMain button100">
-			<option value="">Filter by category:</option>
-			<option value="food">Food</option>
-			<option value="redevelopment/planning">Redevelopment/Planning</option>
-			<option value="health/well-being">Health/Well-being</option>
-			<option value="Exercise/Activities">Exercise/Activities</option>
-			<option value="Creative">Creative</option>
-			<option value="Technology">Technology</option>
-			<option value="Education">Education</option>
-			<option value="Social">Social</option>
-		</select>
 
 		<div class="gradient"></div>
 
 	</div>
-<!-- DA DESCRIPTION -->
+
+	<div id="landingSpread">
+		<p>
+			<div id="container" class="logo">
+				<img src="/Images/RepresentHolloway.gif" alt="A 1" class="logo" style="mix-blend-mode: darken; display: flex; justify-content: center; align-items: center; position: relative; top: 134px; margin-bottom: 0px;" >
+			</div>
+		</p>
+	
+		<p class="subtitle "><strong> COMMUNITY-LED SUPPORT DIRECTORY<BR>UNITY AND CHANGE THROUGH COLLECTIVE ACTION</strong></p>
+	</div>	
+	<!-- DA DESCRIPTION -->
+
 	<p class="filterbuttonText">Ways you can engage with our community, through supporting/volunteering at groups that aim for a better, equal, and inclusive Holloway.</p>
 <!-- DA ARROWS -->
 	<div id="container" class="arrows">
@@ -115,7 +119,9 @@
 
 	</div>
 
-	<div id="container" class="table">
+	
+
+	<div id="contentContainer" class="table">
 		<!-- <hr> -->
 		<ul id="content"></ul>
 	</div>
@@ -126,15 +132,20 @@
 		</div>
 	</div> -->
 	
-	<div id="bottom">
-		<a href="https://representholloway.wixsite.com/represent-holloway" target="_blank">
-			<button id="bot_open" class="btn btn-primary buttonMain buttonBlue">Contribute Your Community Service</button>
-		</a>
-	</div>
-	<div id="bottom2">
-		<a href="about.html" target="_blank">
-			<button id="bot_aboutus" class="btn btn-primary buttonMain buttonBlue">About Us</button>
-		</a>
+	<div class="fixedBottomButtons">
+
+		<div id="bottom">
+			<a href="https://representholloway.wixsite.com/represent-holloway" target="_blank">
+				<button id="bot_open" class="btn buttonMain buttonBlue">Contribute Your Community Service</button>
+			</a>
+		</div>
+
+		<div id="bottom2">
+			<a href="about.html" target="_blank">
+				<button id="bot_aboutus" class="btn buttonMain buttonBlue">About Us</button>
+			</a>
+		</div>
+
 	</div>
 
 

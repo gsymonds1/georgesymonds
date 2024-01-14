@@ -8,7 +8,7 @@ width: 100%
 body{
     margin: 2vw;
     font-family: Helvetica, Arial, sans-serif;
-    margin-top: 34px;
+    margin-top: 0px;
     
     
 }
@@ -69,7 +69,7 @@ p, li, ol{
 
 
 .filterbuttonText {
-    margin-top: 195px;
+    margin-top: 130px;
     display: inline-block;
     margin-right: 10px; /* Adjust the space between the text and the button */
     color: #000000;
@@ -80,7 +80,8 @@ p, li, ol{
 .menu_section {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: -30px;
+    padding-top: 0px;
     max-width: 96vw;
 }
 
@@ -134,13 +135,12 @@ p, li, ol{
 
 .buttonOn{
     background-color: #D1D1D1;
-    margin-right: 10px; 
+    
 }
 
 .buttonOff{
     background-color: #FFFFFF;
     color:#0000ff;
-    margin-right: 10px; 
 }
 
 .button100{
@@ -154,6 +154,14 @@ p, li, ol{
     width: 49.8%;
 }
 
+.button75 {
+    width: calc(100% - 110px);
+    /* max-width: fit-content; */
+    position: relative;
+    left: -20px;
+}
+
+
 
 
 .arrows{
@@ -165,10 +173,16 @@ p, li, ol{
 
  .logo{
     max-width: 50vw;
-    margin-top: 60px;
+    top: 60px;
     margin-left: auto;
     margin-right: auto;
  }
+
+ .subtitle{
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
 
 .arrows img {
     max-height: 50px; /* Adjust the maximum height of the images */
@@ -185,14 +199,32 @@ p, li, ol{
   right: +100px;
 }
 
-
-
 .table{
     padding-top: 3vh;
 
 }
 
 
+
+/* .contentContainer{
+    margin-left: 10px;
+    margin-right: 10px;
+} */
+
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 96vw;
+    justify-content: space-between;
+}
+
+.filter-container p {
+    margin-right: 10px; /* Adjust the margin as needed */
+    margin-top: 0px;
+    padding-top: 0px;
+}
 
 
 /* THE CSS FOR CONTNT FROM XL */
@@ -207,6 +239,13 @@ p, li, ol{
     line-height: 30px;
 }
 
+.fixedBottomButtons{
+    display: flex;
+    width: 100%;
+    max-width: 96vw;
+    justify-content: space-between;
+}
+
 
 #bottom button,
 #bottom2 button {
@@ -218,15 +257,18 @@ p, li, ol{
 }
 
 #bottom button {
-    left: 2%;
+    width: 69%;
 }
 
 #bottom2 button {
-    left: 50%;
-    transform: translateX(-50%); /* Center the button at 50% left position */
+    left: 30%;
+    width: 25%;
+    padding-left: 0px;
+    margin-left: 0px;
+    
 }
 
-
+/* 
 
 
 @media only screen and (max-width: 570px) {
@@ -239,7 +281,7 @@ p, li, ol{
         left: 85%;
         transform: translateX(-50%);
     }
-}
+} */
 
 #bottomSubPoint button {
     position: relative;

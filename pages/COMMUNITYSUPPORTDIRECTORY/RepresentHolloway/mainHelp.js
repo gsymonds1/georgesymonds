@@ -14,7 +14,7 @@ function processData(rows) {
             content.innerHTML += "<div class='circleContainer'><small class='circleText'>" + row[0] + "</small></div>"; //circle nu
             content.innerHTML += "<div class='contentContainer' style='float: left; width: calc(100% - 140px);'><h2><a href='" + row[11] + "' style='color: black; text-decoration: none;'>" + row[5] + "</a></h2><p>" + row[7] + "</p> <img src='" + row[10] + "' style=' height: 23px; top: -100px;'> <br><br><br> </div>"; //title. desc.
             content.innerHTML += "<img src='" + row[9] + "' style='width: 23%; float: right; vertical-align: top; margin-top: -20vh; object-fit: cover; height: 100px; width: 100px;'> "; //side pic
-            content.innerHTML += '<div id="bottomSubPoint"><a href="about.html" target="_blank"><button id="bot_grouplink" class="btn btn-primary buttonMain">@' + row[5] + '</button></a></div>' //sub
+            content.innerHTML += '<div id="bottomSubPoint"><a href="about.html" target="_blank"><button id="bot_grouplink" class="contentContainer btn buttonMain" style="width:100%">@' + row[5] + '</button></a></div>' //sub
             content.innerHTML += "<br><br>";
         }
     }
