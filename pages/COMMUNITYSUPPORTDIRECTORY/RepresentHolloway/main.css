@@ -69,7 +69,7 @@ p, li, ol{
 
 
 .filterbuttonText {
-    margin-top: 145px;
+    margin-top: 195px;
     display: inline-block;
     margin-right: 10px; /* Adjust the space between the text and the button */
     color: #000000;
@@ -226,6 +226,9 @@ p, li, ol{
     transform: translateX(-50%); /* Center the button at 50% left position */
 }
 
+
+
+
 @media only screen and (max-width: 570px) {
     /* Adjust the styling for smaller screens */
     #bottom button {
@@ -236,6 +239,28 @@ p, li, ol{
         left: 85%;
         transform: translateX(-50%);
     }
+}
+
+#bottomSubPoint button {
+    position: relative;
+    z-index: 100;
+    left: 39px;
+    font-size: 11px;
+    padding: 3px 15px;
+    width: 94%;
+    top:-23px;
+    text-align: left;
+}
+
+#bottomSubPoint button .circle-image {
+    width: 13px; /* Adjust the width of the circle */
+    height: 13px; /* Adjust the height of the circle */
+    border-radius: 50%;
+    margin-left: 5px; /* Adjust the distance from the text on the left */
+    vertical-align: middle; /* Adjust the vertical alignment */
+    position: relative;
+    top: -1px; /* Adjust the distance from the top */
+    left: 50%;
 }
 
 

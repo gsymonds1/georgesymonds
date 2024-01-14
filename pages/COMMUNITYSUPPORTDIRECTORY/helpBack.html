@@ -5,9 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>The Community Support Directory</title>
 	<link rel="stylesheet" type="text/css" href="RepresentHolloway/main.css">
-
 	<link rel="icon" href="/Images/RepresentHolloway/Hhd.png" type="image/png">
-
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-78PVLNB943"></script>
@@ -15,7 +13,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-78PVLNB943');
 </script>
 
@@ -64,6 +61,12 @@
 
 	<div id="title-area" class="fixed-title-area">
 		<div class="menu_section">
+
+			
+
+
+
+
             <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about buttonMain button100">
                 <option value="about">The Community Support Directory</option>
                 <option value="cyberfeminism">ABOUT</option>
@@ -71,6 +74,8 @@
             </select>
             <div id="green_box"></div>
         </div>
+
+		
 		<!-- <h1>The Community Support Directory</h1> -->
 		<!-- <p>Community Services For You</p>
 		<p><a href="helpBack.html">Help Your Community</a></p> -->
@@ -85,7 +90,17 @@
 		<!-- Add this input element for the search bar -->
 		<!-- <input type="text" id="searchInput" oninput="handleSearch()"> -->
 		
-				
+		<select id="categoryDropdown" onchange="handleCategoryFilter(this)" class="with_about buttonMain button100">
+			<option value="">Filter by category:</option>
+			<option value="food">Food</option>
+			<option value="redevelopment/planning">Redevelopment/Planning</option>
+			<option value="health/well-being">Health/Well-being</option>
+			<option value="Exercise/Activities">Exercise/Activities</option>
+			<option value="Creative">Creative</option>
+			<option value="Technology">Technology</option>
+			<option value="Education">Education</option>
+			<option value="Social">Social</option>
+		</select>
 
 		<div class="gradient"></div>
 
@@ -113,14 +128,27 @@
 	
 	<div id="bottom">
 		<a href="https://representholloway.wixsite.com/represent-holloway" target="_blank">
-			<button id="bot_open" class="btn btn-primary btn-rounded buttonMain buttonBlue">Contribute Your Community Service</button>
+			<button id="bot_open" class="btn btn-primary buttonMain buttonBlue">Contribute Your Community Service</button>
 		</a>
 	</div>
 	<div id="bottom2">
-		<a href="https://representholloway.wixsite.com/represent-holloway" target="_blank">
-			<button id="bot_open" class="btn btn-primary btn-rounded buttonMain buttonBlue">About Us</button>
+		<a href="about.html" target="_blank">
+			<button id="bot_aboutus" class="btn btn-primary buttonMain buttonBlue">About Us</button>
 		</a>
 	</div>
+
+
+
+	<!-- bring baclk -->
+
+	<!-- <div id="bottomSubPoint">
+		<a href="about.html" target="_blank">
+			<button id="bot_open" class="btn btn-primary buttonMain">
+				@The Holloway Neighbourhood Group
+				<img src="/Images/computerman.png" alt="Circle Image" class="circle-image">
+			</button>
+		</a>
+	</div> -->
 	
 
 </body>
