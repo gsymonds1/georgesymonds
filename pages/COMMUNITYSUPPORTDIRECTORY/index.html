@@ -57,7 +57,7 @@
         }
     </script>
 
-
+<br><br><br>
 
 	<div id="title-area" class="fixed-title-area">
 		<div class="menu_section">
@@ -76,17 +76,20 @@
 
 		<input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search.." title="Type in a name" class="buttonMain button100">
 		
-		<select id="categoryDropdown" onchange="handleCategoryFilter(this)" class="with_about buttonMain button100">
-			<option value="">Filter by category:</option>
-			<option value="food">Food</option>
-			<option value="redevelopment/planning">Redevelopment/Planning</option>
-			<option value="health/well-being">Health/Well-being</option>
-			<option value="Exercise/Activities">Exercise/Activities</option>
-			<option value="Creative">Creative</option>
-			<option value="Technology">Technology</option>
-			<option value="Education">Education</option>
-			<option value="Social">Social</option>
-		</select>
+		<div class="filter-container">
+			<p class="greyText">Filter By Category:</p>
+			<select id="categoryDropdown" onchange="handleCategoryFilter(this)" class="with_about buttonMain button75">
+				<option value="">Filter by category:</option>
+				<option value="food">Food</option>
+				<option value="redevelopment/planning">Redevelopment/Planning</option>
+				<option value="health/well-being">Health/Well-being</option>
+				<option value="Exercise/Activities">Exercise/Activities</option>
+				<option value="Creative">Creative</option>
+				<option value="Technology">Technology</option>
+				<option value="Education">Education</option>
+				<option value="Social">Social</option>
+			</select>
+		</div>
 	</div>
 
 
