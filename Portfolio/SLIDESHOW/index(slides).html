@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#VES">VES</a>
+    <a href="#portfolio">Work/Portfolio</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Info/Contact</a>
+  </nav>
+
+
+
+  <div class="slideshow-container">
+    <div class="slide">
+      <a href="work1.html">
+        <img src="/Images/projects/Jakarta Is Sinking/Screenshot 2023-04-07 at 3.59.58 pm.png" alt="Work 1">
+      </a>
+    </div>
+
+    <div class="slide">
+      <a href="work2.html">
+        <img src="/Images/projects/KR/KR1.png" alt="Work 2">
+      </a>
+    </div>
+
+    <div class="slide">
+        <a href="work3.html">
+          <img src="/Images/projects/Global Temperature Rise/Map.png" alt="Work 3">
+        </a>
+      </div>
+    <!-- Add more slides as needed -->
+
+
+
+    <div class="thumbnails">
+      <div class="thumbnail" onclick="showSlide(0)">
+        <img src="/Images/projects/Jakarta Is Sinking/Screenshot 2023-04-07 at 3.59.58 pm.png" alt="Work 1">
+      </div>
+
+      <div class="thumbnail" onclick="showSlide(1)">
+        <img src="/Images/projects/KR/KR1.png" alt="Work 2">
+      </div>
+
+      <div class="thumbnail" onclick="showSlide(2)">
+        <img src="/Images/projects/Global Temperature Rise/Map.png" alt="Work 3">
+      </div>
+      <!-- Add more thumbnails as needed -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

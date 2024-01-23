@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;  
+    /*background: pink;
+    background-image: url("/Images/projects/MappingEmotion/main1.png")*/
+}
+
+
+
+   /*NAVBAR*/
+.nav-container {
+    margin: 0; 
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72;
+}
+nav ul {
+    display: flex; 
+}
+.nav-items li {
+  
+width: 1180px;
+    list-style: none;
+    margin-right: 100px;
+
+    font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-decoration-line: underline;
+
+color: #000000;
+    
+}
+
+.sub-info{
+  position: absolute;
+  width: 250px;
+  height: 74px;
+  left: 1123px;
+  top: 49px;
+
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 4vh00;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #000000;
+
+}
+
+.wrapper{
+    max-width: 1306px;
+    margin: 0 auto; 
+}
+
+.landing-header{
+  height: 100vh;
+  position: static;
+
+  background: url('Images/projects/MappingEmotion/main1.png') no-repeat center center fixed;
+    background-size: cover;
+  
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+    
+    
+
+    
+  }
+  
+  h1 {
+      /* 👋 Welcome! */
+    position: absolute;
+    width: 104px;
+    height: 17px;
+    left: 67px;
+    top: 109px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+  }
+
+  p {
+  /* I’m George, here’s what I do :) */
+      position: absolute;
+      width: 250px;
+      height: 17px;
+      left: 67px;
+      top: 133px;
+
+      font-family: 'Helvetica Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+      color: #000000;
+
+  }
+
+  li {
+    font: size 8px;
+    font-family: Helvetica, sans-serif;
+    margin-left: 10px;
+  }
+
+  footer {
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-family: Helvetica, sans-serif;
+    margin-left: 10px;
+    font: size 10px;
+    
+  }
+  
+.specialText { 
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+    font: size 40px;
+    font-family: Helvetica, sans-serif;
+
+}
