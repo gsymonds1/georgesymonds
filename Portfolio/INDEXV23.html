@@ -1,99 +1,85 @@
-<html class="no-js" lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head>
-    <meta charset="utf-8">
-    <title>
-        GEORGE SYMONDS
-    </title>
-    <link rel="icon" href="Images/1EARTHLOGOblack.png" type="image/x-icon">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html class="no-js" lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
 
-    
-    <link rel="stylesheet" type="text/css" href="static/css/1earthcss.css">
-    <link rel="stylesheet" type="text/css" href="SLIDESHOW//styles.css">
+<head>
+  <meta charset="utf-8">
+  <title>
+    GEORGE SYMONDS
+  </title>
+  <link rel="icon" href="Images/1EARTHLOGOblack.png" type="image/x-icon">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="static/css/1earthcss.css">
+  <link rel="stylesheet" type="text/css" href="SLIDESHOW//styles.css">
+
 </head>
 
-<body id="main_content" class="template-homepage" data-new-gr-c-s-check-loaded="14.1137.0" data-gr-ext-installed="">
-    <div id="splashPage">
-        <div class="splashWhite"></div>
-        <div class="splashRow">
-            <div class="splashText">
-                <span>WELCOME TO MY PORTFOLIO! CURRENTLY UNDER DEVELOPMENT
-                    <a href="http://www.inventorypress.com/product/cyberfeminism-index" target="_blank">GEORGE SYMONDS</a>
-                </span>
-                <div class="splashBookMobile">
-                    <img src="static/assets/cover.webp">
-                </div>
-            </div>
 
-            <div class="splashBook">
-                <img src="static/assets/cover.png">
-            </div>
-            <div id="splashX" onclick="closeSplash()">
-                <img src="static/assets/x.svg">
-            </div>
-        </div>
-    </div>
 
 <div class="left_content">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
     <!-- Your other head elements go here -->
-</head>
-<body>
+  </head>
+
+  <body>
 
     <header>
-        <div class="menu_section">
-            <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
-                <option value="cyberfeminism">GEORGE SYMONDS</option>
-                <option value="about">ABOUT</option>
-                <option value="images">WORK</option>
-                <option value="collections">VIRTUAL EXHIBITION SPACE</option>
-                <option value="search">SEARCH</option>
-            </select>
-            <div id="green_box"></div>
-        </div>
+      <div class="menu_section">
+        <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
+          <option value="cyberfeminism">GEORGE SYMONDS</option>
+          <option value="images">WORK</option>
+          <option value="about">ABOUT</option>
+          <option value="collections">VIRTUAL EXHIBITION SPACE</option>
+          <option value="search">RESEARCH & FORWARD THINKING</option>
+        </select>
+        <div id="green_box"></div>
+      </div>
     </header>
 
     <script>
-        // Set the default selection to 'cyberfeminism' only if not already on that page
-        document.addEventListener("DOMContentLoaded", function() {
-            var select = document.getElementById("menu");
-            if (window.location.pathname !== '/cyberfeminism') {
-                select.value = "cyberfeminism";
-                handleMenu(select);
-            }
-        });
-
-        function handleMenu(select) {
-            var selectedValue = select.value;
-
-            switch (selectedValue) {
-                case 'cyberfeminism':
-                    //window.location.href = '/index.html'; // Change the URL accordingly
-                    break;
-                case 'about':
-                    window.location.href = '/about/about.html'; // Change the URL accordingly
-                    break;
-                case 'images':
-                    window.location.href = '/work/work_INDEX.html'; // Change the URL accordingly
-                    break;
-                case 'collections':
-                    window.location.href = '/collections'; // Change the URL accordingly
-                    break;
-                case 'search':
-                    window.location.href = '/search'; // Change the URL accordingly
-                    break;
-                default:
-                    // Handle other cases or do nothing
-                    break;
-            }
+      // Set the default selection to 'cyberfeminism' only if not already on that page
+      document.addEventListener("DOMContentLoaded", function () {
+        var select = document.getElementById("menu");
+        if (window.location.pathname !== '/cyberfeminism') {
+          select.value = "cyberfeminism";
+          handleMenu(select);
         }
+      });
+
+      function handleMenu(select) {
+        var selectedValue = select.value;
+
+        switch (selectedValue) {
+          case 'cyberfeminism':
+            //window.location.href = '/index.html'; // Change the URL accordingly
+            break;
+          case 'about':
+            window.location.href = '/portfolio/about/about.html'; // Change the URL accordingly
+            break;
+          case 'images':
+            window.location.href = '/portfolio/work/work_INDEX.html'; // Change the URL accordingly
+            break;
+          case 'collections':
+            window.location.href = 'collections'; // Change the URL accordingly
+            break;
+          case 'search':
+            window.location.href = 'search'; // Change the URL accordingly
+            break;
+          default:
+            // Handle other cases or do nothing
+            break;
+        }
+      }
     </script>
 
-    <!-- Your other body elements go here -->   
+    <!-- Your other body elements go here -->
 
 
 
@@ -102,152 +88,150 @@
 
 
     <div id="top_location"></div>
-    
- 
+
+
     <div id="about_pg_content" class="internal_pg_container about_pg">
-        <div class="slideshow-container">
-            
-          <div class="slide">
-            <a href="work/work_INDEX.html">
-              <img src="Images/ME_bio/DAGIF.gif" alt="TRT">
-            </a>
+      <div class="slideshow-container">
+
+        <div class="slide">
+          <a href="work/work_INDEX.html">
+            <img src="Images/ME_bio/DAGIF.gif" alt="TRT">
+          </a>
+        </div>
+        <div class="slide">
+          <a href="work/work_INDEX.html">
+            <img src="Images/ME_bio/DAGIF.gif" alt="TRT">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work/work_TCR.html">
+            <img src="Images/projects/TCR/zoom.gif" alt="Work 0">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work/work_TCR.html">
+            <img src="Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="TRT">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work/work_TCR.html">
+            <img src="Images/projects/Memo/memoshort.gif" alt="Memo">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work/work_TCR.html">
+            <img src="Images/projects/Photography/compressed.png" alt="Photography">
+          </a>
+        </div>
+        <div class="slide">
+          <a href="work/work_TCR.html">
+            <img src="Images/projects/Virtual Exhibition Space/VES.png" alt="VES">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work2.html">
+            <img src="Images/projects/KR/KR1.png" alt="KR 2">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work3.html">
+            <img src="Images/projects/Global Temperature Rise/Map.png" alt="DataViz">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work3.html">
+            <img src="Images/projects/UV3/UV3.png" alt="DataViz">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work3.html">
+            <img src="Images/projects/Nerf Gun Sentry Turret/action.gif" alt="DataViz">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work3.html">
+            <img src="Images/projects/AI Celebs_Paeul/Paeul.png" alt="DataViz">
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="work3.html">
+            <img src="Images/projects/MappingEmotion/main1.png" alt="DataViz">
+          </a>
+        </div>
+        <!-- Add more slides as needed -->
+
+
+
+        <div class="thumbnails">
+          <div class="thumbnail" onclick="showSlide(0)">
+            <img src="Images/ME_bio/DAPIC.png" alt="Work 1">
           </div>
-          <div class="slide">
-            <a href="work/work_INDEX.html">
-              <img src="Images/ME_bio/DAGIF.gif" alt="TRT">
-            </a>
+          <div class="thumbnail" onclick="showSlide(1)">
+            <img src="Images/projects/TCR/TCR.png" alt="Work 1">
           </div>
-          
-          <div class="slide">
-                <a href="work/work_TCR.html">
-                  <img src="Images/projects/TCR/zoom.gif" alt="Work 0">
-                </a>
-            </div>
-
-            <div class="slide">
-                <a href="work/work_TCR.html">
-                  <img src="Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="TRT">
-                </a>
-            </div>
-
-            <div class="slide">
-                <a href="work/work_TCR.html">
-                  <img src="Images/projects/Memo/memoshort.gif" alt="Memo">
-                </a>
-            </div>
-
-            <div class="slide">
-              <a href="work/work_TCR.html">
-                <img src="Images/projects/Photography/compressed.png" alt="Photography">
-              </a>
-            </div>
-            <div class="slide">
-                <a href="work/work_TCR.html">
-                  <img src="Images/projects/Virtual Exhibition Space/VES.png" alt="VES">
-                </a>
-              </div>
-
-            <div class="slide">
-              <a href="work2.html">
-                <img src="Images/projects/KR/KR1.png" alt="KR 2">
-              </a>
-            </div>
-        
-            <div class="slide">
-                <a href="work3.html">
-                  <img src="Images/projects/Global Temperature Rise/Map.png" alt="DataViz">
-                </a>
-              </div>
-
-              <div class="slide">
-                <a href="work3.html">
-                  <img src="Images/projects/UV3/UV3.png" alt="DataViz">
-                </a>
-              </div>
-
-              <div class="slide">
-                <a href="work3.html">
-                  <img src="Images/projects/Nerf Gun Sentry Turret/action.gif" alt="DataViz">
-                </a>
-              </div>
-
-              <div class="slide">
-                <a href="work3.html">
-                  <img src="Images/projects/AI Celebs_Paeul/Paeul.png" alt="DataViz">
-                </a>
-              </div>
-
-              <div class="slide">
-                <a href="work3.html">
-                  <img src="Images/projects/MappingEmotion/main1.png" alt="DataViz">
-                </a>
-              </div>
-            <!-- Add more slides as needed -->
-        
-        
-        
-            <div class="thumbnails">
-              <div class="thumbnail" onclick="showSlide(0)">
-                <img src="Images/ME_bio/DAPIC.png" alt="Work 1">
-            </div>
-                <div class="thumbnail" onclick="showSlide(1)">
-                    <img src="Images/projects/TCR/TCR.png" alt="Work 1">
-                </div>
-                <div class="thumbnail" onclick="showSlide(2)">
-                    <img src="Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="Work 1">
-                </div>
-                <div class="thumbnail" onclick="showSlide(3)">
-                    <img src="Images/projects/Memo/logoSS.png" alt="Work 1">
-                </div>
-                <div class="thumbnail" onclick="showSlide(4)">
-                    <img src="Images/projects/Photography/000004250012.jpg" alt="Work 1">
-                </div>
-                <div class="thumbnail" onclick="showSlide(5)">
-                    <img src="Images/projects/Virtual Exhibition Space/VES.png" alt="Work 2">
-                </div>
-                <div class="thumbnail" onclick="showSlide(6)">
-                    <img src="Images/projects/KR.png" alt="Work 1">
-                </div>
-                <div class="thumbnail" onclick="showSlide(7)">
-                    <img src="Images/projects/Global Temperature Rise/Map.png" alt="Work 1">
-                </div>
-                <div class="thumbnail" onclick="showSlide(8)">
-                    <img src="Images/projects/UV3/UV3.png" alt="Work 3">
-                </div>
-                <div class="thumbnail" onclick="showSlide(9)">
-                    <img src="Images/projects/Nerf Gun Sentry Turret/thumbb.png" alt="Work 3">
-                </div>
-                <div class="thumbnail" onclick="showSlide(10)">
-                    <img src="Images/projects/AI Celebs_Paeul/Paeul.png" alt="Work 3">
-                </div>
-                <div class="thumbnail" onclick="showSlide(11)">
-                    <img src="Images/projects/MappingEmotion/main1.png" alt="Work 3">
-                </div>
-              
-              <!-- Add more thumbnails as needed -->
-            </div>
+          <div class="thumbnail" onclick="showSlide(2)">
+            <img src="Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="Work 1">
           </div>
-        
-          <script src="SLIDESHOW/script.js"></script>
-        
+          <div class="thumbnail" onclick="showSlide(3)">
+            <img src="Images/projects/Memo/logoSS.png" alt="Work 1">
+          </div>
+          <div class="thumbnail" onclick="showSlide(4)">
+            <img src="Images/projects/Photography/000004250012.jpg" alt="Work 1">
+          </div>
+          <div class="thumbnail" onclick="showSlide(5)">
+            <img src="Images/projects/Virtual Exhibition Space/VES.png" alt="Work 2">
+          </div>
+          <div class="thumbnail" onclick="showSlide(6)">
+            <img src="Images/projects/KR.png" alt="Work 1">
+          </div>
+          <div class="thumbnail" onclick="showSlide(7)">
+            <img src="Images/projects/Global Temperature Rise/Map.png" alt="Work 1">
+          </div>
+          <div class="thumbnail" onclick="showSlide(8)">
+            <img src="Images/projects/UV3/UV3.png" alt="Work 3">
+          </div>
+          <div class="thumbnail" onclick="showSlide(9)">
+            <img src="Images/projects/Nerf Gun Sentry Turret/thumbb.png" alt="Work 3">
+          </div>
+          <div class="thumbnail" onclick="showSlide(10)">
+            <img src="Images/projects/AI Celebs_Paeul/Paeul.png" alt="Work 3">
+          </div>
+          <div class="thumbnail" onclick="showSlide(11)">
+            <img src="Images/projects/MappingEmotion/main1.png" alt="Work 3">
+          </div>
+
+          <!-- Add more thumbnails as needed -->
+        </div>
+      </div>
+
     </div>
 
     <h1>George Symonds</h1>
     <p>Welcome to my Website</p>
 
     <br><br><br><br><br>
-      
-</body>
- 
+
+
+    <!-- BOTTOM OF BODY EVERYTIME -->
     <div class="bottom-buttons">
       <button class="back_to_top" onclick="back_to_top('top_location')">back to top</button>
-      <button class="contact"><a href="mailto:representholloway@gmail.com">contact</a></button>
-      <button class="submit"><a href="submit">projects</a></button>
+      <button class="contact"><a href="mailto:symonds.george@gmail.com">contact</a></button>
+      <button class="submit"><a href="submit">submit</a></button>
     </div>
-
 
     <script type="text/javascript" src="SLIDESHOW/script.js"></script>
     <script type="text/javascript" src="static/js/1earthjs.js"></script>
 
+  </body>
 
-</div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+  </html>

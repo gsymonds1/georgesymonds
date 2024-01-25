@@ -1,90 +1,44 @@
-<html class="no-js" lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head>
+<html class="no-js" lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+<head>
     <meta charset="utf-8">
     <title>
         GEORGE SYMONDS
     </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
-    <link rel="stylesheet" type="text/css" href="/static/css/1earthcss.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-RNB4ZHEMHF&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-177281044-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-177281044-1');
-    </script>
+    <link rel="stylesheet" type="text/css" href="/Portfolio/static/css/1earthcss.css">
 
 
 
 
 
 
-   <!--  
-        
-     -->
-
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/css/favicon_package_v0.16/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/css/favicon_package_v0.16/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/css/favicon_package_v0.16/favicon-16x16.png">
-    <!-- <link rel="manifest" href="/static/css/favicon_package_v0.16/site.webmanifest"> -->
-    <link rel="mask-icon" href="/static/css/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"> </script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css">
-    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
-</head>
-
-<body id="main_content" class="template-homepage" data-new-gr-c-s-check-loaded="14.1137.0" data-gr-ext-installed="">
-    <!-- <div id="splashPage">
-        <div class="splashWhite"></div>
-        <div class="splashRow">
-            <div class="splashText">
-                <span>WELCOME TO 1EARTH! CURRENTLY UNDER DEVELOPMENT
-                    <a href="http://www.inventorypress.com/product/cyberfeminism-index" target="_blank">GEORGE SYMONDS</a>
-                </span>
-                <div class="splashBookMobile">
-                    <img src="/static/assets/cover.webp">
-                </div>
-            </div>
-
-            <div class="splashBook">
-                <img src="/static/assets/cover.png">
-            </div>
-            <div id="splashX" onclick="closeSplash()">
-                <img src="/static/assets/x.svg">
-            </div>
-        </div>
-    </div> -->
 
 
-  
 
-<div class="left_content">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Your other head elements go here -->
-</head>
+    <div class="left_content">
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <!-- Your other head elements go here -->
+        </head>
+
 <body>
 
     <header>
         <div class="menu_section">
             <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
                 <option value="cyberfeminism">WORK</option>
-                <option value="about">ABOUT</option>
                 <option value="images">GEORGE SYMONDS</option>
+                <option value="about">ABOUT</option>
                 <option value="collections">VIRTUAL EXHIBITION SPACE</option>
-                <option value="search">SEARCH</option>
+                <option value="research">RESEARCH & FORWARD THINKING</option>
             </select>
             <div id="green_box"></div>
         </div>
@@ -92,7 +46,7 @@
 
     <script>
         // Set the default selection to 'cyberfeminism' only if not already on that page
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var select = document.getElementById("menu");
             if (window.location.pathname !== '/cyberfeminism') {
                 select.value = "cyberfeminism";
@@ -105,12 +59,12 @@
 
             switch (selectedValue) {
                 case 'images':
-                    window.location.href = '/INDEXV23.html'; // Change the URL accordingly
+                    window.location.href = '/portfolio/INDEXV23.html'; // Change the URL accordingly
                     break;
                 case 'about':
-                    window.location.href = '/about/about.html'; // Change the URL accordingly
+                    window.location.href = '/portfolio/about/about.html'; // Change the URL accordingly
                     break;
-                 case 'cyberfeminism':
+                case 'cyberfeminism':
                     //window.location.href = '/index.html'; // Change the URL accordingly
                     break;
                 case 'collections':
@@ -126,119 +80,212 @@
         }
     </script>
 
-<!-- Your other body elements go here -->
+    <!-- Your other body elements go here -->
 
 </body>
 
+<div id="top_location"></div>
 
 
 
+<div id="top_location"></div>
 
-    <div id="top_location"></div>
- 
-    <div id="about_pg_content" class="internal_pg_containertext about_pg"> <!--USE THIS CSS TAG FOR BODY-->
-    
-    <p>Work/Portfolio<br>
-        <div class="hoverproject_img">
-            1. <a href="/work/work_TCR.html">Tottenham Court Road (2021)<span><img src="/Images/projects/TCR/TCR.png" alt="image" height="100" /></span></a>
-       </div>
-       <div class="hoverproject_img">
-            2. <a href="/work/work_UV3.html">The Raw Tapes Vol. 1 (2023)*<span><img src="/Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="image" height="100" /></span></a>
-       </div>
-       <div class="hoverproject_img">
-            3. <a href="/work/work_UV3.html">Memo Approved (2022)<span><img src="/Images/projects/Memo/logoSS.png" alt="image" height="100" /></span></a>
+<div id="about_pg_content" class="internal_pg_containertext about_pg">
+    <!--USE THIS CSS TAG FOR BODY-->
+    <br><br><br><br>
+    <h2>Work/Portfolio:</h2>
+
+    <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search..." title="Type in a name"
+        class="searchbar">
+
+    <div class="filterSection">
+        <p>Filter by category:</p>
+        <div class="menu_section">
+            <select id="filter" name="filter" onchange="handleFilter()" class="filteroptions">
+                <option value="all">All</option>
+                <option value="community">Community</option>
+                <option value="computation">Computation</option>
+                <option value="education">Education</option>
+                <option value="film">Film</option>
+                <option value="image">Image</option>
+                <option value="music">Music</option>
+                <option value="strategyidentity">Strategy & Identity</option>
+                <option value="web">Web</option>
+            </select>
         </div>
-        <div class="hoverproject_img">
-            4. <a href="/work/work_UV3.html">Photography<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
-       </div>
-       <div class="hoverproject_img">
-            5. <a href="/work/work_VES.html">Virtual Exhibition Space (2021)<span><img src="/Images/projects/Virtual Exhibition Space/VES.png" alt="image" height="100" /></span></a>
+    </div>
+
+    <p><br>
+
+    <div class="menuContents">
+        <div class="hoverproject_img community computation strategyidentity image film education music web">
+            <a href="/work/work_TCR.html" class="black ">1EARTH<span><img
+                        src="/Portfolio/Images/projects/1EARTH/1EARTHLOGOblack.png" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            6. <a href="/work/work_UV3.html">Kang Records (2022)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
-       </div>
-       <div class="hoverproject_img">
-            7. <a href="/work/work_UV3.html">Data Visualisation<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img computation strategyidentity web">
+            <a href="/work/work_UV3.html" class="black">The Community Support Directory<span><img
+                        src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            8. <a href="/work/work_UV3.html">Untitled Vol. 2 (2022)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img community film education">
+            <a href="/work/work_UV3.html" class="black">Tottenham Court Road (2021)<span><img
+                        src="/Portfolio/Images/projects/TCR/zoom.gif" alt="image" style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            9. <a href="/work/work_UV3.html">Nerf Gun Sentry Turret (2023)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img computation, web, education">
+            <a href="/work/work_UV3.html" class="black">The Research Database<span><img
+                        src="/Portfolio/Images/projects/The Research Database/miro.png" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            10. <a href="/work/work_Paeul.html">Ai Celebs: Pæul(2047)<span><img src="/Images/projects/AI Celebs_Paeul/Wide.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img community, strategyidentity, film, music">
+            <a href="/work/work_UV3.html" class="black">KANG RECORDS<span><img
+                        src="/Portfolio/Images/projects/KR/kr spin.gif" alt="image" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            11. <a href="/work/work_UV3.html">Mapping Emotions (2021)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img community computation film education">
+            <a href="/work/work_UV3.html" class="black">"How Can We Make A Difference?"<span><img
+                        src="/Portfolio/Images/projects/HowCanWeMakeADifference/DocCut.gif" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            12. <a href="/work/work_UV3.html">Smiley Beanie (2023)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img community community">
+            <a href="/work/work_UV3.html" class="black">Memo Approved<span><img
+                        src="/Portfolio/Images/projects/Memo/memo.gif" alt="image" style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            13. <a href="/work/work_UV3.html">KeyScape<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img community image music">
+            <a href="/work/work_UV3.html" class="black">Film Photography<span><img
+                        src="/Portfolio/Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            14. <a href="/work/work_UV3.html">Album Covers<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img community film music">
+            <a href="/work/work_UV3.html" class="black">Music Videos<span><img
+                        src="/Portfolio/Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            15. <a href="/work/work_UV3.html">WeCare(2022)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img music community film">
+            <a href="/work/work_UV3.html" class="black">The Raw Tapes Vol. 1<span><img
+                        src="/Portfolio/Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            16. <a href="/work/work_UV3.html">Jakarta Is Sinking(2022)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img computation web">
+            <a href="/work/work_UV3.html" class="black">Virtual Exhbition Space<span><img
+                        src="/Portfolio/Images/projects/Virtual Exhibition Space/VES.png" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            17. <a href="/work/work_UV3.html">SZN Settings(2022)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img computation education web">
+            <a href="/work/work_UV3.html" class="black">DataDeception<span><img
+                        src="/Portfolio/Images/projects/DataDeception/SS.png" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            18. <a href="/work/work_UV3.html">The Game of Life(2021)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img music">
+            <a href="/work/work_UV3.html" class="black">Untitled Vol.2<span><img
+                        src="/Portfolio/Images/projects/UV3/UV3.png" alt="image" style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            19. <a href="/work/work_UV3.html">Creation Station(2022)<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img computation">
+            <a href="/work/work_UV3.html" class="black">The Nerf Gun Sentry Turret<span><img
+                        src="/Portfolio/Images/projects/Nerf Gun Sentry Turret/ze gun.png" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            20. <a href="/work/work_UV3.html">Kawi Type(2023)*<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img computation">
+            <a href="/work/work_UV3.html" class="black">Smiley Beanie<span><img
+                        src="/Portfolio/Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            21. <a href="/work/work_UV3.html">Represent Holloway(2023)*<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img computation music">
+            <a href="/work/work_UV3.html" class="black">KeyScape<span><img
+                        src="/Portfolio/Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
-        <div class="hoverproject_img">
-            22. <a href="/work/work_UV3.html">1EARTH(2023)*<span><img src="/Images/projects/UV3/UV3.png" alt="image" height="100" /></span></a>
+        <div class="hoverproject_img film education">
+            <a href="/work/work_UV3.html" class="black">Jakarta Is Sinking (2022)<span><img
+                        src="/Portfolio/Images/projects/Jakarta Is Sinking/Screenshot 2023-04-07 at 3.59.58 pm.png"
+                        alt="image" style="width:60vw;" /></span></a>
+        </div>
+        <div class="hoverproject_img image">
+            <a href="/work/work_UV3.html" class="black">Mapping Emotions<span><img
+                        src="/Portfolio/Images/projects/MappingEmotion/main1.png" alt="image"
+                        style="width:60vw;" /></span></a>
+        </div>
+        <div class="hoverproject_img community image music">
+            <a href="/work/work_UV3.html" class="black">Album Covers<span><img
+                        src="/Portfolio/Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="image"
+                        style="width:60vw;" /></span></a>
+        </div>
+        <div class="hoverproject_img strategyidentity film">
+            <a href="/work/work_UV3.html" class="black">WeCare<span><img
+                        src="/Portfolio/Images/projects/WeCare/fc97a2cf-0e59-47fe-bc89-2c570b719ca5_rw_1200.png"
+                        alt="image" style="width:60vw;" /></span></a>
+        </div>
+        <div class="hoverproject_img computation">
+            <a href="/work/work_UV3.html" class="black">Creation Station<span><img
+                        src="/Portfolio/Images/projects/Creation Station/CrSt.JPG" alt="image"
+                        style="width:60vw;" /></span></a>
+        </div>
+        <div class="hoverproject_img computation web">
+            <a href="/work/work_UV3.html" class="black">(The Game of) Life<span><img
+                        src="/Portfolio/Images/projects/LifeGame/main1.png" alt="image"
+                        style="width:60vw;" /></span></a>
         </div>
 
-       
-       <style>
-       
-       .hoverproject_img a { position:relative; }
-       .hoverproject_img a span { position:absolute; display:none; z-index:99; }
-       .hoverproject_img a:hover span { display:block; }
-       </style>
-       
-        <p>Have a look around and see my work! <em>My Practice range of skills is wide & includes (but is not limited to) </em> Web Development, UX Design, Film, Photography, Music Production, Creative Direction, Physical Computing, Brand Strategy & Identity, <em>Please feel welcome to reach out to me! using the “contact” button at the bottom of all pages.</em></p>
+    </div>
 
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-<img src="/static/assets/cover.png" alt="1earthlogo" style="width: 23%; max-width: 100%; height: auto;">
-<br><br><br><br>
+
+    <script>
+        function handleFilter() {
+            var selectedCategory = document.getElementById('filter').value;
+
+            var projects = document.querySelectorAll('.hoverproject_img');
+            projects.forEach(function (project) {
+                var projectCategories = project.className.split(' ');
+
+                if (selectedCategory === 'all' || projectCategories.includes(selectedCategory)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+
+        function handleSearch() {
+            var searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+            var projects = document.querySelectorAll('.hoverproject_img');
+            projects.forEach(function (project) {
+                var projectName = project.textContent.toLowerCase();
+                var projectKeywords = project.className.toLowerCase();
+
+                if (projectName.includes(searchInput) || projectKeywords.includes(searchInput)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+
+    <p>Have a look around and see my work! <em>My Practice range of skills is wide & includes (but is not limited to)
+        </em> Web Development, UX Design, Film, Photography, Music Production, Creative Direction, Physical Computing,
+        Brand Strategy & Identity, <em>Please feel welcome to reach out to me! using the “contact” button at the bottom
+            of all pages.</em></p>
+
+    <br><br><br><br>
+</div>
+</div>
+
 <!-- BOTTOM OF BODY EVERYTIME -->
-<script type="text/javascript" src="/static/js/1earthjs.js"></script>
 <div class="bottom-buttons">
-  <button class="back_to_top" onclick="back_to_top('top_location')">back to top</button>
-  <button class="contact"><a href="mailto:symonds.george@gmail.com">contact</a></button>
-  <button class="submit"><a href="submit">submit</a></button>
+    <button class="back_to_top" onclick="back_to_top('top_location')">back to top</button>
+    <button class="contact"><a href="mailto:symonds.george@gmail.com">contact</a></button>
+    <button class="submit"><a href="submit">submit</a></button>
 </div>
-    
-</div>
+
+
+
+
+
+<script type="text/javascript" src="static/js/1earthjs.js"></script>
+
+
 
 </body>
 
-
-
-
-
-
-
-    
-    <script type="text/javascript" src="/static/js/1earthjs.js"></script>
-
-
-</div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+</html>
