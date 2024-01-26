@@ -468,7 +468,14 @@ margin:3px 0 0 0 !important;
 
         }
 
+.contexttalk{
+  display: none;
+}
 
+.all{
+
+display: block;
+}
 .hoverproject_img a { 
   position:relative;  
   z-index: 1;

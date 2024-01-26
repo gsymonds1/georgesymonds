@@ -103,15 +103,107 @@
             </div>
         </div>
 
-        <p><br>
+
+        <br>
 
         <div class="menuContents">
+
+            <div class="contexttalk all">
+                <p>Have a look around and see my work! My practice & skillset are diverse, it centres around<em>
+                        community, computation, education, film, image, film, image, music, identity, & web.</em>
+                    <strong>Use the filter menu above to find what you want! </strong> & feel free to reach out to me
+                    using the “contact” button
+                    at the bottom of all pages!
+                </p>
+            </div>
+            <div class="contexttalk community">
+                <p>Community is key, my whole creative practice revolves around it. To represent a community is to
+                    explore its core meanings and values, and to identify how they can be translated into public-facing
+                    outcomes that resonate with authenticity and purpose. View my projects below to find how I do this:
+                </p>
+            </div>
+            <div class="contexttalk computation">
+                <p>I merge design with technical computation in my practice to deliver functioning outcomes that can’t
+                    be solved with just design alone. My outcomes are designed to exist and thrive in the real world,
+                    addressing the specific needs of my aim. View my projects below to find how I do this:
+                </p>
+            </div>
+
+            <div class="contexttalk education">
+                <p>Education to me is a dynamic transfer of knowledge. I dissect this process, exploring how creatively
+                    designed mediums can make learning engaging, powerful, and experimental through creating crafted
+                    experiences. In my self-initiated practice, I talk on topics such as the cost-of-living crisis and
+                    raise awareness of lesser-known societal issues. View my projects below to find how I do this:
+                </p>
+            </div>
+
+            <div class="contexttalk film">
+                <p>In my practice, I’m gravitated towards film as it’s one of the most powerful forms of translating
+                    ideas and stories. I use it to empower and amplify independent & alternate stories, through
+                    constructing deep audio+visual landscapes channelling emotions that resonate with my viewer. View my
+                    projects below to find how I do this:
+                </p>
+            </div>
+
+            <div class="contexttalk image">
+                <p>I use image to give form & represent conceptual ideas, creating new points of understanding for my
+                    viewers. I focus on the translation & representation of my subjects, positioning them within the
+                    world to create a bridge between abstract concepts and tangible connections. View my projects below
+                    to find how I do this:
+                </p>
+            </div>
+
+            <div class="contexttalk film">
+                <p>In my practice, I’m gravitated towards film as it’s one of the most powerful forms of translating
+                    ideas and stories. I use it to empower and amplify independent & alternate stories, through
+                    constructing deep audio+visual landscapes channelling emotions that resonate with my viewer. View my
+                    projects below to find how I do this:
+                </p>
+            </div>
+
+            <div class="contexttalk film">
+                <p>In my practice, I’m gravitated towards film as it’s one of the most powerful forms of translating
+                    ideas and stories. I use it to empower and amplify independent & alternate stories, through
+                    constructing deep audio+visual landscapes channelling emotions that resonate with my viewer. View my
+                    projects below to find how I do this:
+                </p>
+            </div>
+
+            <div class="contexttalk music">
+                <p>I am a producer, I work with my community to bring out their best. Through collaboration & developing
+                    mediums to cultivate their identity (such as music videos, album covers, and photography) and
+                    bringing the dopest beats. (KR) is my community, our mentality, and our collective identity. We all
+                    do this together:
+                </p>
+            </div>
+
+            <div class="contexttalk strategyidentity">
+                <p>I approach identity as a strategy. I aim to accurately represent my subject's core values, beliefs,
+                    and history and incorporate them in all the designed facets of public-facing outcomes through
+                    thorough research & investigation. View my projects below to find how I do this:
+                </p>
+            </div>
+
+            <div class="contexttalk web">
+                <p>I use the web to frame my self-initiated work, making it universally accessible, and inviting a
+                    diverse audience to engage with it. You can check out my projects below to see how I put this into
+                    practice:
+                </p>
+            </div>
+
+
+
+
+            <br>
+            <br>
+            <br>
+
             <div class="hoverproject_img community computation strategyidentity image film education music web">
                 <a href="/work/work_TCR.html" class="black ">1EARTH<span><img
                             src="/Portfolio/Images/projects/1EARTH/1EARTHLOGOblack.png" alt="image"
                             style="width:60vw;" /></span></a>
             </div>
-            <div class="hoverproject_img computation strategyidentity web">
+            <div class="hoverproject_img computation strategyidentity web community">
                 <a href="work_CSD.html" class="black">The Community Support Directory<span><img
                             src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="image"
                             style="width:60vw;" /></span></a>
@@ -230,6 +322,20 @@
                         project.style.display = 'none';
                     }
                 });
+
+
+                var projects2 = document.querySelectorAll('.contexttalk');
+                projects2.forEach(function (project2) {
+                    var project2Categories = project2.className.split(' ');
+
+                    if (project2Categories.includes(selectedCategory)) {
+                        project2.style.display = 'block';
+                    } else {
+                        project2.style.display = 'none';
+                    }
+                });
+
+
             }
 
             function handleSearch() {
@@ -250,13 +356,7 @@
         </script>
 
 
-        <p>Have a look around and see my work! <em>My Practice range of skills is wide & includes (but is not limited
-                to)
-            </em> Web Development, UX Design, Film, Photography, Music Production, Creative Direction, Physical
-            Computing,
-            Brand Strategy & Identity, <em>Please feel welcome to reach out to me! using the “contact” button at the
-                bottom
-                of all pages.</em></p>
+
 
         <br><br><br><br>
     </div>
@@ -279,4 +379,4 @@
 
     </body>
 
-    </html>
+</html>
