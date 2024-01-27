@@ -472,6 +472,14 @@ margin:3px 0 0 0 !important;
   display: none;
 }
 
+.contexttalk.all p,.contexttalk.community p, .contexttalk.computation p, .contexttalk.education p, .contexttalk.film p, .contexttalk.image p, .contexttalk.film p, .contexttalk.image p,.contexttalk.music p, .contexttalk.strategyidentity p, .contexttalk.web p{
+  z-index: 100;
+}
+
+.blue{
+  color: #0000ff;
+}
+
 .all{
 
 display: block;
