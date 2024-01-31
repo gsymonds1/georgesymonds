@@ -42,6 +42,11 @@ body, html {
   border: #000;
 }
 
+ul{
+
+  margin: 0;
+  padding: 0;
+}
 
 h1{
   color: #fff;
@@ -85,6 +90,23 @@ p{
 
 .thismyworkpic{
 width: 50%;
+}
+
+.workContentTitle {
+  padding: 0;
+  margin: 0;
+}
+
+.workContentTitle .workContent {
+  /* Styles for the ul inside the container div */
+  list-style: none; /* Removes default list styles */
+  padding: 0;
+  margin: 0;
+}
+
+.workContentTitle .workContent li {
+  padding: 0;
+  margin: 0;
 }
 
 /* Media query for screens with a width less than 600px */
@@ -558,6 +580,11 @@ margin-bottom: 64px;
 overflow: hidden;
 /* height: 100vh; */
 z-index: 1;
+}
+
+
+#content{
+  padding: 0vw;
 }
 
 

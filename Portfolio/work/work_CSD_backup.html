@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>GEORGE SYMONDS</title>
+    <link rel="icon" href="/Portfolio/Images/projects/1EARTH/1ECROP.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/Portfolio/static/css/1earthcss.css">
+    <script type="text/javascript" src="/Portfolio/static/js/1earthjs.js"></script>
+    
+</head>
+
+
+
+
+
+<body>
+
+    <div class="left_content">
+
+        <header>
+            <div class="menu_section">
+                <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
+                    <option value="cyberfeminism">WORK</option>
+                    <option value="images">GEORGE SYMONDS</option>
+                    <option value="about">ABOUT</option>
+                    <option value="collections">VIRTUAL EXHIBITION SPACE</option>
+                    <option value="research">RESEARCH & FORWARD THINKING</option>
+                </select>
+                <div id="green_box"></div>
+            </div>
+        </header>
+
+
+        <script>
+            // Set the default selection to 'cyberfeminism' only if not already on that page
+            document.addEventListener("DOMContentLoaded", function () {
+                var select = document.getElementById("menu");
+                if (window.location.pathname !== '/cyberfeminism') {
+                    select.value = "cyberfeminism";
+                    handleMenu(select);
+                }
+            });
+
+            function handleMenu(select) {
+                var selectedValue = select.value;
+
+                switch (selectedValue) {
+                    case 'images':
+                        window.location.href = '/portfolio/INDEXV23.html'; // Change the URL accordingly
+                        break;
+                    case 'about':
+                        window.location.href = '/portfolio/about/about.html'; // Change the URL accordingly
+                        break;
+                    case 'cyberfeminism':
+                        //window.location.href = '/index.html'; // Change the URL accordingly
+                        break;
+                    case 'collections':
+                        window.location.href = '/collections'; // Change the URL accordingly
+                        break;
+                    case 'search':
+                        window.location.href = '/search'; // Change the URL accordingly
+                        break;
+                    default:
+                        // Handle other cases or do nothing
+                        break;
+                }
+            }
+        </script>
+
+        <!-- Your other body elements go here -->
+
+
+
+        <div id="top_location"></div>
+
+        <div id="about_pg_content" class="internal_pg_containertext about_pg">
+            <!--USE THIS CSS TAG FOR BODY-->
+            <br><br>
+
+            <a href="work_INDEX.html">go back</a>
+
+
+            <br><br>
+
+            <div class="thismywork">
+
+                <h2>h2 Community Support Directory:</h2>
+                <h4>h4 2024</h4>
+                <h3>h3 Community-led Support Directory - Unity & Change Through Facilitating Collective Action</h3>
+                <h4 class="black italic">h4 web-platform</h4>
+                <p>p A real community-led support directory deployed in Holloway, redirecting users towards all they ways
+                    can help & collaborate with our local communities committed towards creating positive change</p>
+
+                <div class="picofmyworkandcaption">
+                    <img src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="Work 0"
+                        class="thismyworkpic">
+                        <p class="imagecaption">The Community Support Directory</p>
+                </div>
+
+
+                <p>p This project aims to create change through design in my local community, Holloway. I’ve collaborated
+                    with local community centres, engaging with their groups to create a project that encourages &
+                    provides a platform to unite people to give back to our community.</p>
+
+                <br>
+
+
+                <a href="/pages/COMMUNITYSUPPORTDIRECTORY/RepresentHolloway/oldIndex.html">link to the website!</a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="picofmyworkandcaption">
+                    <img src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="Work 0"
+                        class="thismyworkpic">
+                        <p class="imagecaption">The Community Support Directory</p>
+                </div>
+
+                <br>
+                
+                <div class="picofmyworkandcaption">
+                    <img src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="Work 0"
+                        class="thismyworkpic">
+                        <p class="imagecaption">The Community Support Directory</p>
+                </div>
+
+                <br>
+                <a href="/pages/COMMUNITYSUPPORTDIRECTORY/RepresentHolloway/oldIndex.html">link to the documentary!</a>
+                <br>
+                <br>
+                <p>This project aims to create change through design in my local community, Holloway. I’ve collaborated
+                    with local community centres, engaging with their groups to create a project that encourages &
+                    provides a platform to unite people to give back to our community.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                nowand
+
+
+            </div>
+
+
+            <br>
+
+
+
+
+
+            <br><br><br><br>
+        </div>
+
+
+        <!-- BOTTOM OF BODY EVERYTIME -->
+        <div class="bottom-buttons">
+            <button class="back_to_top" onclick="back_to_top('top_location')">back to top</button>
+            <button class="contact"><a href="mailto:symonds.george@gmail.com">contact</a></button>
+            <button class="submit"><a href="/Portfolio/work/work_INDEX.html">portfolio</a></button>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
