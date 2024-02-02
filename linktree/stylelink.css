@@ -1,0 +1,354 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+width: 100%;
+background-color: #000000;
+
+
+;}
+
+body{
+    margin: 2vw;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 0px;
+    
+    color: #FFFFFF;
+}
+
+#content{
+    padding: 0vw;
+}
+
+.with_about {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('/Images/RepresentHolloway/buttonarrow.png') no-repeat right 50%; /* Custom arrow icon */
+    background-size: 18px; /* Adjust the size of the arrow */
+    background-position: 98%;
+    background-color: white;
+    width: 100%;
+}
+
+
+
+
+h1{
+    line-height: normal;
+}
+
+h2{
+    /* font-size: medium;
+    line-height: normal; */
+    margin: 0;
+    padding: 10px;
+    font-size: 23px;
+    color: white;
+}
+
+h2 a{
+    color: white;
+}
+
+h3{
+    font-size: medium;
+    line-height: normal;
+}
+
+p, li, ol{
+    font-size: 12px;
+    line-height: normal;
+}
+
+/* additional styles for the normal background image */
+.background-image {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Adjust the width as needed */
+    height: 100%;
+    background-image: url('/Images/1EspinLowRes.gif');
+    opacity: 23%;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    background-repeat: no-repeat; /* Adjust as needed */
+}
+
+
+.filterbuttonText {
+    margin-top: 130px;
+    display: inline-block;
+    margin-right: 10px; /* Adjust the space between the text and the button */
+    color: #000000;
+    margin-bottom: 0px;
+    z-index: 9999;
+}
+
+.menu_section {
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+    padding-top: 0px;
+    max-width: 96vw;
+}
+
+
+
+
+.gradient {
+   
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh / 2.3); /* Adjust the gradient height here */
+    background: linear-gradient(to bottom, #21a84e, rgba(0, 255, 0, 0));
+    z-index: -1; /* Ensure it's behind the content */
+    border-color: none;
+    position: fixed;
+}
+
+.fixed-title-area{
+    position: fixed;
+ 
+    width: 100%;
+    max-width: 100vw;
+    z-index: 1000; /* Adjust z-index to ensure it's above other content */
+    /* Add any additional styles as needed */
+}
+
+.buttonContainer {
+    display: flex;
+    width: 100%;
+    max-width: 96vw;
+    justify-content: space-between;
+}
+
+.buttonMain {
+    max-width: 96vw;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    color: #707070;
+    border: 1px solid #707070;
+    padding: 7.5px;
+    margin-bottom: 14px;
+    border-radius: 23px;
+    box-sizing: border-box; 
+    z-index: 1;
+    position:relative;
+}
+
+
+
+.buttonOn{
+    background-color: #D1D1D1;
+    
+}
+
+.buttonOff{
+    background-color: #FFFFFF;
+    color:#0000ff;
+}
+
+.button100{
+    width: 100%;
+}
+.button99{
+    width: 98.5%;
+}
+
+.button50{
+    width: 49.8%;
+}
+
+.button75 {
+    width: calc(100% - 110px);
+    /* max-width: fit-content; */
+    position: relative;
+    left: -20px;
+}
+
+
+.greyText{
+    color: #707070;
+}
+
+.arrows{
+        display: flex;
+        
+        padding-top: 2vh; /* Adjust vertical padding if needed */
+
+ }
+
+ .logo{
+    max-width: 34vw;
+    top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 230px;
+    z-index: 10;
+    position: relative;
+ }
+
+ .subtitle{
+    position: relative;
+    top: 60px;
+    text-align: center;
+    font-size: 34px;
+}
+
+.arrows img {
+    max-height: 50px; /* Adjust the maximum height of the images */
+    width: auto; /* Maintain aspect ratio */
+    /* Other styles as needed */
+}
+
+.arrow-two {
+    margin-left: 23px; /* Spacing for the second image */
+}
+
+.arrow-three {
+    position: absolute; /* or 'fixed' depending on your layout needs */
+  right: +100px;
+}
+
+.table{
+    padding-top: 3vh;
+
+}
+
+
+.filter-container {
+    display: flex;
+    align-items: grid;
+    width: 100%;
+    max-width: 96vw;
+    justify-content: space-between;
+}
+
+.filter-container p {
+    margin-right: 10px; /* Adjust the margin as needed */
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+
+/* THE CSS FOR CONTNT FROM XL */
+.circleText {
+    color: #707070;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.fixedBottomButtons{
+    display: flex;
+    width: 100%;
+    max-width: 96vw;
+    justify-content: space-between;
+}
+
+
+#bottom button,
+#bottom2 button {
+    position: fixed;
+    bottom: 2%;
+    z-index: 1000;
+    text-align: center;
+    text-decoration: none;
+}
+
+#bottom button {
+    width: 69%;
+}
+
+#bottom2 button {
+    left: 30%;
+    width: 25%;
+    padding-left: 0px;
+    margin-left: 0px;
+    
+}
+
+
+.innerTableContent {
+    display: flex;
+    align-items: grid;
+    border: 1px solid white; 
+    justify-content: space-between;
+    margin-top: 23px;
+    margin-left: 44px;
+}
+
+/* 
+
+
+@media only screen and (max-width: 570px) {
+    /* Adjust the styling for smaller screens */
+    #bottom button {
+        left: 2%;
+    }
+
+    #bottom2 button {
+        left: 85%;
+        transform: translateX(-50%);
+    }
+
+
+#bottomSubPoint button {
+    position: relative;
+    z-index: 100;
+    left: 39px;
+    font-size: 11px;
+    padding: 3px 15px;
+    width: 94%;
+    top:-23px;
+    text-align: left;
+}
+
+#bottomSubPoint button .circle-image {
+    width: 13px; /* Adjust the width of the circle */
+    height: 13px; /* Adjust the height of the circle */
+    border-radius: 50%;
+    margin-left: 5px; /* Adjust the distance from the text on the left */
+    vertical-align: middle; /* Adjust the vertical alignment */
+    position: relative;
+    top: -1px; /* Adjust the distance from the top */
+    left: 50%;
+}
+
+
+.buttonBlue{
+    border-color: #0000ff;
+    color: #0000ff;
+    border-width: 2px;
+    position: relative;
+}
+
+
+.circleContainer {
+    float: left;
+    margin-right: 10px; /* Adjust the margin as needed */
+    vertical-align: middle; /* Align vertically */
+}
+  
+.contentContainer {
+    overflow: hidden; /* Ensures the container adjusts its height based on content */
+    vertical-align: middle; /* Align vertically */
+    padding-right: 200px;
+ }
+
+ 
+ .indent {
+    margin-left: 20px;
+  }
+
+ 
