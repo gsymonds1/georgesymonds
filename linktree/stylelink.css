@@ -136,7 +136,7 @@ p, li, ol{
     border: 1px solid #707070;
     padding: 7.5px;
     margin-bottom: 14px;
-    border-radius: 23px;
+    /* border-radius: 23px; */
     box-sizing: border-box; 
     z-index: 1;
     position:relative;
