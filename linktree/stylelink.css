@@ -28,8 +28,10 @@ body{
     background-size: 18px; /* Adjust the size of the arrow */
     background-position: 98%;
     background-color: white;
-    width: 100%;
+    width: 96%;
     padding: 7px;
+    display: block;
+    top: 10px;
 }
 
 
@@ -190,7 +192,7 @@ p, li, ol{
  }
 
  .logo{
-    max-width: 34vw;
+    max-width: 30vw;
     top: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -203,7 +205,7 @@ p, li, ol{
     position: relative;
     top: 60px;
     text-align: center;
-    font-size: 34px;
+    font-size: 27px;
 }
 
 .arrows img {
@@ -273,7 +275,7 @@ p, li, ol{
 }
 
 #bottom button {
-    width: 69%;
+    width: 100%;
 }
 
 #bottom2 button {
