@@ -46,7 +46,7 @@ h2{
     line-height: normal; */
     margin: 0;
     padding: 10px;
-    font-size: 23px;
+    font-size: 18px;
     color: white;
 }
 
@@ -197,7 +197,7 @@ p, li, ol{
     margin-left: auto;
     margin-right: auto;
     max-height: 230px;
-    z-index: 10;
+    z-index: 1;
     position: relative;
  }
 
@@ -257,6 +257,14 @@ p, li, ol{
     
 }
 
+.footerText{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    color: #0000ff;
+    
+}
+
 .fixedBottomButtons{
     display: flex;
     width: 100%;
@@ -264,6 +272,18 @@ p, li, ol{
     justify-content: space-between;
 }
 
+.secondLine {
+    position: absolute;
+    left: 20px;
+    margin: 0px;
+    margin-top: 2px;
+    opacity: 50%;
+}
+
+.secondLine {
+    max-width: 23px; /* Adjust the maximum width of the small image */
+    max-height: 23px; /* Adjust the maximum height of the small image */
+}
 
 #bottom button,
 #bottom2 button {
@@ -295,7 +315,7 @@ p, li, ol{
     margin-top: 23px;
     margin-left: 44px;
     box-shadow: 0 4px 8px rgba(253, 211, 39, 0.6); /* Adjust values as needed */
-
+    background-color: rgb(0 0 0 / 60%)
 }
 
 /* 
