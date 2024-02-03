@@ -29,6 +29,7 @@ body{
     background-position: 98%;
     background-color: white;
     width: 100%;
+    padding: 7px;
 }
 
 
@@ -86,6 +87,10 @@ p, li, ol{
     color: #000000;
     margin-bottom: 0px;
     z-index: 9999;
+}
+
+.landingSpread{
+    padding: 10px;
 }
 
 .menu_section {
@@ -247,6 +252,7 @@ p, li, ol{
     border-radius: 50%;
     text-align: center;
     line-height: 30px;
+    
 }
 
 .fixedBottomButtons{
@@ -286,6 +292,8 @@ p, li, ol{
     justify-content: space-between;
     margin-top: 23px;
     margin-left: 44px;
+    box-shadow: 0 4px 8px rgba(253, 211, 39, 0.6); /* Adjust values as needed */
+
 }
 
 /* 
