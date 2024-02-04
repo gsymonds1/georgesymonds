@@ -21,6 +21,11 @@ function processData(rows) {
         var row = rows[2];
         console.log("Class is CSD. Value assigned to rows[2].");
 
+    } else if (content.classList.contains('RESEACHDATABASE')) {
+        // row=rows[2]
+        var row = rows[4];
+        console.log("Class is CSD. Value assigned to rows[4].");
+
     } else if (content.classList.contains('Photography')) {
         // row=rows[2]
         var row = rows[8];
@@ -32,16 +37,27 @@ function processData(rows) {
     }
 
 
-
+    
 
     content.innerHTML += "<h2>" + row[1] + "</h2>";//title
     content.innerHTML += "<h4>" + row[4] + "</h4>";//yr
     content.innerHTML += "<h3>" + row[2] + "</h3>";//sub
     content.innerHTML += "<h4>" + row[3] + "</h3>";//media
     content.innerHTML += "<p>" + row[5] + "</p>";//p
-    content.innerHTML += `<div class="picofmyworkandcaption"><img src="`+ row[6]+`" alt="Work 0"class="thismyworkpic"><p class="imagecaption">`+row[7]+`</p></div>`
+    if (row[6].trim() !== '') {
+        content.innerHTML += `<div class="picofmyworkandcaption"><img src="${row[6]}" alt="Work 0" class="thismyworkpic"><p class="imagecaption">${row[7]}</p></div>`;
+    }
     content.innerHTML += "<p>" + row[8] + "</p>";//p
     content.innerHTML += `<a href="`+row[9]+`">`+row[10]+`</a>`
+
+
+
+    //THE RELATED FOOTER
+    var content2 = document.getElementById('relatedWorkContentTitle');
+    console.log("relatedWorkContentTitle");
+    content2.innerHTML += "<p>RELATED WORK HERE</p>";
+
+
 }
 
 
@@ -50,6 +66,6 @@ function processData(rows) {
 //this gets the data from the google sheet
 fetch(url)
     .then(response => response.json())
-    .then(data => processData(data.values));
+    .then(data => processData(data.values))
 
 
