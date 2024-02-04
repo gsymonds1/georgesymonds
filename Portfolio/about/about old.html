@@ -1,0 +1,162 @@
+<html class="no-js" lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        GEORGE SYMONDS
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/Portfolio/Images/projects/1EARTH/1ECROP.png" type="image/png">
+
+    <link rel="stylesheet" type="text/css" href="/Portfolio/static/css/1earthcss.css">
+
+</head>
+
+<body id="main_content" class="template-homepage" data-new-gr-c-s-check-loaded="14.1137.0" data-gr-ext-installed="">
+    <div id="splashPage">
+        <div class="splashWhite"></div>
+        <div class="splashRow">
+            <div class="splashText">
+                <span>WELCOME TO MY WEBSITE! IT HOUSES ALL OF MY PROJECTS & CODING EXPERIMENTS
+                    <br>
+                    <a href="http://www.inventorypress.com/product/cyberfeminism-index" target="_blank">GEORGE
+                        SYMONDS</a>
+                </span>
+                <div class="splashBookMobile">
+                    <img src="/static/assets/cover.webp">
+                </div>
+            </div>
+
+            <div class="splashBook">
+                <img src="/static/assets/cover.png">
+            </div>
+            <div id="splashX" onclick="closeSplash()">
+                <img src="/static/assets/x.svg">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="left_content">
+
+        <head>
+            <!-- Your other head elements go here -->
+        </head>
+
+        <body>
+
+            <header>
+                <div class="menu_section">
+                    <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
+                        <option value="about">ABOUT</option>
+                        <option value="cyberfeminism">GEORGE SYMONDS</option>
+                        <option value="images">WORK</option>
+                        <option value="collections">VIRTUAL EXHIBITION SPACE</option>
+                        <option value="search">RESEARCH & FORWARD THINKING</option>
+                    </select>
+                    <div id="green_box"></div>
+                </div>
+            </header>
+
+            <script>
+                // Set the default selection to 'about' only if not already on that page
+                document.addEventListener("DOMContentLoaded", function () {
+                    var select = document.getElementById("menu");
+                    if (window.location.pathname !== '/about/about.html') {
+                        select.value = "about";
+                        handleMenu(select);
+                    }
+                });
+
+                function handleMenu(select) {
+                    var selectedValue = select.value;
+
+                    switch (selectedValue) {
+
+                        case 'about':
+                            //window.location.href = '/about/about.html'; // Change the URL accordingly
+                            break;
+                        case 'cyberfeminism':
+                            window.location.href = '/Portfolio/INDEXV23.html'; // Change the URL accordingly
+                            break;
+                        case 'images':
+                            window.location.href = '/Portfolio/work/work_INDEX.html'; // Change the URL accordingly
+                            break;
+                        case 'collections':
+                            window.location.href = '/collections'; // Change the URL accordingly
+                            break;
+                        case 'search':
+                            window.location.href = '/search'; // Change the URL accordingly
+                            break;
+                        default:
+                            // Handle other cases or do nothing
+                            break;
+                    }
+                }
+            </script>
+
+            <!-- Your other body elements go here -->
+
+        </body>
+
+
+
+
+
+        <div id="top_location"></div>
+
+        <div id="about_pg_content" class="internal_pg_containertext about_pg">
+            <!--USE THIS CSS TAG FOR BODY-->
+
+            <p>(ABOUT) GEORGE SYMONDS, ALWAYS IN PROGRESS. Graphic Communication Designer & Creative Coder & <a href="https://www.instagram.com/kangrecords_/" target="_blank">Kang Records General</a>.
+                Have a look around and see my work! <em>My Practice range of skills is wide & includes (but is not
+                    limited to) </em> Web Development, UX Design, Film, Photography, Music Production, Creative
+                Direction, Physical Computing, Brand Strategy & Identity, <em>Please feel welcome to reach out to me!
+                    using the “contact” button at the bottom of all pages.</em></p>
+                    
+                    <p><a href="https://www.instagram.com/kangrecords_/" target="_blank">INSTAGRAM</a></p>
+            <p><em>1EARTH?</em></p>
+
+            
+                <img src="/Images/1EspinLowRes.gif" alt="1earthlogo" style="width: 23%; max-width: 100%; height: auto;">
+
+
+                <p>MISSION STATEMENT:
+                <p>AT 1EARTH WE AIM TO EMPOWER THOSE THAT BELIEVE THEY CAN MAKE AND CHANGE THE WORLD THEMSELVES. WE ARE FOR THE INDEPENDENTS, THE RISK-TAKERS, THE SELF-BELIEVERS. <br><br>
+
+                    UNITED BY OUR SHARED IDENTITY TOGETHER WE ASSOCIATE IN MOVEMENT & ACTIVISM TOWARDS MAKING A REAL DIFFERENCE, through our actions & practices we PUT ACTION TOWARDS OUR CORE BELIEFS - COMMUNITY & TRUTH. <br><br>
+                    
+                    <em>“communication is always linked with power and that those groups who wield power in a society influence what gets represented through the media.” [<small><a href="https://www.mediaed.org/transcripts/Stuart-Hall-Representation-and-the-Media-Transcript.pdf" target="_blank">1</a></small>]. WE SAY ITS TIME THIS CHANGES. IT IS TIME OUR UNHEARD VOICES ARE RECOGNISED & AMPLIFIED. <br><br>
+                    
+                    1EARTH IS MORE THAN A CONCEPT, WE CREATE REAL CHANGE, WE INNOVATE WEB PLATFORMS, WE EDUCATE, CREATE NEW SHARED COMMUNITIES, WE REPRESENT OUR BELIEFS TO THE FULLEST AND TOGETHER IN COLLABORATION WE ARE 1EARTH.</p>
+
+
+                <!-- BOTTOM OF BODY EVERYTIME -->
+                <script type="text/javascript" src="/static/js/1earthjs.js"></script>
+                <div class="bottom-buttons">
+                    <button class="back_to_top" onclick="back_to_top('top_location')">back to top</button>
+                    <button class="contact"><a href="mailto:symonds.george@gmail.com">contact</a></button>
+                    <button class="submit"><a href="submit">submit</a></button>
+                </div>
+
+        </div>
+
+</body>
+
+
+
+
+
+
+
+</div>
+</body>
+
+</html>

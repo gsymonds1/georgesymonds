@@ -1,141 +1,162 @@
-<html class="no-js" lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head>
-    <meta charset="utf-8">
-    <title>
-        GEORGE SYMONDS
-    </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-    <link rel="stylesheet" type="text/css" href="/static/css/1earthcss.css">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
-</head>
-
-<body id="main_content" class="template-homepage" data-new-gr-c-s-check-loaded="14.1137.0" data-gr-ext-installed="">
-    <div id="splashPage">
-        <div class="splashWhite"></div>
-        <div class="splashRow">
-            <div class="splashText">
-                <span>WELCOME TO 1EARTH! CURRENTLY UNDER DEVELOPMENT
-                    <a href="http://www.inventorypress.com/product/cyberfeminism-index" target="_blank">GEORGE SYMONDS</a>
-                </span>
-                <div class="splashBookMobile">
-                    <img src="/static/assets/cover.webp">
-                </div>
-            </div>
-
-            <div class="splashBook">
-                <img src="/static/assets/cover.png">
-            </div>
-            <div id="splashX" onclick="closeSplash()">
-                <img src="/static/assets/x.svg">
-            </div>
-        </div>
-    </div>
-    
-  
-
-<div class="left_content">
-    <!DOCTYPE html>
-<html lang="en">
 <head>
-    <!-- Your other head elements go here -->
+    <meta charset="utf-8">
+    <title>GEORGE SYMONDS</title>
+    <meta name="about" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/Portfolio/Images/projects/1EARTH/1ECROP.png" type="image/png">
+
+    <link rel="stylesheet" type="text/css" href="/Portfolio/static/css/1earthcss.css">
+    <script type="text/javascript" src="/Portfolio/static/js/1earthjs.js"></script>
+
 </head>
+
 <body>
 
-    <header>
-        <div class="menu_section">
-            <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
-                <option value="about">ABOUT</option>
-                <option value="cyberfeminism">GEORGE SYMONDS</option>
-                <option value="images">WORK</option>
-                <option value="collections">VIRTUAL EXHIBITION SPACE</option>
-                <option value="search">SEARCH</option>
-            </select>
-            <div id="green_box"></div>
+
+
+    <div class="left_content">
+
+        <head>
+            <!-- Your other head elements go here -->
+        </head>
+
+
+
+        <header>
+            <div class="menu_section">
+                <select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
+                    <option value="about">ABOUT</option>
+                    <option value="cyberfeminism">GEORGE SYMONDS</option>
+                    <option value="images">WORK/PORTFOLIO</option>
+                    <option value="collections">VIRTUAL EXHIBITION SPACE</option>
+                    <option value="search">RESEARCH & FORWARD THINKING</option>
+                </select>
+                <div id="green_box"></div>
+            </div>
+        </header>
+
+        <script>
+            // Set the default selection to 'about' only if not already on that page
+            document.addEventListener("DOMContentLoaded", function () {
+                var select = document.getElementById("menu");
+                if (window.location.pathname !== '/about/about.html') {
+                    select.value = "about";
+                    handleMenu(select);
+                }
+            });
+
+            function handleMenu(select) {
+                var selectedValue = select.value;
+
+                switch (selectedValue) {
+
+                    case 'about':
+                        //window.location.href = '/about/about.html'; // Change the URL accordingly
+                        break;
+                    case 'cyberfeminism':
+                        window.location.href = '/Portfolio/INDEXV23.html'; // Change the URL accordingly
+                        break;
+                    case 'images':
+                        window.location.href = '/Portfolio/work/work_INDEX.html'; // Change the URL accordingly
+                        break;
+                    case 'collections':
+                        window.location.href = '/collections'; // Change the URL accordingly
+                        break;
+                    case 'search':
+                        window.location.href = '/search'; // Change the URL accordingly
+                        break;
+                    default:
+                        // Handle other cases or do nothing
+                        break;
+                }
+            }
+        </script>
+
+        <!-- Your other body elements go here -->
+
+
+
+        <div id="top_location"></div>
+
+        <div id="about_pg_content" class="internal_pg_containertext about_pg">
+            <!--USE THIS CSS TAG FOR BODY-->
+
+
+            <div class="thismywork">
+
+                <div id="workContentTitle" class="workContentTitle">
+
+                    <h2>WELCOME TO MY WEBSITE! IT HOUSES ALL OF MY PROJECTS & CODING EXPERIMENTS
+                        <br>
+                        <a href="http://www.inventorypress.com/product/cyberfeminism-index" target="_blank">GEORGE
+                            SYMONDS</a>
+                    </h2>
+                    <p>
+                        (ABOUT) GEORGE SYMONDS, ALWAYS IN PROGRESS. Graphic Communication Designer & Creative Coder
+                        & <a href="https://www.newmuseum.org/exhibitions/view/first-look-cyberfeminism-index"
+                            target="_blank">Kang Records General</a>.
+                        Have a look around and see my work! <em>My Practice range of skills is wide & includes (but
+                            is not
+                            limited to) </em> Web Development, UX Design, Film, Photography, Music
+                        Production,Creative Direction, Physical Computing, Brand Strategy & Identity, <em>Please
+                            feel welcome to reach out to me!</em></p>
+                    <p>[<a href="https://www.instagram.com/georgeysmonds_/" target="_blank">INSTAGRAM</a>] [<a
+                            href="mailto:symonds.george@gmail.com" target="_blank">EMAIL</a>]</p>
+                    <p><em>1EARTH?</em></p>
+
+                    <img src="/Images/1EspinLowRes.gif" alt="1earthlogo"
+                        style="width: 23%; max-width: 100%; height: auto;">
+
+
+                    <p>MISSION STATEMENT:
+                    <p>AT 1EARTH WE AIM TO EMPOWER THOSE THAT BELIEVE THEY CAN MAKE AND CHANGE THE WORLD THEMSELVES.
+                        WE ARE FOR THE INDEPENDENTS, THE RISK-TAKERS, THE SELF-BELIEVERS. <br><br>
+
+                        UNITED BY OUR SHARED IDENTITY TOGETHER WE ASSOCIATE IN MOVEMENT & ACTIVISM TOWARDS MAKING A
+                        REAL DIFFERENCE, through our actions & practices we PUT ACTION TOWARDS OUR CORE BELIEFS -
+                        COMMUNITY & TRUTH. <br><br>
+
+                        <em>“communication is always linked with power and that those groups who wield power in a
+                            society influence what gets represented through the media.” [<small><a
+                                    href="https://www.mediaed.org/transcripts/Stuart-Hall-Representation-and-the-Media-Transcript.pdf"
+                                    target="_blank">1</a></small>]. WE SAY ITS TIME THIS CHANGES. IT IS TIME OUR
+                            UNHEARD VOICES ARE RECOGNISED & AMPLIFIED. <br><br>
+
+                            1EARTH IS MORE THAN A CONCEPT, WE CREATE REAL CHANGE, WE INNOVATE WEB PLATFORMS, WE
+                            EDUCATE, CREATE NEW SHARED COMMUNITIES, WE REPRESENT OUR BELIEFS TO THE FULLEST AND
+                            TOGETHER IN COLLABORATION WE ARE 1EARTH.
+                    </p>
+
+
+
+
+                </div>
+
+
+                <br>
+
+
+
+
+
+                <br><br><br><br>
+            </div>
+
+
+            <!-- BOTTOM OF BODY EVERYTIME -->
+            <div class="bottom-buttons">
+                <button class="back_to_top" onclick="back_to_top('top_location')">back to top</button>
+                <button class="submit"><a href="/Portfolio/work/work_INDEX.html">portfolio</a></button>
+            </div>
         </div>
-    </header>
-    
-    <script>
-        // Set the default selection to 'about' only if not already on that page
-        document.addEventListener("DOMContentLoaded", function() {
-            var select = document.getElementById("menu");
-            if (window.location.pathname !== '/about/about.html') {
-                select.value = "about";
-                handleMenu(select);
-            }
-        });
-    
-        function handleMenu(select) {
-            var selectedValue = select.value;
-    
-            switch (selectedValue) {
-                
-                case 'about':
-                    //window.location.href = '/about/about.html'; // Change the URL accordingly
-                    break;
-                case 'cyberfeminism':
-                    window.location.href = '/INDEXV23.html'; // Change the URL accordingly
-                    break;
-                case 'images':
-                    window.location.href = '/work/work_INDEX.html'; // Change the URL accordingly
-                    break;
-                case 'collections':
-                    window.location.href = '/collections'; // Change the URL accordingly
-                    break;
-                case 'search':
-                    window.location.href = '/search'; // Change the URL accordingly
-                    break;
-                default:
-                    // Handle other cases or do nothing
-                    break;
-            }
-        }
-    </script>
 
-<!-- Your other body elements go here -->
 
+
+
+    </div>
 </body>
 
-
-
-
-
-    <div id="top_location"></div>
- 
-    <div id="about_pg_content" class="internal_pg_containertext about_pg"> <!--USE THIS CSS TAG FOR BODY-->
-      
-    <p>(ABOUT) GEORGE SYMONDS, ALWAYS IN PROGRESS. Graphic Communication Designer & Creative Coder & <a href="https://www.newmuseum.org/exhibitions/view/first-look-cyberfeminism-index" target="_blank">Kang Records General</a>. 
-        Have a look around and see my work! <em>My Practice range of skills is wide & includes (but is not limited to) </em> Web Development, UX Design, Film, Photography, Music Production, Creative Direction, Physical Computing, Brand Strategy & Identity, <em>Please feel welcome to reach out to me! using the “contact” button at the bottom of all pages.</em></p>
-<p><em>1EARTH?</em></p>
-
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-<img src="/static/assets/cover.png" alt="1earthlogo" style="width: 23%; max-width: 100%; height: auto;">
-
-
-<p>Education:<p>Rooted as it is by <em>feminism</em>, <em>cyberfeminism</em> is an imperfect umbrella term. The history of feminism is dominated by Western attitudes, which makes it complicated and exclusionary. The reason I have chosen to use the term is because the combination of ‘cyber’ and ‘feminism’ allows novices to quickly connote its meaning and speaks to its lineage and evolution. This includes branches like Cyberfeminism 2.0 <a href="https://cyberfeminismindex.com/#/cyberfeminism-20" class="cr" slug="cyberfeminism-20"><span slug="cyberfeminism-20" title="Cyberfeminism 2.0" class="tooltip">(380)</span></a>, black cyberfeminism <a href="https://cyberfeminismindex.com/#/race-gender-and-virtual-inequality-exploring-the-liberatory-potential-of-black-cyberfeminist-theory" class="cr" slug="race-gender-and-virtual-inequality-exploring-the-liberatory-potential-of-black-cyberfeminist-theory"><span slug="race-gender-and-virtual-inequality-exploring-the-liberatory-potential-of-black-cyberfeminist-theory" title="Race, Gender, and Virtual Inequality: Exploring the Liberatory Potential of Black Cyberfeminist Theory" class="tooltip">(477)</span></a>, xenofeminism <a href="https://cyberfeminismindex.com/#/xenofeminist-manifesto" class="cr" slug="xenofeminist-manifesto"><span slug="xenofeminist-manifesto" title="Xenofeminism: A Politics for Alienation" class="tooltip">(648)</span></a>, post-cyber feminism <a href="https://cyberfeminismindex.com/#/after-the-future-n-hypotheses-of-post-cyber-feminism" class="cr" slug="after-the-future-n-hypotheses-of-post-cyber-feminism"><span slug="after-the-future-n-hypotheses-of-post-cyber-feminism" title="After the Future: n Hypotheses of Post-Cyber Feminism" class="tooltip">(577)</span></a>, glitch feminism <a href="https://cyberfeminismindex.com/#/glitch-feminism-a-manifesto" class="cr" slug="glitch-feminism-a-manifesto"><span slug="glitch-feminism-a-manifesto" title="Glitch Feminism: A Manifesto" class="tooltip">(791)</span></a>, Afrofuturism <a href="https://cyberfeminismindex.com/#/black-future" class="cr" slug="black-future"><span slug="black-future" title="Black to the Future" class="tooltip">(19)</span></a>, and hackfeministas [page "Manifiesto por Algoritmias HackFeministas" not found], transhackfeminism, 넷페미 (netfemi) [page "Korean Netfemis: Learned Woman, Yeoshi, Feminachi, Megal... Netfemi Sunansa (대한민국 넷페미사: 배운여자 여시 페미나치 메갈… 넷페미 수난사)" not found], 女权之声 (feminist voices) [page "Feminist Voices 女权之声" not found], among others.</p>
-<p>When I began building this index, Judy Malloy <a href="https://cyberfeminismindex.com/#/women-art-technology" class="cr" slug="women-art-technology"><span slug="women-art-technology" title="Women, Art, Technology" class="tooltip">(255)</span></a> recommended that I distinguish between YACK or HACK, theory versus practice respectively. YACK was collected by reading. HACK was collected through conversations with generous people who told me their stories and referred me to others (see below for these contributors). I learned of hackerspaces [page "Legacies of craft and the centrality of failure in a mother-operated hackerspace" not found], digital rights activist groups [page "Colnodo: Uso estratégico de Internet para el desarrollo" not found], DIWO organizations <a href="https://cyberfeminismindex.com/#/cyborgrrrls" class="cr" slug="cyborgrrrls"><span slug="cyborgrrrls" title="Cyborgrrrls" class="tooltip">(620)</span></a>, DIY teledildonics manuals [page "buttplug.io" not found], bio-hacktivists <a href="https://cyberfeminismindex.com/#/gynepunk" class="cr" slug="gynepunk"><span slug="gynepunk" title="GynePunk" class="tooltip">(454)</span></a>, data dominatrixes <a href="https://cyberfeminismindex.com/#/data-domination" class="cr" slug="data-domination"><span slug="data-domination" title="Data Domination" class="tooltip">(581)</span></a>, and open source estrogen pioneers [page "Sex Hormones, Biopower and Biopolitics, Endocrine Disruption, Estrogens, Biohacking" not found].</p>
-<p>The majority of references I received and read drew from a Western context. This may have been due to the limits of English, but it may also have been the relatively late adoption of the internet and varying forms of feminism outside the West. It may have also been the difference in terminology and search queries, as many included here do not self-identify as cyberfeminist. The voids in this index should not suggest that non-Western cyberfeminism does not exist. They merely reveal the inherent constraints of my Western vantage. </p>
-<p><em>design</em></p>
-<p>Angeline and I actively thought about how websites age... Many of the design elements use default form fields and system fonts, like Arial by Robin Nicholas and Patricia Saunders, one of few system fonts designed by a woman. The website was inspired by the First Cyberfeminist International website <a href="https://cyberfeminismindex.com/#/first-cyberfeminist-international" class="cr" slug="first-cyberfeminist-international"><span slug="first-cyberfeminist-international" title="First Cyberfeminist International" class="tooltip">(102)</span></a> by Old Boys Network <a href="https://cyberfeminismindex.com/#/old-boys-network-obn" class="cr" slug="old-boys-network-obn"><span slug="old-boys-network-obn" title="Old Boys Network" class="tooltip">(99)</span></a>. In order to future proof this website, Angeline used the least amount of extra tech as possible, such as vanilla JavaScript for client-side and only Python for server-side. There is one additional library used for markdown, but other than this, we do not rely on third parties or additional libraries and plugins. One day, it will be incorporated into Rhizome’s linked open data project Artbase.</p>
-
-
-<!-- BOTTOM OF BODY EVERYTIME -->
-<script type="text/javascript" src="/static/js/1earthjs.js"></script>
-<div class="bottom-buttons">
-  <button class="back_to_top" onclick="back_to_top('top_location')">back to top</button>
-  <button class="contact"><a href="mailto:symonds.george@gmail.com">contact</a></button>
-  <button class="submit"><a href="submit">submit</a></button>
-</div>
-    
-</div>
-
-</body>
-
-
-
-    
-  
-
-
-</div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+</html>
