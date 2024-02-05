@@ -21,15 +21,40 @@ function processData(rows) {
         var row = rows[2];
         console.log("Class is CSD. Value assigned to rows[2].");
 
+    } else if (content.classList.contains('TCR')) {
+        // row=rows[2]
+        var row = rows[3];
+        console.log("Class is TCR. Value assigned to rows[3].");
+
     } else if (content.classList.contains('RESEACHDATABASE')) {
         // row=rows[2]
         var row = rows[4];
         console.log("Class is CSD. Value assigned to rows[4].");
 
+    } else if (content.classList.contains('KR')) {
+        // row=rows[2]
+        var row = rows[5];
+        console.log("Class is KR. Value assigned to rows[5].");
+
+    } else if (content.classList.contains('DOC2')) {
+        // row=rows[2]
+        var row = rows[6];
+        console.log("Class is DOC2. Value assigned to rows[6].");
+
+    } else if (content.classList.contains('MEMO')) {
+        // row=rows[2]
+        var row = rows[7];
+        console.log("Class is MEMO. Value assigned to rows[7].");
+
     } else if (content.classList.contains('Photography')) {
         // row=rows[2]
         var row = rows[8];
         console.log("Class is CSD. Value assigned to rows[8].");
+
+    } else if (content.classList.contains('UV2')) {
+        // row=rows[2]
+        var row = rows[13];
+        console.log("Class is UV2. Value assigned to rows[13].");
 
     } else   {
         var row = rows[0];
