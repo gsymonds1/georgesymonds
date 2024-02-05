@@ -596,22 +596,29 @@ header #tag_btn button span {
   display: block;
 }
 
+
+
+
 .hoverproject_img a {
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  display: block;
+
 }
 
 .hoverproject_img a span {
   position: fixed;
   display: none;
   z-index: 0;
-  left: 40%;
-  top: 30%;
+  left: 20%;
+  top: 0%;
   transform: translate(-70%, -50%);
   max-width: 10vw;
   /* Limit image size to 70% of the viewport width */
   max-height: 40px;
   /* Limit image size to 70% of the viewport height */
+
 }
 
 .hoverproject_img a:hover span {
@@ -619,12 +626,65 @@ header #tag_btn button span {
 
 }
 
+.hiddenheader {
+  height: auto !important;
+  display: none !important;
+  color: black;
+}
+
 @media only screen and (max-width: 753px) {
+  .hoverproject_img a {
+    width: 100%;
+    /* Take full width of the screen */
+    height: 175px;
+    /* Set the height to 150px */
+    /* margin-bottom: 200px;  */
+    outline: 1px solid black;
+    color: #fff;
+  }
+
+  .hiddenheader {
+    color: #000 !important;
+    display: block !important;
+  }
+
+  .hoverproject_img {
+    margin-left: 0.3px;
+    margin-top: 10px;
+  }
+
+
   .hoverproject_img a span {
     display: block;
     /* Show the image by default on mobile */
-    /* Additional mobile styles go here */
+    position: static;
+    /* Reset position to static for normal flow */
+    transform: none;
+    /* Reset transform */
+    width: 100%;
+    /* Take full width of the container */
+    max-height: 175px;
+    /* Set the max height */
+    left: -50%;
+    /* Center horizontally */
+    top: -50%;
+    /* Center vertically */
+    transform: translate(-50%, -10%);
+    z-index: 0;
   }
+
+  .up120{
+    transform: translate(0%, -40%);
+  }
+
+  .up100{
+    transform: translate(0%, -34%);
+  }
+
+  .up50{
+    transform: translate(0%, -23%);
+  }
+
 }
 
 
@@ -712,7 +772,7 @@ header #tag_btn button span {
     font-size: 16px;
     background-color: #fff;
   }
-  
+
 
   .grid-container {
     grid-template-columns: 27px 40px 43% 25%;
@@ -753,16 +813,17 @@ header #tag_btn button span {
 } */
 
 }
-  .you-may-also-like-container {
-    position: relative;
-    width: 1040px;
-    height: 367px;
-    left: 0px;
-    top: 14px;
-  }
 
-  .you-may-also-like-text {
-    /* position: absolute;
+.you-may-also-like-container {
+  position: relative;
+  width: 1040px;
+  height: 367px;
+  left: 0px;
+  top: 14px;
+}
+
+.you-may-also-like-text {
+  /* position: absolute;
   width: 144px;
   height: 20px;
   left: 0px;
@@ -776,42 +837,68 @@ header #tag_btn button span {
   identical to box height */
 
 
-    color: #000000;
-  }
+  color: #000000;
+}
 
 
-  .scrollframe-mini {
-    position: relative;
-    width: 1373px;
-    height: 866px;
-    top: 26px;
-    left: -4;
-    overflow-x: scroll;
-    /* overflow-y: hidden; */
-  }
+.scrollframe-mini {
+  position: relative;
+  width: 1373px;
+  height: 866px;
+  top: 26px;
+  left: -4;
+  overflow-x: scroll;
+  /* overflow-y: hidden; */
+}
 
-  .scrollmenu {
-    overflow: auto;
-    white-space: nowrap;
-  }
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
 
-  .row1 {
-    position: relative;
-    width: 2099px;
-    height: 338px;
-    left: 0px;
-    top: 0px;
-  }
+.row1 {
+  position: relative;
+  width: 2099px;
+  height: 338px;
+  left: 0px;
+  top: 0px;
+}
 
-  .img-container {
-    position: relative;
-    display: inline-block;
-    color: #0000FF;
-  }
+.img-container {
+  position: relative;
+  display: inline-block;
+  color: #0000FF;
+}
 
-  .project-pic-mini {
-    border: 1px solid #000000;
-    object-fit: cover;
-    width: 250px;
-    height: 338px;
-  }
+.project-pic-mini {
+  border: 1px solid #000000;
+  object-fit: cover;
+  width: 250px;
+  height: 338px;
+}
+
+.relatedWorkContentTitle {
+  overflow-x: auto;
+}
+
+.scrolling-container {
+  display: flex;
+  /* Make it a flex container to line up items horizontally */
+}
+
+.relatedWorkItem {
+  margin-right: 10px;
+  /* Adjust the margin between items as needed */
+}
+
+.relatedWorkItem img {
+  object-fit: cover;
+  width: 150px;
+  height: 200px;
+}
+
+/* Optional: Add styling for the captions */
+.relatedWorkItem p {
+  text-align: left;
+  margin-top: 5px;
+}
