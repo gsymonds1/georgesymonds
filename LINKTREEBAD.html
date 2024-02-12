@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BETI</title>
+	<link rel="stylesheet" type="text/css" href="linktree/stylelinkBAD.css">
+	<link rel="icon" href="/Portfolio/Images/projects/1EARTH/1ECROP.png" type="image/png">
+
+
+	<!-- Google tag (gtag.js)
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78PVLNB943"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-78PVLNB943');
+</script> -->
+
+	<style>
+		/* additional styles for the overlay */
+		.overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1000;
+			opacity: 1;
+			/* initial opacity */
+			transition: opacity 2s ease-out;
+			/* 2 seconds fade out transition */
+
+
+		}
+
+		/* additional styles for the background image */
+		.overlay img {
+
+			height: 100%;
+			max-width: 100%;
+
+			object-fit: cover;
+		}
+
+		/* additional styles for the content container */
+		#contentContainer {
+			opacity: 0;
+			padding-right: 30px;
+			/* initial opacity */
+			transition: opacity 2s ease-in;
+			/* 2 seconds fade in transition */
+		}
+	</style>
+
+</head>
+
+<div class="background-image"></div>
+
+<body>
+
+	<style>
+		header {
+			margin: 11px 0 30px 0;
+			width: 100vw;
+			position: fixed;
+			text-align: center;
+			z-index: 2;
+		}
+
+		header .menu_section {
+			position: relative;
+			z-index: 10;
+			width: calc(100% - 30px);
+			display: inline-block;
+			height: 100%;
+			/* margin-left: -14px; */
+		}
+	</style>
+	<!-- the headerbar -->
+
+	<script>
+		// Set the default selection to 'cyberfeminism' only if not already on that page
+		document.addEventListener("DOMContentLoaded", function () {
+			var select = document.getElementById("menu");
+			if (window.location.pathname !== '/cyberfeminism') {
+				select.value = "cyberfeminism";
+				handleMenu(select);
+			}
+		});
+
+		function handleMenu(select) {
+			var selectedValue = select.value;
+
+			switch (selectedValue) {
+				case 'cyberfeminism':
+					//window.location.href = '/index.html'; // Change the URL accordingly
+					break;
+				case 'about':
+					window.location.href = '/Portfolio/about/about.html'; // Change the URL accordingly
+					break;
+				case 'images':
+					window.location.href = '/Portfolio/work/work_INDEX.html'; // Change the URL accordingly
+					break;
+				case 'collections':
+					window.location.href = 'collections'; // Change the URL accordingly
+					break;
+				case 'search':
+					window.location.href = 'search'; // Change the URL accordingly
+					break;
+				default:
+					// Handle other cases or do nothing
+					break;
+			}
+		}
+	</script>
+
+
+	<div id="landingSpread">
+		<header>
+			<div class="menu_section">
+				<select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
+					<option value="cyberfeminism">LINKTREE</option>
+					<option value="images">WORK</option>
+					<option value="about">ABOUT</option>
+					<option value="collections">VIRTUAL EXHIBITION SPACE</option>
+					<option value="search">RESEARCH & FORWARD THINKING</option>
+				</select>
+				<div id="green_box"></div>
+			</div>
+		</header>
+
+		<p>
+		<div id="container" class="logo">
+			<img src="/Images/BETI/BETILOGOwhiteLOGO.png" alt="A 1" class="logo"
+				style="mix-blend-mode: darken; display: flex; justify-content: center; align-items: center; position: relative; margin-bottom: 0px;">
+		</div>
+		</p>
+
+		<p class="subtitle "><strong> @b3tise</strong></p>
+	</div>
+
+
+	<br>
+
+	<div id="contentContainer" class="table">
+		<!-- <hr> -->
+		<ul id="content"></ul>
+	</div>
+	<br><br><br>
+
+
+	<div class="fixedBottomButtons">
+		<div class="footerText">
+			℗ 1Earth 2024
+		</div>
+
+		<!-- <div id="bottom">
+			<a href="/Portfolio/work/work_1EARTH.html" target="_blank">
+				<button id="bot_open" class="btn buttonMain ">1EARTH SOLUTIONS</button>
+			</a>
+		</div> -->
+
+		<!-- <div id="bottom2">
+			<a href="/Portfolio/work/work_INDEX.html" target="_blank">
+				<button id="bot_aboutus" class="btn buttonMain ">ABOUT ME</button>
+			</a>
+		</div> -->
+
+	</div>
+
+
+
+
+	<!-- overlay with GIF -->
+	<div class="overlay">
+		<img src="/Images/BETI/back.gif" alt="Overlay GIF" style="width: 100%; height: 100%;">
+	</div>
+
+	<!-- content container -->
+	<div id="contentContainer" class="table">
+		<!-- your existing content -->
+	</div>
+
+		<!-- your existing script tag -->
+		<script type="text/javascript" src="linktree/mainBAD.js"></script>
+
+	<script>
+		// Wait for the window to load
+		window.onload = function () {
+			// Set a timeout to hide the overlay and fade in the content
+			setTimeout(function () {
+				var overlay = document.querySelector('.overlay');
+				var contentContainer = document.getElementById('contentContainer');
+
+				// Hide the overlay
+				overlay.style.opacity = 0;
+
+				// Fade in the content
+				contentContainer.style.opacity = 1;
+
+				// Make the overlay non-interactive
+				overlay.style.pointerEvents = 'none';
+			}, 1000); // 2000 milliseconds (2 seconds)
+		};
+
+	</script>
+
+
+
+
+
+</body>
+
+
+
+<!-- </h2><div class="innerTableContent"><p style="flex: 1; margin: 0; vertical-align: top;">descriptiontext</p><img src="https://live.staticflickr.com/7372/12502775644_acfd415fa7_w.jpg" style="flex: 0 0 100px; object-fit: cover; height: 100px; width: 100px;"></div><img src='https://live.staticflickr.com/7372/12502775644_acfd415fa7_w.jpg' style=' height: 23px; top: -100px;'><br><br></div>
+	<div id="bottomSubPoint"><a href="about.html" target="_blank"><button id="bot_grouplink" class="contentContainer btn buttonMain" style="width:100%">@' + row[5] + '</button></a></div>
+	 -->
+
+
+</html>

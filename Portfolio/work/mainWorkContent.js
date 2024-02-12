@@ -1,96 +1,84 @@
 var id = '1ioWsWWhAhvDNPCSVsR5340V_8OPOIMsk1sp6KwdSGqs';
 var sheet_name = 'Sheet1';
-var key = "AIzaSyB5b_wv4yQMDoHTCDDZydcbYxLZ5ISrGbQ"
+var key = "AIzaSyB5b_wv4yQMDoHTCDDZydcbYxLZ5ISrGbQ";
 var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + id + '/values/' + sheet_name + '?alt=json&key=' + key;
 
-
-
 function processData(rows) {
-
-    var headers = rows[0];
     var content = document.getElementById('workContent');
-    var startingRow = 0; // Specify the line number from which you want to start reading content
+    var content2 = document.getElementById('relatedWorkContentTitle');
 
-    if (content.classList.contains('1EARTH')) {
-        // row=rows[1]
-        var row = rows[1];
-        console.log("Class is 1EARTH. Value assigned to rows[1].");
-    
-    } else if (content.classList.contains('CSD')) {
-        // row=rows[2]
-        var row = rows[2];
-        console.log("Class is CSD. Value assigned to rows[2].");
+    const classToRowIndexMap = {
+        '1EARTH': 1,
+        'CSD': 2,
+        'TCR': 3,
+        'RESEARCHDATABASE': 4,
+        'KR': 5,
+        'DOC2': 6,
+        'MEMO': 7,
+        'Photography': 8,
+        'MV': 9,
+        'TRT': 10,
+        'UV2': 13,
+    };
 
-    } else if (content.classList.contains('TCR')) {
-        // row=rows[2]
-        var row = rows[3];
-        console.log("Class is TCR. Value assigned to rows[3].");
+    var row = rows[classToRowIndexMap[content.classList.value]] || rows[0];
+    console.log(`Class is ${content.classList.value}. Value assigned to rows[${classToRowIndexMap[content.classList.value] || 0}].`);
 
-    } else if (content.classList.contains('RESEACHDATABASE')) {
-        // row=rows[2]
-        var row = rows[4];
-        console.log("Class is CSD. Value assigned to rows[4].");
+    renderBodyContent(row, content);
+    // renderRelatedContent(row, content2);
 
-    } else if (content.classList.contains('KR')) {
-        // row=rows[2]
-        var row = rows[5];
-        console.log("Class is KR. Value assigned to rows[5].");
+    //DETECT + PRINT RELATED WORK
+    // Check all other rows in column 11
+    const columnIndex11 = 11;
+    const currentColumn11Value = row[columnIndex11];
 
-    } else if (content.classList.contains('DOC2')) {
-        // row=rows[2]
-        var row = rows[6];
-        console.log("Class is DOC2. Value assigned to rows[6].");
+    // Split the keywords into an array
+    const currentKeywordsArray = currentColumn11Value.split(',').map(keyword => keyword.trim());
+    content2.innerHTML += "<p><strong>RELATED WORK:</strong></p>";
+    for (let i = 0; i < rows.length; i++) {
+        if (i !== classToRowIndexMap[content.classList.value]) { // Skip the current row
+            const column11Value = rows[i][columnIndex11];
 
-    } else if (content.classList.contains('MEMO')) {
-        // row=rows[2]
-        var row = rows[7];
-        console.log("Class is MEMO. Value assigned to rows[7].");
+            // Split the keywords of the current row into an array
+            const otherKeywordsArray = column11Value.split(',').map(keyword => keyword.trim());
 
-    } else if (content.classList.contains('Photography')) {
-        // row=rows[2]
-        var row = rows[8];
-        console.log("Class is CSD. Value assigned to rows[8].");
+            // Check if there's any common keyword
+            if (currentKeywordsArray.some(keyword => otherKeywordsArray.includes(keyword))) {
+                console.log(`Matching keyword found in row ${i + 1}: ${rows[i][1]}`);
+                
+                content2.innerHTML += "<p>title:" + rows[i][1] + "</p>";
+                content2.innerHTML += ``
 
-    } else if (content.classList.contains('UV2')) {
-        // row=rows[2]
-        var row = rows[13];
-        console.log("Class is UV2. Value assigned to rows[13].");
-
-    } else   {
-        var row = rows[0];
-        console.log(row);
+            }
+        }
     }
+}
 
-
-    
-
-    content.innerHTML += "<h2>" + row[1] + "</h2>";//title
-    content.innerHTML += "<h4>" + row[4] + "</h4>";//yr
-    content.innerHTML += "<h3>" + row[2] + "</h3>";//sub
-    content.innerHTML += "<h4>" + row[3] + "</h3>";//media
-    content.innerHTML += "<p>" + row[5] + "</p>";//p
+function renderBodyContent(row, content) {
+    content.innerHTML += "<h2>" + row[1] + "</h2>"; // title
+    content.innerHTML += "<h4>" + row[4] + "</h4>"; // yr
+    content.innerHTML += "<h3>" + row[2] + "</h3>"; // sub
+    content.innerHTML += "<h4>" + row[3] + "</h4>"; // media
+    content.innerHTML += "<p>" + row[5] + "</p>"; // p
     if (row[6].trim() !== '') {
         content.innerHTML += `<div class="picofmyworkandcaption"><img src="${row[6]}" alt="Work 0" class="thismyworkpic"><p class="imagecaption">${row[7]}</p></div>`;
     }
-    content.innerHTML += "<p>" + row[8] + "</p>";//p
-    content.innerHTML += `<a href="`+row[9]+`">`+row[10]+`</a>`
-
-
-
-    //THE RELATED FOOTER
-    var content2 = document.getElementById('relatedWorkContentTitle');
-    console.log("relatedWorkContentTitle");
-    content2.innerHTML += "<p>RELATED WORK HERE</p>";
-
-
+    content.innerHTML += "<p>" + row[8] + "</p>"; // p
+    content.innerHTML += `<a href="${row[9]}">${row[10]}</a>`;
 }
 
+// function renderRelatedContent(row, content2) {
+//     console.log("relatedWorkContentTitle");
+//     content2.innerHTML += "<p>RELATED WORK HERE</p>";
+//     content2.innerHTML += "<p>title:</p>" + row[1];
+// }
 
-
-
-//this gets the data from the google sheet
 fetch(url)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => processData(data.values))
-
-
+    .catch(error => console.error('Error fetching data:', error));
