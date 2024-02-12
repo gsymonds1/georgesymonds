@@ -18,7 +18,18 @@ function processData(rows) {
         'Photography': 8,
         'MV': 9,
         'TRT': 10,
+        'VES':11,
+        'DD':12,
         'UV2': 13,
+        'GUN': 14,
+        'BEANIE': 15,
+        'KEYSCAPE': 16,
+        'JKT': 17,
+        'EMOTIONS': 18,
+        'ALBUMCOVERS': 19,
+        'WECARE': 20,
+        'CREATIONSTATION': 21,
+        'LIFE': 22,
     };
 
     var row = rows[classToRowIndexMap[content.classList.value]] || rows[0];
