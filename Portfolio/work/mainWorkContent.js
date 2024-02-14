@@ -18,8 +18,8 @@ function processData(rows) {
         'Photography': 8,
         'MV': 9,
         'TRT': 10,
-        'VES':11,
-        'DD':12,
+        'VES': 11,
+        'DD': 12,
         'UV2': 13,
         'GUN': 14,
         'BEANIE': 15,
@@ -46,23 +46,33 @@ function processData(rows) {
     // Split the keywords into an array
     const currentKeywordsArray = currentColumn11Value.split(',').map(keyword => keyword.trim());
     content2.innerHTML += "<p><strong>RELATED WORK:</strong></p>";
+    content2.innerHTML += `<div id="relatedWorkContentTitle" class="relatedWorkContentTitle">
+        <div id="scrollingContainer" class="scrolling-container">`;
+    
     for (let i = 0; i < rows.length; i++) {
         if (i !== classToRowIndexMap[content.classList.value]) { // Skip the current row
             const column11Value = rows[i][columnIndex11];
-
+    
             // Split the keywords of the current row into an array
             const otherKeywordsArray = column11Value.split(',').map(keyword => keyword.trim());
-
+    
             // Check if there's any common keyword
             if (currentKeywordsArray.some(keyword => otherKeywordsArray.includes(keyword))) {
-                console.log(`Matching keyword found in row ${i + 1}: ${rows[i][1]}`);
-                
-                content2.innerHTML += "<p>title:" + rows[i][1] + "</p>";
-                content2.innerHTML += ``
-
+                console.log(`Matching keyword found in row ` + i + `: ` + rows[i][1]);
+                // PRINT RELATED WORK HERE:
+    
+                content2.innerHTML += 
+                    `<div class="relatedWorkItem">
+                        <a href="`+ rows[i][12] + `" target="_blank">
+                            <img src="` + rows[i][13] + `" alt="Image `+ i+`">
+                        </a>
+                        <p>`+ rows[i][1] + `</p>
+                    </div>`;
             }
         }
     }
+    
+    content2.innerHTML += `</div></div>`;
 }
 
 function renderBodyContent(row, content) {
