@@ -48,12 +48,31 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    flex-wrap: wrap; /* Allow thumbnails to wrap onto the next line */
+    justify-content: center;
+    width: 79vw;
+  }
+/* SCROLLING */
+  .thumbnails.initial {
+    bottom: 10px;
+    transition: bottom 0.5s ease; /* Disable transition for initial positioning */
+  }
+  /* Add this rule for the scrolling animation */
+  .thumbnails.scrolled {
+    position: fixed;
+    bottom: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: bottom 0.5s ease; /* Adjust the duration and easing as needed */
   }
   
   .thumbnail {
-    width: 60px;
+    width: 80px;
     height: 40px;
-    margin: 0 5px;
+    margin:  5px;
     cursor: pointer;
   }
   
@@ -83,3 +102,7 @@ body {
     text-decoration: underline;
   }
   
+
+  .thumbnail.active {
+    box-shadow: 0 0 10px #0000ff; /* Adjust color as needed */
+  }
