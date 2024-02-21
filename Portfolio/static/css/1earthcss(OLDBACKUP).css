@@ -473,6 +473,91 @@ header #tag_btn button span {
 }
 
 
+.tooltip {
+  position: relative;
+  color: #00ff00;
+  /*-webkit-transition: all 500ms ease-in-out;*/
+}
+
+#pdf_list .pdf_section {
+  padding: 22px 0;
+}
+
+#pdf_list .index_drawer .drawer_content {
+  padding: 0;
+}
+
+#pdf_list .grid-container div.sm.num {
+  margin: 0;
+  text-align: left;
+  width: 4%;
+}
+
+#pdf_page .cover {
+  font-size: 98px;
+  text-shadow: 0 0 17px #00ff00;
+  line-height: 1.1;
+  margin-left: 20px;
+  color: transparent;
+}
+
+#pdf_page .left_content {
+  padding: 22px;
+}
+
+#pdf_page .print-description {
+  margin-top: 120px;
+}
+
+#pdf_page .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  width: 100%;
+}
+
+#pdf_page .grid-container div {
+  text-align: left;
+  width: 9%;
+}
+
+#pdf_page .grid-container div.lg {
+  width: 50%;
+  /*text-indent: 20px;*/
+}
+
+#pdf_page .grid-container div.md {
+  width: 30%;
+  float: right;
+}
+
+#pdf_page p.cr {
+  margin: 3px 0 0 0 !important;
+}
+
+@media all {
+  #pdf_page .break {
+    display: none;
+  }
+}
+
+@media print {
+  #pdf_page .break {
+    display: block;
+    page-break-before: always;
+  }
+
+  #pdf_page div {
+    display: inline;
+  }
+
+  /*body, html { margin:0.5in; }*/
+  @page {
+    margin: 0.5in;
+  }
+}
+
 /* THE PROJECT MENU */
 
 .filterSection {
@@ -517,64 +602,47 @@ header #tag_btn button span {
 }
 
 
-.hoverproject_img {
-  width: calc(33.33% - 10px); /* Adjust width and margin as needed */
-  margin: 5px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
+
 
 .hoverproject_img a {
-  /* position: relative; */
+  position: relative;
   z-index: 1;
   overflow: hidden;
   display: block;
-  height: 100%;
-  outline: 1px solid black;
-  color: #fff;
 
-}
-
-.hoverproject_img a img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .hoverproject_img a span {
-  display: block;
-  /* Show the image by default on mobile */
-  position: static;
-  /* Reset position to static for normal flow */
-  transform: none;
-  /* Reset transform */
-  width: 100%;
-  width: 100%;
-  /* Take full width of the container */
-  max-height: 175px;
-  /* Set the max height */
-  left: -50%;
-  /* Center horizontally */
-  top: -50%;
-  /* Center vertically */
-  /* transform: translate(-50%, -10%); */
+  position: fixed;
+  display: none;
   z-index: 0;
+  left: 20%;
+  top: 0%;
+  transform: translate(-70%, -50%);
+  max-width: 10vw;
+  /* Limit image size to 70% of the viewport width */
+  max-height: 40px;
+  /* Limit image size to 70% of the viewport height */
+
 }
 
-/* .hoverproject_img a:hover span {
+.hoverproject_img a:hover span {
   display: block;
 
-} */
+}
 
 .hiddenheader {
   height: auto !important;
-  color: #000 !important;
-  display: block !important;
+  display: none !important;
+  color: black;
 }
 
 @media only screen and (max-width: 753px) {
   .hoverproject_img a {
+    width: 100%;
+    /* Take full width of the screen */
     height: 175px;
+    /* Set the height to 150px */
     /* margin-bottom: 200px;  */
     outline: 1px solid black;
     color: #fff;
@@ -586,10 +654,9 @@ header #tag_btn button span {
   }
 
   .hoverproject_img {
-    width: 100%; /* Adjust width and margin as needed */
-    margin: 0px;
-    box-sizing: border-box;
-}
+    margin-left: 0.3px;
+    margin-top: 10px;
+  }
 
 
   .hoverproject_img a span {
@@ -599,46 +666,35 @@ header #tag_btn button span {
     /* Reset position to static for normal flow */
     transform: none;
     /* Reset transform */
-    /* width: 10%; */
+    width: 100%;
     /* Take full width of the container */
     max-height: 175px;
     /* Set the max height */
-    /* left: -50%; */
+    left: -50%;
     /* Center horizontally */
-    /* top: -50%; */
+    top: -50%;
     /* Center vertically */
-    /* transform: translate(-50%, -10%); */
+    transform: translate(-50%, -10%);
     z-index: 0;
   }
 
- 
+  .up120{
+    transform: translate(0%, -40%);
+  }
+
+  .up100{
+    transform: translate(0%, -30%);
+  }
+
+  .up50{
+    transform: translate(0%, -23%);
+  }
 
 }
 
-.centrecrop span{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* .up120 {
-  transform: translate(0%, -40%);
-}
-
-.up100 {
-  transform: translate(0%, -30%);
-}
-
-.up50 {
-  transform: translate(0%, -23%);
-} */
 
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Adjust alignment as needed */
-}
+
 
 
 
@@ -699,12 +755,6 @@ header #tag_btn button span {
   padding: 0vw;
 }
 
-.worktitleimage img{
-  /* height: 100%;
-  width: 100%;
-  object-fit: contain; */
-  /* margin: 20px; */
-}
 
 .picofmyworkandcaption {
   display: flex;

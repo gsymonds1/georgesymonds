@@ -30,6 +30,7 @@ function processData(rows) {
         'WECARE': 20,
         'CREATIONSTATION': 21,
         'LIFE': 22,
+        'GEORGE': 23,
     };
 
     var row = rows[classToRowIndexMap[content.classList.value]] || rows[0];
@@ -45,9 +46,9 @@ function processData(rows) {
 
     // Split the keywords into an array
     const currentKeywordsArray = currentColumn11Value.split(',').map(keyword => keyword.trim());
-    content2.innerHTML += "<p><strong>RELATED WORK:</strong></p>";
-    content2.innerHTML += `<div id="relatedWorkContentTitle" class="relatedWorkContentTitle">
-        <div id="scrollingContainer" class="scrolling-container">`;
+    // content2.innerHTML += "<p><strong>RELATED WORK:</strong></p>";
+    // content2.innerHTML += `<div id="relatedWorkContentTitle" class="relatedWorkContentTitle">
+    //     <div id="scrollingContainer" class="scrolling-container">`;
     
     for (let i = 0; i < rows.length; i++) {
         if (i !== classToRowIndexMap[content.classList.value]) { // Skip the current row
@@ -72,7 +73,7 @@ function processData(rows) {
         }
     }
     
-    content2.innerHTML += `</div></div>`;
+    // content2.innerHTML += `</div></div>`;
 }
 
 function renderBodyContent(row, content) {

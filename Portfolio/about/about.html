@@ -66,7 +66,7 @@
                         window.location.href = '/collections'; // Change the URL accordingly
                         break;
                     case 'search':
-                        window.location.href = '/search'; // Change the URL accordingly
+                        window.location.href = '/Portfolio/work/work_INDEX.html'; // Change the URL accordingly
                         break;
                     default:
                         // Handle other cases or do nothing
@@ -105,34 +105,198 @@
                             feel welcome to reach out to me!</em></p>
                     <p>[<a href="https://www.instagram.com/georgeysmonds_/" target="_blank">INSTAGRAM</a>] [<a
                             href="mailto:symonds.george@gmail.com" target="_blank">EMAIL</a>]</p>
-                    <p><em>1EARTH?</em></p>
+
+
+
+
+                    <div class="filterSection">
+                        <p>Filter Design Statement by category:</p>
+                        <div class="menu_section">
+                            <select id="filter" name="filter" onchange="handleFilter()" class="filteroptions">
+                                <option value="all">All</option>
+                                <option value="community">Community</option>
+                                <option value="computation">Computation</option>
+                                <option value="education">Education</option>
+                                <option value="film">Film</option>
+                                <option value="image">Image</option>
+                                <option value="music">Music</option>
+                                <option value="strategyidentity">Strategy & Identity</option>
+                                <option value="web">Web</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="menuContents">
+
+                        <div class="contexttalk all">
+                            <p>Currently a final year university student at CSM, specialising in translating the core meanings and values of communities into authentic and purposeful public-facing outcomes. In my practice, I combine design with technical computation to produce functional outcomes that cannot be achieved through design alone. My outcomes are designed to exist and thrive in the real world, catering to the specific needs of my target audience.
+                            </p>
+                        </div>
+                        <div class="contexttalk community">
+                            <p>Community is key, my whole creative practice revolves around it. To represent a community
+                                is to
+                                explore its core meanings and values, and to identify how they can be translated into
+                                public-facing
+                                outcomes that resonate with authenticity and purpose. View my projects below to find how
+                                I do this:
+                            </p>
+                        </div>
+                        <div class="contexttalk computation">
+                            <p>I merge design with technical computation in my practice to deliver functioning outcomes
+                                that can’t
+                                be solved with just design alone. My outcomes are designed to exist and thrive in the
+                                real world,
+                                addressing the specific needs of my aim. View my projects below to find how I do this:
+                            </p>
+                        </div>
+
+                        <div class="contexttalk education">
+                            <p>Education to me is a dynamic transfer of knowledge. I dissect this process, exploring how
+                                creatively
+                                designed mediums can make learning engaging, powerful, and experimental through creating
+                                crafted
+                                experiences. In my self-initiated practice, I talk on topics such as the cost-of-living
+                                crisis and
+                                raise awareness of lesser-known societal issues. View my projects below to find how I do
+                                this:
+                            </p>
+                        </div>
+
+                        <div class="contexttalk film">
+                            <p>In my practice, I’m gravitated towards film as it’s one of the most powerful forms of
+                                translating
+                                ideas and stories. I use it to empower and amplify independent & alternate stories,
+                                through
+                                constructing deep audio+visual landscapes channelling emotions that resonate with my
+                                viewer. View my
+                                projects below to find how I do this:
+                            </p>
+                        </div>
+
+                        <div class="contexttalk image">
+                            <p>I use image to give form & represent conceptual ideas, creating new points of
+                                understanding for my
+                                viewers. I focus on the translation & representation of my subjects, positioning them
+                                within the
+                                world to create a bridge between abstract concepts and tangible connections. View my
+                                projects below
+                                to find how I do this:
+                            </p>
+                        </div>
+
+                        <div class="contexttalk music">
+                            <p>I am a producer, I work with my community to bring out their best. Through collaboration
+                                & developing
+                                mediums to cultivate their identity (such as music videos, album covers, and
+                                photography) and
+                                bringing the dopest beats. (KR) is my community, our mentality, and our collective
+                                identity. We all
+                                do this together:
+                            </p>
+                        </div>
+
+                        <div class="contexttalk strategyidentity">
+                            <p>I approach identity as a strategy. I aim to accurately represent my subject's core
+                                values, beliefs,
+                                and history and incorporate them in all the designed facets of public-facing outcomes
+                                through
+                                thorough research & investigation. View my projects below to find how I do this:
+                            </p>
+                        </div>
+
+                        <div class="contexttalk web">
+                            <p>I use the web to frame my self-initiated work, making it universally accessible, and
+                                inviting a
+                                diverse audience to engage with it. You can check out my projects below to see how I put
+                                this into
+                                practice:
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                    <script>
+                        function handleFilter() {
+                            var selectedCategory = document.getElementById('filter').value;
+
+                            var projects = document.querySelectorAll('.hoverproject_img');
+                            projects.forEach(function (project) {
+                                var projectCategories = project.className.split(' ');
+
+                                if (selectedCategory === 'all' || projectCategories.includes(selectedCategory)) {
+                                    project.style.display = 'block';
+                                } else {
+                                    project.style.display = 'none';
+                                }
+                            });
+
+
+                            var projects2 = document.querySelectorAll('.contexttalk');
+                            projects2.forEach(function (project2) {
+                                var project2Categories = project2.className.split(' ');
+
+                                if (project2Categories.includes(selectedCategory)) {
+                                    project2.style.display = 'block';
+                                } else {
+                                    project2.style.display = 'none';
+                                }
+                            });
+
+
+                        }
+
+                        function handleSearch() {
+                            var searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+                            var projects = document.querySelectorAll('.hoverproject_img');
+                            projects.forEach(function (project) {
+                                var projectName = project.textContent.toLowerCase();
+                                var projectKeywords = project.className.toLowerCase();
+
+                                if (projectName.includes(searchInput) || projectKeywords.includes(searchInput)) {
+                                    project.style.display = 'block';
+                                } else {
+                                    project.style.display = 'none';
+                                }
+                            });
+                        }
+                    </script>
+
 
                     <img src="/Images/1EspinLowRes.gif" alt="1earthlogo"
                         style="width: 23%; max-width: 100%; height: auto;">
 
 
-                    <p>MISSION STATEMENT:
-                    <p>AT 1EARTH WE AIM TO EMPOWER THOSE THAT BELIEVE THEY CAN MAKE AND CHANGE THE WORLD THEMSELVES.
-                        WE ARE FOR THE INDEPENDENTS, THE RISK-TAKERS, THE SELF-BELIEVERS. <br><br>
+                </div>
+                <br><br>
 
-                        UNITED BY OUR SHARED IDENTITY TOGETHER WE ASSOCIATE IN MOVEMENT & ACTIVISM TOWARDS MAKING A
-                        REAL DIFFERENCE, through our actions & practices we PUT ACTION TOWARDS OUR CORE BELIEFS -
-                        COMMUNITY & TRUTH. <br><br>
+                <p><strong>COLLABORATIONS:</strong></p>
+                <div id="relatedWorkContentTitle" class="relatedWorkContentTitle">
+                    <div id="scrollingContainer" class="scrolling-container">
 
-                        <em>“communication is always linked with power and that those groups who wield power in a
-                            society influence what gets represented through the media.” [<small><a
-                                    href="https://www.mediaed.org/transcripts/Stuart-Hall-Representation-and-the-Media-Transcript.pdf"
-                                    target="_blank">1</a></small>]. WE SAY ITS TIME THIS CHANGES. IT IS TIME OUR
-                            UNHEARD VOICES ARE RECOGNISED & AMPLIFIED. <br><br>
+                        <!-- Repeat the following structure for each of the 23 pictures -->
+                        <div class="relatedWorkItem">
+                            <a href="linkfromrow[i][12]" target="_blank">
+                                <img src="/Images/dance.gif" alt="Image 1">
+                            </a>
+                            <p>muriel artists</p>
+                        </div>
+                        <div class="relatedWorkItem">
+                            <a href="linkfromrow[i][12]" target="_blank">
+                                <img src="/Images/dance.gif" alt="Image 1">
+                            </a>
+                            <p>memo approved</p>
+                        </div>
+                        <div class="relatedWorkItem">
+                            <a href="linkfromrow[i][12]" target="_blank">
+                                <img src="/Images/dance.gif" alt="Image 1">
+                            </a>
+                            <p>driven thru prayer</p>
+                        </div>
+                        <!-- ^Repeats for however many there is -->
 
-                            1EARTH IS MORE THAN A CONCEPT, WE CREATE REAL CHANGE, WE INNOVATE WEB PLATFORMS, WE
-                            EDUCATE, CREATE NEW SHARED COMMUNITIES, WE REPRESENT OUR BELIEFS TO THE FULLEST AND
-                            TOGETHER IN COLLABORATION WE ARE 1EARTH.
-                    </p>
-
-
-
-
+                    </div>
                 </div>
 
 
