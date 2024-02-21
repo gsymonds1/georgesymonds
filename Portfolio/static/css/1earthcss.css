@@ -21,6 +21,19 @@
   font-feature-settings: "liga", "clig";
 }
 
+.menu_section select {
+  /* Your styles here */
+  height: 23px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.bottom-buttons button {
+  height: 23px;
+  background-color: white;
+  border-radius: 3px;
+}
+
 body,
 html {
   margin: 0;
@@ -153,6 +166,9 @@ button {
   /* Remove default margin */
   z-index: 10;
   position: relative;
+  height: 23px;
+  background-color: white;
+  border-radius: 3px;
 }
 
 .images_pg img {
@@ -210,36 +226,7 @@ header #menu {
 
 }
 
-header #menu select {
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: -internal-light-dark-color(black, white);
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  -webkit-appearance: menulist;
-  box-sizing: border-box;
-  align-items: center;
-  white-space: pre;
-  -webkit-rtl-ordering: logical;
-  background-color: rgb(248, 248, 248);
-  cursor: default;
-  margin: 0em;
-  font: 400 11px system-ui;
-  border-radius: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(166, 166, 166);
-  border-image: initial;
-}
 
-select#menu.nav {
-  color: black;
-}
 
 header #tag_btn {
   display: inline-block;
@@ -255,10 +242,7 @@ header #tag_btn button:hover {
   cursor: pointer;
 }
 
-header #tag_btn button span {
-  /* font-size: 1vw; */
-  vertical-align: middle;
-}
+
 
 #categories_section {
   width: 100%;
@@ -274,26 +258,14 @@ header #tag_btn button span {
 
 
 
-.internal_pg_container {
-  margin: 0px 0px 0px;
-  /* height: 100%; */
-}
 
-.internal_pg_containertext {
-  margin: 53px 20px 0px;
-  /* height: 100%; */
-}
-
-.img_sq {
-  display: inline-block;
-  cursor: pointer;
-}
 
 .bottom-buttons {
   position: fixed;
   bottom: 20px;
   left: 18px;
   z-index: 1000;
+  
 }
 
 .go {
@@ -303,10 +275,11 @@ header #tag_btn button span {
 .bottom-buttons button a {
   text-decoration: none;
   color: black;
+
 }
 
 .submit {
-  box-shadow: 0 0 10px #00ff00;
+  box-shadow: 0 0 12px #00ff00;
 }
 
 .transparent {
@@ -500,17 +473,6 @@ header #tag_btn button span {
   object-fit: cover;
 }
 
-/* .up120 {
-  transform: translate(0%, -40%);
-}
-
-.up100 {
-  transform: translate(0%, -30%);
-}
-
-.up50 {
-  transform: translate(0%, -23%);
-} */
 
 
 .gallery {
@@ -559,23 +521,23 @@ header #tag_btn button span {
   padding: 0 4px;
 }
 
-.images_pg.main_index_style.gallery .img_container {
-  float: left;
-  display: inline-block;
-  padding: 5px;
-}
 
-.images_pg.main_index_style.gallery .img_container img {
-  margin-bottom: 5px;
-}
 
 #about_pg_content {
   margin-bottom: 64px;
   overflow: hidden;
   /* height: 100vh; */
   z-index: 1;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
+#grad1 {
+  height: 20px;
+  background-color: rgb(223, 223, 223); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(33, 33, 33), rgb(230, 230, 230));
+  border: none;
+}
 
 #content {
   padding: 0vw;
