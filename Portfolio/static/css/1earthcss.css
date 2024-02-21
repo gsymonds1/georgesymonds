@@ -29,7 +29,7 @@ html {
   overflow: auto;
   /* or overflow: visible; */
   /* height: 170vh; */
-  background-color: white;
+  background-color: rgb(233, 233, 233);
 }
 
 .left_content {
@@ -235,7 +235,7 @@ a {
   font-style: italic;
 }
 
-.search_pg #categories_list label {
+/* .search_pg #categories_list label {
   color: #00ff00;
 }
 
@@ -317,10 +317,7 @@ p.no_results {
   color: #00ff00;
 }
 
-.main_index_style .index_entry:hover.arrows {
-  color: #000;
-  background: #fff;
-}
+
 
 #index_list .index_entry .sm:hover,
 #index_list .index_entry .md:hover,
@@ -339,7 +336,7 @@ p.no_results {
 #download-btns {
   position: fixed;
   bottom: 20px;
-}
+} */
 
 
 
@@ -587,7 +584,7 @@ header #tag_btn button span {
 
   .hoverproject_img {
     width: 100%; /* Adjust width and margin as needed */
-    margin: 0px;
+    margin-bottom: 5px;
     box-sizing: border-box;
 }
 
@@ -699,11 +696,12 @@ header #tag_btn button span {
   padding: 0vw;
 }
 
-.worktitleimage img{
+.worktitlenimage{
   /* height: 100%;
   width: 100%;
   object-fit: contain; */
   /* margin: 20px; */
+  background-color: #fff;
 }
 
 .picofmyworkandcaption {
@@ -725,7 +723,7 @@ header #tag_btn button span {
   body,
   html {
     font-size: 16px;
-    background-color: #fff;
+  
   }
 
 

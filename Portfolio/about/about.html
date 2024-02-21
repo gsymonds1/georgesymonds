@@ -11,10 +11,15 @@
     <link rel="stylesheet" type="text/css" href="/Portfolio/static/css/1earthcss.css">
     <script type="text/javascript" src="/Portfolio/static/js/1earthjs.js"></script>
 
+    <!-- 3d -->
+    <!--  REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
 </head>
 
-<body>
+<body style="background-color: transparent;">
 
+    
 
 
     <div class="left_content">
@@ -91,12 +96,12 @@
 
                     <h2>WELCOME TO MY WEBSITE! IT HOUSES ALL OF MY PROJECTS & CODING EXPERIMENTS
                         <br>
-                        <a href="http://www.inventorypress.com/product/cyberfeminism-index" target="_blank">GEORGE
+                        <a href="https://gsymonds1.github.io/Portfolio/INDEXV23.html" target="_blank">GEORGE
                             SYMONDS</a>
                     </h2>
                     <p>
                         (ABOUT) GEORGE SYMONDS, ALWAYS IN PROGRESS. Graphic Communication Designer & Creative Coder
-                        & <a href="https://www.newmuseum.org/exhibitions/view/first-look-cyberfeminism-index"
+                        & <a href="https://www.instagram.com/kangrecords_/"
                             target="_blank">Kang Records General</a>.
                         Have a look around and see my work! <em>My Practice range of skills is wide & includes (but
                             is not
@@ -129,7 +134,11 @@
                     <div class="menuContents">
 
                         <div class="contexttalk all">
-                            <p>Currently a final year university student at CSM, specialising in translating the core meanings and values of communities into authentic and purposeful public-facing outcomes. In my practice, I combine design with technical computation to produce functional outcomes that cannot be achieved through design alone. My outcomes are designed to exist and thrive in the real world, catering to the specific needs of my target audience.
+                            <p>Currently a final year university student at CSM, specialising in translating the core
+                                meanings and values of communities into authentic and purposeful public-facing outcomes.
+                                In my practice, I combine design with technical computation to produce functional
+                                outcomes that cannot be achieved through design alone. My outcomes are designed to exist
+                                and thrive in the real world, catering to the specific needs of my target audience.
                             </p>
                         </div>
                         <div class="contexttalk community">
@@ -321,6 +330,36 @@
 
 
     </div>
+
+
+    <model-viewer src="3d-model-main/KRGENERAL.gltf" alt="GEORGE3D" shadow-intensity="1" 
+        auto-rotate ar camera-orbit="100deg 90deg 30m" >
+    </model-viewer>
+
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+
+    <style>
+        
+        model-viewer {
+            opacity: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin-left: 100px;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(233, 233, 233);
+            z-index: -1;
+            /* Set a lower z-index to place it underneath other elements */
+        }
+    </style>
+
 </body>
 
 </html>
