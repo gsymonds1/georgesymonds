@@ -50,7 +50,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow thumbnails to wrap onto the next line */
     justify-content: center;
-    width: 79vw;
+    width: 85vw;
   }
 /* SCROLLING */
   .thumbnails.initial {
@@ -60,7 +60,7 @@ body {
   /* Add this rule for the scrolling animation */
   .thumbnails.scrolled {
     position: fixed;
-    bottom: -140px;
+    bottom: -440px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -70,11 +70,24 @@ body {
   }
   
   .thumbnail {
-    width: 80px;
+    width: 40px;
     height: 40px;
-    margin:  5px;
+    margin:  4px;
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 753px) {
+    
+    .thumbnail {
+      width: 34px;
+      height: 23px;
+      margin:  2px;
+    
+    }
+
+
+  }
+
   
   .thumbnail img {
     width: 100%;
