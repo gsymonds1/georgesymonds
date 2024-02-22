@@ -650,12 +650,15 @@ header #tag_btn button:hover {
 
 .scrolling-container {
   display: flex;
+  overflow: hidden; 
   /* Make it a flex container to line up items horizontally */
+  overflow-x: auto;
 }
 
 .relatedWorkItem {
   margin-right: 10px;
   /* Adjust the margin between items as needed */
+  float: left;
 }
 
 .relatedWorkItem img {
@@ -663,12 +666,15 @@ header #tag_btn button:hover {
   width: 150px;
   height: 200px;
   border: 0.5px solid #000;
+  background-color: #fff;
 }
 
 /* Optional: Add styling for the captions */
 .relatedWorkItem p {
   text-align: left;
   margin-top: 5px;
+  width: 150px;
+  word-wrap: break-word; 
 }
 
 
@@ -683,7 +689,7 @@ header #tag_btn button:hover {
 model-viewer {
   opacity: 50%;
   position: absolute;
-  top: 0px;
+  top: -100px;
   right: 0;
   margin-left: 10px;
   margin-right: 100px;
@@ -698,8 +704,16 @@ model-viewer {
 @media only screen and (max-width: 753px) {
   model-viewer {
     margin-right: 30px;
-top: -100px;
+top: -140px;
   }
   
 }
 
+.bottomessege {
+  position: relative;
+  display: flex;
+}
+
+.bottomessege p{
+  flex: 2;
+}
