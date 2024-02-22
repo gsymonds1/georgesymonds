@@ -703,19 +703,3 @@ top: -100px;
   
 }
 
-/* SLIDE?LINE */
-
-#slidesContainer {
-  position: relative;
-}
-
-.vertical-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background-color: black;
-  transition: left 1s ease-in-out;
-  /* Adjust the duration as needed */
-}
