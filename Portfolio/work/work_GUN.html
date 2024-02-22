@@ -9,6 +9,39 @@
     <link rel="stylesheet" type="text/css" href="/Portfolio/static/css/1earthcss.css">
     <script type="text/javascript" src="/Portfolio/static/js/1earthjs.js"></script>
     <script type="text/javascript" src="/Portfolio/work/mainWorkContent.js"></script>
+    <style>
+        .canvasparent {
+            position: relative;
+            height: 120%;
+            z-index: 10;
+            /* Set a lower z-index to place it underneath other elements */
+        }
+
+        .canvasborder {
+            position: absolute;
+        }
+
+        #tv-screen {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 98vw;
+            height: 130vh;
+            z-index: -1;
+            /* Send it to the background */
+            background-color: rgba(226, 226, 226, 0.5);
+            /* Adjust alpha value for transparency */
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0) !important;
+            /* This sets the body background to fully transparent */
+        }
+
+        /* Add other styles as needed */
+    </style>
 </head>
 
 
@@ -75,6 +108,10 @@
 
         <div id="top_location"></div>
 
+        <div class="canvasborder">
+            <canvas id="tv-screen"></canvas>
+        </div>
+
         <div id="about_pg_content" class="internal_pg_containertext about_pg">
             <!--USE THIS CSS TAG FOR BODY-->
             <br><br>
@@ -82,68 +119,22 @@
             <a href="/Portfolio/INDEXV23.html#work_location">go back</a>
 
 
+
             <br><br>
 
             <div class="thismywork">
 
-                <div id = "workContentTitle" class= "workContentTitle"> 
+                <div id="workContentTitle" class="workContentTitle">
 
                     <ul id="workContent" class="GUN"></ul>
                 </div>
-
-                <!-- <div class="picofmyworkandcaption">
-                    <img src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="Work 0"
-                        class="thismyworkpic">
-                        <p class="imagecaption">The Community Support Directory</p>
-                </div> -->
-
-                <!-- <div class="picofmyworkandcaption"><img src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="Work 0"class="thismyworkpic"><p class="imagecaption">The Community Support Directory</p></div> -->
-
-
-                <!-- <p>p This project aims to create change through design in my local community, Holloway. I’ve collaborated
-                    with local community centres, engaging with their groups to create a project that encourages &
-                    provides a platform to unite people to give back to our community.</p>
-
-                <br>
- -->
-
-                <!-- <a href="/pages/COMMUNITYSUPPORTDIRECTORY/RepresentHolloway/oldIndex.html">link to the website!</a> -->
-                <!-- <br>
-                <br>
-                <br>
-                <br>
-                <div class="picofmyworkandcaption">
-                    <img src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="Work 0"
-                        class="thismyworkpic">
-                        <p class="imagecaption">The Community Support Directory</p>
-                </div>
-
-                <br>
-                
-                <div class="picofmyworkandcaption">
-                    <img src="/Portfolio/Images/projects/The Community Support Directory/CSDCUT.gif" alt="Work 0"
-                        class="thismyworkpic">
-                        <p class="imagecaption">The Community Support Directory</p>
-                </div> -->
-
-                <!-- <br>
-                <a href="/pages/COMMUNITYSUPPORTDIRECTORY/RepresentHolloway/oldIndex.html">link to the documentary!</a>
-                <br>
-                <br>
-                <p>This project aims to create change through design in my local community, Holloway. I’ve collaborated
-                    with local community centres, engaging with their groups to create a project that encourages &
-                    provides a platform to unite people to give back to our community.</p>
-                <br> -->
                 <br>
                 <br>
                 <br>
                 <br>
-               <!-- RELATEDEFOOTER -->
-            <p><strong>RELATED WORK:</strong></p>
-            <div id="newrelatedWorkItem" class="scrolling-container"></div>
-              
-
-
+                <!-- RELATEDEFOOTER -->
+                <p><strong>RELATED WORK:</strong></p>
+                <div id="newrelatedWorkItem" class="scrolling-container"></div>
 
             </div>
 
@@ -158,8 +149,8 @@
         </div>
 
 
-         <!-- BOTTOM OF BODY EVERYTIME -->
-         <div class="bottom-buttons">
+        <!-- BOTTOM OF BODY EVERYTIME -->
+        <div class="bottom-buttons">
             <button class="back_to_top" onclick="back_to_top('top_location')">back to top</button>
             <button class="contact"><a href="/Portfolio/about/about.html">contact</a></button>
             <button class="submit"><a href="/Portfolio/work/work_INDEX.html">portfolio</a></button>
@@ -169,7 +160,7 @@
 
 
 
-
+    <script src="/Portfolio/bouncinglogo/js/app.js"></script>
 
 </body>
 
