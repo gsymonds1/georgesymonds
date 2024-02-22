@@ -334,30 +334,79 @@ header #tag_btn button:hover {
 
 
 .hoverproject_img {
-  width: calc(33.33% - 10px);
+  width: calc(25% - 10px);
   /* Adjust width and margin as needed */
   margin: 5px;
   box-sizing: border-box;
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 753px) {
-  .hoverproject_img a {
-    height: 175px;
-    /* margin-bottom: 200px;  */
-    color: #fff;
-  }
-
-  .hiddenheader {
-    color: #000 !important;
-    display: block !important;
-  }
-
+@media only screen and (max-width: 1023px) {
   .hoverproject_img {
+    width: calc(33.33% - 10px);
+  }
+}
+
+  @media only screen and (max-width: 753px) {
+    .hoverproject_img a {
+      height: 175px;
+      /* margin-bottom: 200px;  */
+      color: #fff;
+    }
+
+    .hiddenheader {
+      color: #000 !important;
+      display: block !important;
+    }
+
+    .hoverproject_img {
+      width: calc(50% - 10px) !important;
+      /* Adjust width and margin as needed */
+      margin-bottom: 5px;
+      box-sizing: border-box;
+    }
+
+    .hoverproject_img a span {
+      display: block;
+      /* Show the image by default on mobile */
+      position: static;
+      /* Reset position to static for normal flow */
+      transform: none;
+      /* Reset transform */
+      /* width: 10%; */
+      /* Take full width of the container */
+      max-height: 175px;
+      /* Set the max height */
+      /* left: -50%; */
+      /* Center horizontally */
+      /* top: -50%; */
+      /* Center vertically */
+      /* transform: translate(-50%, -10%); */
+      z-index: 0;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .hoverproject_img {
+      width: 100% !important;
+    }
+  }
+
+  .hoverproject_img a {
+    /* position: relative; */
+    z-index: 1;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    outline: 1px solid black;
+    color: #fff;
+
+  }
+
+  .hoverproject_img a img {
     width: 100%;
-    /* Adjust width and margin as needed */
-    margin-bottom: 5px;
-    box-sizing: border-box;
+    height: 100%;
+    object-fit: cover;
   }
 
   .hoverproject_img a span {
@@ -367,230 +416,193 @@ header #tag_btn button:hover {
     /* Reset position to static for normal flow */
     transform: none;
     /* Reset transform */
-    /* width: 10%; */
+    width: 100%;
+    width: 100%;
     /* Take full width of the container */
     max-height: 175px;
     /* Set the max height */
-    /* left: -50%; */
+    left: -50%;
     /* Center horizontally */
-    /* top: -50%; */
+    top: -50%;
     /* Center vertically */
     /* transform: translate(-50%, -10%); */
     z-index: 0;
   }
-}
 
-.hoverproject_img a {
-  /* position: relative; */
-  z-index: 1;
-  overflow: hidden;
-  display: block;
-  height: 100%;
-  outline: 1px solid black;
-  color: #fff;
-
-}
-
-.hoverproject_img a img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hoverproject_img a span {
-  display: block;
-  /* Show the image by default on mobile */
-  position: static;
-  /* Reset position to static for normal flow */
-  transform: none;
-  /* Reset transform */
-  width: 100%;
-  width: 100%;
-  /* Take full width of the container */
-  max-height: 175px;
-  /* Set the max height */
-  left: -50%;
-  /* Center horizontally */
-  top: -50%;
-  /* Center vertically */
-  /* transform: translate(-50%, -10%); */
-  z-index: 0;
-}
-
-/* .hoverproject_img a:hover span {
+  /* .hoverproject_img a:hover span {
   display: block;
 
 } */
 
-.hiddenheader {
-  height: auto !important;
-  color: #000 !important;
-  display: block !important;
-}
-
-@media only screen and (max-width: 753px) {
-  .hoverproject_img a {
-    height: 175px;
-    /* margin-bottom: 200px;  */
-    outline: 1px solid black;
-    color: #fff;
-  }
-
   .hiddenheader {
+    height: auto !important;
     color: #000 !important;
     display: block !important;
   }
 
-  .hoverproject_img {
+  @media only screen and (max-width: 753px) {
+    .hoverproject_img a {
+      height: 175px;
+      /* margin-bottom: 200px;  */
+      outline: 1px solid black;
+      color: #fff;
+    }
+
+    .hiddenheader {
+      color: #000 !important;
+      display: block !important;
+    }
+
+    .hoverproject_img {
+      width: 100%;
+      /* Adjust width and margin as needed */
+      margin-bottom: 5px;
+      box-sizing: border-box;
+    }
+
+    .hoverproject_img a span {
+      display: block;
+      /* Show the image by default on mobile */
+      position: static;
+      /* Reset position to static for normal flow */
+      transform: none;
+      /* Reset transform */
+      /* width: 10%; */
+      /* Take full width of the container */
+      max-height: 175px;
+      /* Set the max height */
+      /* left: -50%; */
+      /* Center horizontally */
+      /* top: -50%; */
+      /* Center vertically */
+      /* transform: translate(-50%, -10%); */
+      z-index: 0;
+    }
+  }
+
+  .centrecrop span {
     width: 100%;
-    /* Adjust width and margin as needed */
-    margin-bottom: 5px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Adjust alignment as needed */
+  }
+
+
+  .thumbnail {
+    border: 0.5px solid #000;
+  }
+
+  .menu_section {
+    flex-grow: 1;
+    /* Take up remaining space */
+    position: relative;
+  }
+
+  .filteroptions {
+    width: calc(100% - 80px);
+    /* Take up the remaining width after leaving 300px for the text */
+    margin-left: 80px;
+    /* Move the dropdown button 300px off the left */
     box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    /* padding: 8px; Adjust padding as needed */
   }
 
-  .hoverproject_img a span {
-    display: block;
-    /* Show the image by default on mobile */
-    position: static;
-    /* Reset position to static for normal flow */
-    transform: none;
-    /* Reset transform */
-    /* width: 10%; */
-    /* Take full width of the container */
-    max-height: 175px;
-    /* Set the max height */
-    /* left: -50%; */
-    /* Center horizontally */
-    /* top: -50%; */
-    /* Center vertically */
-    /* transform: translate(-50%, -10%); */
-    z-index: 0;
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
   }
-}
 
-.centrecrop span {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
 
-
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* Adjust alignment as needed */
-}
-
-
-.thumbnail {
-  border: 0.5px solid #000;
-}
-
-.menu_section {
-  flex-grow: 1;
-  /* Take up remaining space */
-  position: relative;
-}
-
-.filteroptions {
-  width: calc(100% - 80px);
-  /* Take up the remaining width after leaving 300px for the text */
-  margin-left: 80px;
-  /* Move the dropdown button 300px off the left */
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1;
-  /* padding: 8px; Adjust padding as needed */
-}
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, .5);
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
 
 
 
-#about_pg_content {
-  margin-bottom: 64px;
-  overflow: hidden;
-  /* height: 100vh; */
-  z-index: 1;
-  margin-left: 20px;
-  margin-right: 20px;
-}
+  #about_pg_content {
+    margin-bottom: 64px;
+    overflow: hidden;
+    /* height: 100vh; */
+    z-index: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-#grad1 {
-  height: 20px;
-  background-color: rgb(223, 223, 223);
-  /* For browsers that do not support gradients */
-  background-image: linear-gradient(rgb(33, 33, 33), rgb(230, 230, 230));
-  border: none;
-}
+  #grad1 {
+    height: 20px;
+    background-color: rgb(223, 223, 223);
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(rgb(33, 33, 33), rgb(230, 230, 230));
+    border: none;
+  }
 
-#content {
-  padding: 0vw;
-}
+  #content {
+    padding: 0vw;
+  }
 
-.worktitlenimage {
-  /* height: 100%;
+  .worktitlenimage {
+    /* height: 100%;
   width: 100%;
   object-fit: contain; */
-  /* margin: 20px; */
-  background-color: #fff;
-}
+    /* margin: 20px; */
+    background-color: #fff;
+  }
 
-.slide video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* This ensures the video covers the entire container without distortion */
-}
+  .slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This ensures the video covers the entire container without distortion */
+  }
 
-.worktitlenimage video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* This ensures the video covers the entire container without distortion */
-}
+  .worktitlenimage video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This ensures the video covers the entire container without distortion */
+  }
 
-.picofmyworkandcaption {
-  display: flex;
-  align-items: top;
-}
+  .picofmyworkandcaption {
+    display: flex;
+    align-items: top;
+  }
 
-.imagecaption {
-  margin-top: 0px;
-  margin-left: 10px;
-  padding-top: 0px;
-  color: #707070;
-  font-family: 'Times New Roman', Times, serif;
-}
+  .imagecaption {
+    margin-top: 0px;
+    margin-left: 10px;
+    padding-top: 0px;
+    color: #707070;
+    font-family: 'Times New Roman', Times, serif;
+  }
 
 
-.you-may-also-like-container {
-  position: relative;
-  width: 1040px;
-  height: 367px;
-  left: 0px;
-  top: 14px;
-}
+  .you-may-also-like-container {
+    position: relative;
+    width: 1040px;
+    height: 367px;
+    left: 0px;
+    top: 14px;
+  }
 
-.you-may-also-like-text {
-  /* position: absolute;
+  .you-may-also-like-text {
+    /* position: absolute;
   width: 144px;
   height: 20px;
   left: 0px;
@@ -604,116 +616,116 @@ header #tag_btn button:hover {
   identical to box height */
 
 
-  color: #000000;
-}
-
-
-.scrollframe-mini {
-  position: relative;
-  width: 1373px;
-  height: 866px;
-  top: 26px;
-  left: -4;
-  overflow-x: scroll;
-  /* overflow-y: hidden; */
-}
-
-.scrollmenu {
-  overflow: auto;
-  white-space: nowrap;
-}
-
-.row1 {
-  position: relative;
-  width: 2099px;
-  height: 338px;
-  left: 0px;
-  top: 0px;
-}
-
-.img-container {
-  position: relative;
-  display: inline-block;
-  color: #0000FF;
-}
-
-.project-pic-mini {
-  border: 0.5px solid #000000;
-  object-fit: cover;
-  width: 250px;
-  height: 338px;
-}
-
-.relatedWorkContentTitle {
-  overflow-x: auto;
-}
-
-.scrolling-container {
-  display: flex;
-  overflow: hidden; 
-  /* Make it a flex container to line up items horizontally */
-  overflow-x: auto;
-}
-
-.relatedWorkItem {
-  margin-right: 10px;
-  /* Adjust the margin between items as needed */
-  float: left;
-}
-
-.relatedWorkItem img {
-  object-fit: cover;
-  width: 150px;
-  height: 200px;
-  border: 0.5px solid #000;
-  background-color: #fff;
-}
-
-/* Optional: Add styling for the captions */
-.relatedWorkItem p {
-  text-align: left;
-  margin-top: 5px;
-  width: 150px;
-  word-wrap: break-word; 
-}
-
-
-.threedanchor {
-  position: relative;
-}
-
-.threeposition {
-  position: absolute;
-}
-
-model-viewer {
-  opacity: 50%;
-  position: absolute;
-  top: -100px;
-  right: 0;
-  margin-left: 10px;
-  margin-right: 100px;
-  width: 50vw;
-  height: 80vh;
-  /* background-color: rgb(233, 233, 233); */
-  z-index: 0;
-  /* Set a lower z-index to place it underneath other elements */
-}
-
-
-@media only screen and (max-width: 753px) {
-  model-viewer {
-    margin-right: 30px;
-top: -140px;
+    color: #000000;
   }
-  
-}
 
-.bottomessege {
-  position: relative;
-  display: flex;
-}
 
-.bottomessege p{
-  flex: 2;
-}
+  .scrollframe-mini {
+    position: relative;
+    width: 1373px;
+    height: 866px;
+    top: 26px;
+    left: -4;
+    overflow-x: scroll;
+    /* overflow-y: hidden; */
+  }
+
+  .scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .row1 {
+    position: relative;
+    width: 2099px;
+    height: 338px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .img-container {
+    position: relative;
+    display: inline-block;
+    color: #0000FF;
+  }
+
+  .project-pic-mini {
+    border: 0.5px solid #000000;
+    object-fit: cover;
+    width: 250px;
+    height: 338px;
+  }
+
+  .relatedWorkContentTitle {
+    overflow-x: auto;
+  }
+
+  .scrolling-container {
+    display: flex;
+    overflow: hidden;
+    /* Make it a flex container to line up items horizontally */
+    overflow-x: auto;
+  }
+
+  .relatedWorkItem {
+    margin-right: 10px;
+    /* Adjust the margin between items as needed */
+    float: left;
+  }
+
+  .relatedWorkItem img {
+    object-fit: cover;
+    width: 150px;
+    height: 200px;
+    border: 0.5px solid #000;
+    background-color: #fff;
+  }
+
+  /* Optional: Add styling for the captions */
+  .relatedWorkItem p {
+    text-align: left;
+    margin-top: 5px;
+    width: 150px;
+    word-wrap: break-word;
+  }
+
+
+  .threedanchor {
+    position: relative;
+  }
+
+  .threeposition {
+    position: absolute;
+  }
+
+  model-viewer {
+    opacity: 50%;
+    position: absolute;
+    top: -100px;
+    right: 0;
+    margin-left: 10px;
+    margin-right: 100px;
+    width: 50vw;
+    height: 80vh;
+    /* background-color: rgb(233, 233, 233); */
+    z-index: 0;
+    /* Set a lower z-index to place it underneath other elements */
+  }
+
+
+  @media only screen and (max-width: 753px) {
+    model-viewer {
+      margin-right: 30px;
+      top: -140px;
+    }
+
+  }
+
+  .bottomessege {
+    position: relative;
+    display: flex;
+  }
+
+  .bottomessege p {
+    flex: 2;
+  }
