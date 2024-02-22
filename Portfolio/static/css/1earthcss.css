@@ -105,13 +105,14 @@ p {
   z-index: 1;
 }
 
+
 .thismyworkpic {
   width: 50%;
 }
 
 .thismyworkpic {
   width: 50%;
-  border: 1px solid #000;
+  border: 0.5px solid #000;
 }
 
 .workContentTitle {
@@ -343,7 +344,6 @@ header #tag_btn button:hover {
   .hoverproject_img a {
     height: 175px;
     /* margin-bottom: 200px;  */
-    outline: 1px solid black;
     color: #fff;
   }
 
@@ -551,6 +551,18 @@ header #tag_btn button:hover {
   background-color: #fff;
 }
 
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the video covers the entire container without distortion */
+}
+
+.worktitlenimage video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the video covers the entire container without distortion */
+}
+
 .picofmyworkandcaption {
   display: flex;
   align-items: top;
@@ -622,7 +634,7 @@ header #tag_btn button:hover {
 }
 
 .project-pic-mini {
-  border: 1px solid #000000;
+  border: 0.5px solid #000000;
   object-fit: cover;
   width: 250px;
   height: 338px;
@@ -654,6 +666,29 @@ header #tag_btn button:hover {
   text-align: left;
   margin-top: 5px;
 }
+
+
+.threedanchor { 
+  position: relative;
+}
+
+.threeposition{
+  position: absolute;
+}
+
+model-viewer {
+        opacity: 50%;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        margin-left: 100px;
+        margin-right: 100px;
+        width: 50vw;
+        height: 80vh;
+        /* background-color: rgb(233, 233, 233); */
+        z-index: 0;
+        /* Set a lower z-index to place it underneath other elements */
+      }
 
 
 /* SLIDE?LINE */
