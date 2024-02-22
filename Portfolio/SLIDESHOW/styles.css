@@ -44,7 +44,7 @@ body {
   
   .thumbnails {
     position: fixed;
-    bottom: 40px;
+    bottom: 53px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -54,7 +54,7 @@ body {
   }
 /* SCROLLING */
   .thumbnails.initial {
-    bottom: 40px;
+    bottom: 53px;
     transition: bottom 0.5s ease; /* Disable transition for initial positioning */
   }
   /* Add this rule for the scrolling animation */
@@ -79,8 +79,8 @@ body {
   @media only screen and (max-width: 753px) {
     
     .thumbnail {
-      width: 23px;
-      height: 23px;
+      width: 34px;
+      height: 34px;
       margin:  2px;
     
     }
