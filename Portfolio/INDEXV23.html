@@ -10,6 +10,7 @@
 
   <link rel="icon" href="/Portfolio/Images/projects/1EARTH/1ECROP.png" type="image/png">
   <link rel="stylesheet" type="text/css" href="static/css/1earthcss.css">
+  <link rel="stylesheet" type="text/css" href="static/css/loadingbar.css">
   <link rel="stylesheet" type="text/css" href="SLIDESHOW//styles.css">
 
 
@@ -86,6 +87,10 @@
     <div id="top_location"></div>
 
     <!-- MAINSLIDESHOW -->
+
+    <div class="loading-bar-container">
+      <div class="loading-bar" id="loading-bar"></div>
+  </div>
 
     <div class="slideshow-container">
 
@@ -235,58 +240,58 @@
           <img src="Images/ME_bio/DAPIC.png" alt="GS">
         </div>
         <div class="thumbnail" onclick="showSlide(1)" id="thumbnail1">
-          <img src="/Portfolio/Images/projects/The Community Support Directory/thumbnail.png" alt="CSD">
+          <img src="/Portfolio/Images/projects/The Community Support Directory/thumbnail23.jpg" alt="CSD">
         </div>
         <div class="thumbnail" onclick="showSlide(2)" id="thumbnail2">
-          <img src="Images/projects/TCR/TCR.png" alt="CSD">
+          <img src="Images/projects/TCR/thumbnail23.jpg" alt="CSD">
         </div>
         <div class="thumbnail" onclick="showSlide(3)" id="thumbnail3">
-          <img src="Images/projects/The Raw Tapes Vol.1/TRT23.jpg" alt="TRT">
+          <img src="Images/projects/The Raw Tapes Vol.1/thumbnail23.jpg" alt="TRT">
         </div>
         <div class="thumbnail" onclick="showSlide(4)" id="thumbnail4">
-          <img src="Images/projects/HowCanWeMakeADifference/thumbnail.png" alt="RepresentHollowayH">
+          <img src="Images/projects/HowCanWeMakeADifference/thumbnail23.jpg" alt="RepresentHollowayH">
         </div>
         <div class="thumbnail" onclick="showSlide(5)" id="thumbnail5">
-          <img src="Images/projects/Memo/logoSS.png" alt="Memo">
+          <img src="Images/projects/Memo/thumbnail23.jpg" alt="Memo Approved">
         </div>
         <div class="thumbnail" onclick="showSlide(6)" id="thumbnail6">
-          <img src="Images/projects/Photography/000004250012.jpg" alt="Photography">
+          <img src="Images/projects/Photography/thumbnail23.jpg" alt="Photography">
         </div>
         <div class="thumbnail" onclick="showSlide(7)" id="thumbnail7">
-          <img src="/Portfolio/Images/projects/musicvideos/KRPROD.png" alt="MV">
+          <img src="/Portfolio/Images/projects/musicvideos/thumbnail23.jpg" alt="Music Videos">
         </div>
         <div class="thumbnail" onclick="showSlide(8)" id="thumbnail8">
-          <img src="Images/projects/KR.png" alt="VES">
+          <img src="/Portfolio/Images/projects/KR/thumbnail23.jpg" alt="Kang Records">
         </div>
         <div class="thumbnail" onclick="showSlide(9)" id="thumbnail9">
-          <img src="Images/projects/DataDeception/SScrop.png" alt="DD">
+          <img src="Images/projects/DataDeception/thumbnail23.jpg" alt="DataDeception">
         </div>
         <div class="thumbnail" onclick="showSlide(10)" id="thumbnail10">
-          <img src="Images/projects/Virtual Exhibition Space/VES.png" alt="VES">
+          <img src="Images/projects/Virtual Exhibition Space/thumbnail23.jpg" alt="Virtual Exhbition Space">
         </div>
         <div class="thumbnail" onclick="showSlide(11)" id="thumbnail11">
-          <img src="Images/projects/UV3/UV3.png" alt="Work 3">
+          <img src="Images/projects/UV3/thumbnail23.jpg" alt="Unititled Vol. 2">
         </div>
         <div class="thumbnail" onclick="showSlide(12)" id="thumbnail12">
-          <img src="Images/projects/Nerf Gun Sentry Turret/thumbb.png" alt="GUN">
+          <img src="Images/projects/Nerf Gun Sentry Turret/thumbnail23.jpg" alt="GUN">
         </div>
         <div class="thumbnail" onclick="showSlide(13)" id="thumbnail13">
-          <img src="Images/projects/SmileyBeanie/IMG_7350.png" alt="Smiley">
+          <img src="Images/projects/SmileyBeanie/thumbnail23.jpg" alt="Smiley">
         </div>
         <div class="thumbnail" onclick="showSlide(14)" id="thumbnail14">
-          <img src="Images/projects/KeyScape/KeyScape.png" alt="KeyScape">
+          <img src="Images/projects/KeyScape/thumbnail23.jpg" alt="KeyScape">
         </div>
         <div class="thumbnail" onclick="showSlide(15)" id="thumbnail15">
-          <img src="Images/projects/Jakarta Is Sinking/Screenshot 2023-04-07 at 3.59.58 pm.png" alt="Jakarta">
+          <img src="Images/projects/Jakarta Is Sinking/thumbnail23.jpg" alt="Jakarta Is Sinking">
         </div>
         <div class="thumbnail" onclick="showSlide(16)" id="thumbnail16">
-          <img src="Images/projects/MappingEmotion/main1.png" alt="MappingEmotion">
+          <img src="Images/projects/MappingEmotion/thumbnail23.jpg" alt="Mapping Emotion">
         </div>
         <div class="thumbnail" onclick="showSlide(17)" id="thumbnail17">
-          <img src="Images/projects/WeCare/fc97a2cf-0e59-47fe-bc89-2c570b719ca5_rw_1200.png" alt="WeCare">
+          <img src="Images/projects/WeCare/thumbnail23.jpg" alt="WeCare">
         </div>
         <div class="thumbnail" onclick="showSlide(18)" id="thumbnail18">
-          <img src="Images/projects/AI Celebs_Paeul/Paeul.png" alt="Paeul">
+          <img src="Images/projects/AI Celebs_Paeul/thumbnail23.jpg" alt="Paeul">
         </div>
 
         <!-- Add more thumbnails as needed -->
@@ -649,7 +654,7 @@
             <div class="worktitlenimage">
               <a href="work/work_WECARE.html" class="black hiddenheader">>WeCare</a>
               <a href="work/work_WECARE.html" class="black"><span><img
-                    src="/Portfolio/Images/projects/WeCare/fc97a2cf-0e59-47fe-bc89-2c570b719ca5_rw_1200.png"
+                    src="/Portfolio/Images/projects/WeCare/main.png"
                     alt="image" /></span></a>
             </div>
           </div>
@@ -1085,6 +1090,7 @@
       handleScroll();
     </script>
     <script type="text/javascript" src="static/js/1earthjs.js"></script>
+    <script type="text/javascript" src="static/js/loadingbar.js"></script>
 
   </div>
 </body>

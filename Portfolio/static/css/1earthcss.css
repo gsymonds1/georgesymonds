@@ -204,6 +204,11 @@ a {
   font-style: italic;
 }
 
+
+header #menu{
+  width: calc(100% - 10px);
+}
+
 header {
   margin: 11px 0 30px 0;
   width: inherit;
@@ -226,6 +231,7 @@ header .menu_section {
 header #menu {
   /* box-shadow: 1px 1px 10px 1px #00ff00; */
   width: calc(100% - 10px);
+  z-index: 3;
 
 }
 
