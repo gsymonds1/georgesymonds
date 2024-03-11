@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <title>Info Windows</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <style>
+    #map {
+      height: 100%;
+    }
+
+    html,
+    body {
+      height: 500px;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANM1ISOCrErjZgiLejF_4OyREeCNQ5m2I&callback=initMap&v=weekly" defer></script>
+
+  <script>
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: { lat: -25.363, lng: 131.044 },
+      });
+
+      // Array of marker positions (latitude, longitude pairs)
+      const markerPositions = [
+        { lat: -25.363, lng: 131.044 },
+        { lat: -20.917, lng: 142.702 },
+        { lat: -33.8688, lng: 151.2093 },
+        { lat: -31.8688, lng: 151.2093 }
+      ];
+
+      markerPositions.forEach((position, index) => {
+        const infowindow = new google.maps.InfoWindow({
+          content: `<div id="content">Marker ${index + 1}</div>`+
+          '<p>body</p>'
+          ,
+          ariaLabel: `Marker ${index + 1}`,
+        });
+
+        const marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: `Marker ${index + 1}`,
+        });
+
+        marker.addListener("click", () => {
+          infowindow.open({
+            anchor: marker,
+            map,
+          });
+        });
+      });
+    }
+
+    window.initMap = initMap;
+  </script>
+</body>
+
+</html>
