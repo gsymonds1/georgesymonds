@@ -1,31 +1,35 @@
-html{
+html {
     margin: 0;
     padding: 0;
     height: 100%;
-width: 100%;
-background-color: #000000;
+    width: 100%;
+    background-color: #000000;
 
 
-;}
+    ;
+}
 
-body{
+body {
     margin: 2vw;
     font-family: Helvetica, Arial, sans-serif;
     margin-top: 0px;
-    
+
     color: #FFFFFF;
 }
 
-#content{
+#content {
     padding: 0vw;
+    margin-top: 0px;
 }
 
 .with_about {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url('/Images/RepresentHolloway/buttonarrow.png') no-repeat right 50%; /* Custom arrow icon */
-    background-size: 18px; /* Adjust the size of the arrow */
+    background: url('/Images/RepresentHolloway/buttonarrow.png') no-repeat right 50%;
+    /* Custom arrow icon */
+    background-size: 18px;
+    /* Adjust the size of the arrow */
     background-position: 98%;
     background-color: white;
     width: 96%;
@@ -37,30 +41,33 @@ body{
 
 
 
-h1{
+h1 {
     line-height: normal;
 }
 
-h2{
+h2 {
     /* font-size: medium;
     line-height: normal; */
-    margin: 0;
-    padding: 10px;
-    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* padding: 10px; */
+    font-size: 30px;
     color: white;
 }
 
-h2 a{
+h2 a {
     color: white;
 }
 
-h3{
+h3 {
     font-size: medium;
     line-height: normal;
 }
 
-p, li, ol{
-    font-size: 12px;
+p,
+li,
+ol {
+    font-size: 16px;
     line-height: normal;
 }
 
@@ -71,27 +78,30 @@ p, li, ol{
     left: 0px;
     margin: 0;
     padding: 0;
-    width: 100%; /* Adjust the width as needed */
+    width: 100%;
+    /* Adjust the width as needed */
     height: 100%;
-    background-image: url('/Images/BETI/back.gif');
+    background-image: url('/BETILINKstatic/back.gif');
     opacity: 23%;
     background-size: cover;
     background-position: center center;
     z-index: -1;
-    background-repeat: no-repeat; /* Adjust as needed */
+    background-repeat: no-repeat;
+    /* Adjust as needed */
 }
 
 
 .filterbuttonText {
     margin-top: 130px;
     display: inline-block;
-    margin-right: 10px; /* Adjust the space between the text and the button */
+    margin-right: 10px;
+    /* Adjust the space between the text and the button */
     color: #000000;
     margin-bottom: 0px;
     z-index: 9999;
 }
 
-.landingSpread{
+.landingSpread {
     padding: 10px;
 }
 
@@ -107,23 +117,26 @@ p, li, ol{
 
 
 .gradient {
-   
+
     top: 0px;
     left: 0;
     width: 100%;
-    height: calc(100vh / 2.3); /* Adjust the gradient height here */
+    height: calc(100vh / 2.3);
+    /* Adjust the gradient height here */
     background: linear-gradient(to bottom, #21a84e, rgba(0, 255, 0, 0));
-    z-index: -1; /* Ensure it's behind the content */
+    z-index: -1;
+    /* Ensure it's behind the content */
     border-color: none;
     position: fixed;
 }
 
-.fixed-title-area{
+.fixed-title-area {
     position: fixed;
- 
+
     width: 100%;
     max-width: 100vw;
-    z-index: 1000; /* Adjust z-index to ensure it's above other content */
+    z-index: 1000;
+    /* Adjust z-index to ensure it's above other content */
     /* Add any additional styles as needed */
 }
 
@@ -144,31 +157,32 @@ p, li, ol{
     padding: 7.5px;
     margin-bottom: 14px;
     /* border-radius: 23px; */
-    box-sizing: border-box; 
+    box-sizing: border-box;
     z-index: 1;
-    position:relative;
+    position: relative;
 }
 
 
 
-.buttonOn{
+.buttonOn {
     background-color: #D1D1D1;
-    
+
 }
 
-.buttonOff{
+.buttonOff {
     background-color: #FFFFFF;
-    color:#0000ff;
+    color: #0000ff;
 }
 
-.button100{
+.button100 {
     width: 100%;
 }
-.button99{
+
+.button99 {
     width: 98.5%;
 }
 
-.button50{
+.button50 {
     width: 49.8%;
 }
 
@@ -180,28 +194,34 @@ p, li, ol{
 }
 
 
-.greyText{
+
+
+.greyText {
     color: #707070;
 }
 
-.arrows{
-        display: flex;
-        
-        padding-top: 2vh; /* Adjust vertical padding if needed */
+.arrows {
+    display: flex;
 
- }
+    padding-top: 2vh;
+    /* Adjust vertical padding if needed */
 
- .logo{
-    max-width: 30vw;
-    top: 40px;
+}
+
+
+.logo {
+    /* margin-top: 34px; */
+    top: -14px;
+    max-width: 60vw;
+    /* top: 20px; */
     margin-left: auto;
     margin-right: auto;
-    max-height: 230px;
+    max-height: 500px;
     z-index: 1;
     position: relative;
- }
+}
 
- .subtitle{
+.subtitle {
     position: relative;
     top: 60px;
     text-align: center;
@@ -209,22 +229,26 @@ p, li, ol{
 }
 
 .arrows img {
-    max-height: 50px; /* Adjust the maximum height of the images */
-    width: auto; /* Maintain aspect ratio */
+    max-height: 50px;
+    /* Adjust the maximum height of the images */
+    width: auto;
+    /* Maintain aspect ratio */
     /* Other styles as needed */
 }
 
 .arrow-two {
-    margin-left: 23px; /* Spacing for the second image */
+    margin-left: 23px;
+    /* Spacing for the second image */
 }
 
 .arrow-three {
-    position: absolute; /* or 'fixed' depending on your layout needs */
-  right: +100px;
+    position: absolute;
+    /* or 'fixed' depending on your layout needs */
+    right: +100px;
 }
 
-.table{
-    padding-top: 3vh;
+.table {
+    /* padding-top: 3vh; */
 
 }
 
@@ -238,7 +262,8 @@ p, li, ol{
 }
 
 .filter-container p {
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px;
+    /* Adjust the margin as needed */
     margin-top: 0px;
     padding-top: 0px;
 }
@@ -254,18 +279,18 @@ p, li, ol{
     border-radius: 50%;
     text-align: center;
     line-height: 30px;
-    
+
 }
 
-.footerText{
+.footerText {
     width: 100%;
     text-align: center;
     margin-bottom: 100px;
     color: #0000ff;
-    
+
 }
 
-.fixedBottomButtons{
+.fixedBottomButtons {
     display: flex;
     width: 100%;
     max-width: 96vw;
@@ -281,8 +306,10 @@ p, li, ol{
 }
 
 .secondLine {
-    max-width: 23px; /* Adjust the maximum width of the small image */
-    max-height: 23px; /* Adjust the maximum height of the small image */
+    max-width: 23px;
+    /* Adjust the maximum width of the small image */
+    max-height: 23px;
+    /* Adjust the maximum height of the small image */
 }
 
 #bottom button,
@@ -303,6 +330,11 @@ p, li, ol{
     width: 25%;
     padding-left: 0px;
     margin-left: 0px;
+
+}
+
+.leadText {
+    text-align: center;
     
 }
 
@@ -310,12 +342,18 @@ p, li, ol{
 .innerTableContent {
     display: flex;
     align-items: grid;
-    border: 1px solid white; 
+    border: 1px solid white;
     justify-content: space-between;
-    margin-top: 23px;
+    margin-top: 12px;
+    padding:12px;
     margin-left: 44px;
-    box-shadow: 0 4px 8px rgba(253, 211, 39, 0.6); /* Adjust values as needed */
+    box-shadow: 0 4px 8px rgba(253, 211, 39, 0.6);
+    /* Adjust values as needed */
     background-color: rgb(0 0 0 / 60%)
+}
+
+.innerContainer{
+    margin-left: 44px;
 }
 
 /* 
@@ -323,14 +361,14 @@ p, li, ol{
 
 @media only screen and (max-width: 570px) {
     /* Adjust the styling for smaller screens */
-    #bottom button {
-        left: 2%;
-    }
+#bottom button {
+    left: 2%;
+}
 
-    #bottom2 button {
-        left: 85%;
-        transform: translateX(-50%);
-    }
+#bottom2 button {
+    left: 85%;
+    transform: translateX(-50%);
+}
 
 
 #bottomSubPoint button {
@@ -340,23 +378,28 @@ p, li, ol{
     font-size: 11px;
     padding: 3px 15px;
     width: 94%;
-    top:-23px;
+    top: -23px;
     text-align: left;
 }
 
 #bottomSubPoint button .circle-image {
-    width: 13px; /* Adjust the width of the circle */
-    height: 13px; /* Adjust the height of the circle */
+    width: 13px;
+    /* Adjust the width of the circle */
+    height: 13px;
+    /* Adjust the height of the circle */
     border-radius: 50%;
-    margin-left: 5px; /* Adjust the distance from the text on the left */
-    vertical-align: middle; /* Adjust the vertical alignment */
+    margin-left: 5px;
+    /* Adjust the distance from the text on the left */
+    vertical-align: middle;
+    /* Adjust the vertical alignment */
     position: relative;
-    top: -1px; /* Adjust the distance from the top */
+    top: -1px;
+    /* Adjust the distance from the top */
     left: 50%;
 }
 
 
-.buttonBlue{
+.buttonBlue {
     border-color: #0000ff;
     color: #0000ff;
     border-width: 2px;
@@ -366,19 +409,23 @@ p, li, ol{
 
 .circleContainer {
     float: left;
-    margin-right: 10px; /* Adjust the margin as needed */
-    vertical-align: middle; /* Align vertically */
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+    vertical-align: middle;
+    /* Align vertically */
 }
-  
+
 .contentContainer {
-    overflow: hidden; /* Ensures the container adjusts its height based on content */
-    vertical-align: middle; /* Align vertically */
+    overflow: hidden;
+    /* Ensures the container adjusts its height based on content */
+    vertical-align: middle;
+    /* Align vertically */
     padding-right: 200px;
- }
+    padding-top: 0px;
+    margin-top: 0px;
+}
 
- 
- .indent {
+
+.indent {
     margin-left: 20px;
-  }
-
- 
+}

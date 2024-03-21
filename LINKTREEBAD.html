@@ -84,7 +84,7 @@
 	</style>
 	<!-- the headerbar -->
 
-	<script>
+	<!-- <script>
 		// Set the default selection to 'cyberfeminism' only if not already on that page
 		document.addEventListener("DOMContentLoaded", function () {
 			var select = document.getElementById("menu");
@@ -118,11 +118,11 @@
 					break;
 			}
 		}
-	</script>
+	</script> -->
 
 
 	<div id="landingSpread">
-		<header>
+		<!-- <header>
 			<div class="menu_section">
 				<select id="menu" name="menu" onchange="handleMenu(this)" class="with_about">
 					<option value="cyberfeminism">LINKTREE</option>
@@ -133,31 +133,206 @@
 				</select>
 				<div id="green_box"></div>
 			</div>
-		</header>
+		</header> -->
+		
+
+		<style>
+			.image-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 0px;
+				margin-bottom: 0px;
+				z-index: 10;
+				top: -60px;
+				position: relative;
+			}
+
+			.image-container img {
+				width: auto;
+				/* Adjust the width as needed */
+				height: 40px;
+				/* Maintain aspect ratio */
+				margin-right: 12px;
+				/* Adjust the spacing between images */
+				margin-left: 12px;
+
+				z-index: inherit;
+			}
+		</style>
+
+<style>
+    .containetitle {
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .containertitle img {
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+</style>
+
+<div class="containertitle">
+    <img id="image" src="BETILINKstatic/NSAtxt.png" alt="Responsive Image">
+</div>
+
+<script>
+    // JavaScript code to swap images
+    document.addEventListener("DOMContentLoaded", function() {
+        var images = ["BETILINKstatic/NSAtxt.png", "BETILINKstatic/BETItxt.png"];
+        var timeDistribution = [0.8, 0.2]; // 80% for first image, 20% for second image
+        var imageElement = document.getElementById("image");
+
+        function swapImage() {
+            var random = Math.random(); // Generate a random number between 0 and 1
+
+            // Determine which image to display based on the random number and time distribution
+            var currentIndex = random < timeDistribution[0] ? 0 : 1;
+
+            // Update the image source
+            imageElement.src = images[currentIndex];
+        }
+
+        setInterval(swapImage, 3000); // Change image every 3 seconds (adjust as needed)
+    });
+</script>
+
+
 
 		<p>
 		<div id="container" class="logo">
-			<img src="/Images/BETI/BETILOGOwhiteLOGO.png" alt="A 1" class="logo"
+			<img src="BETILINKstatic/BETILOGOwhiteLOGO.png"A 1" class="logo"
 				style="mix-blend-mode: darken; display: flex; justify-content: center; align-items: center; position: relative; margin-bottom: 0px;">
 		</div>
 		</p>
 
-		<p class="subtitle "><strong> @b3tise</strong></p>
+		<!-- <p class="subtitle "><strong> @b3tise</strong></p> -->
 	</div>
 
 
-	<br>
+	<div class="image-container">
+		<a href="https://www.tiktok.com/@gsymonds_" target="_blank">
+			<img src="BETILINKstatic/tiktok-round-white-icon.webp" alt="TikTok Icon">
+		</a>
+		<a href="https://www.instagram.com/georgesymonds_/" target="_blank">
+			<img src="BETILINKstatic/x.webp" alt="Instagram Icon">
+		</a>
+		<a href="https://www.youtube.com/channel/UCdD02XnRrpd1lNZA2Rt7MiA" target="_blank">
+			<img src="BETILINKstatic/iglogo.png" alt="YouTube Icon">
+		</a>
+	</div>
+
+
+
+
 
 	<div id="contentContainer" class="table">
 		<!-- <hr> -->
 		<ul id="content"></ul>
+
+		<br><br>
+
+		<div class="innerContainer">
+
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/0ZOMdiIVWzA?si=pbkkLGHwOG6JhTOw"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen>
+			</iframe>
+
+			<p>Immerse yourself in the North London based rapper BETI’s world and his debut EP - NEVER SCARED AGAIN,
+				following his lastest single “Bad Ways Pt.2”. The 24-year-old Parisian artist blends old school sampling
+				and Grime drum breaks, bridging the London Alternative sounds and French lyricism.</p>
+
+			<br>
+
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/0ZOMdiIVWzA?si=pbkkLGHwOG6JhTOw"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen>
+			</iframe>
+
+			<br>
+
+			<!-- GRIDCODE -->
+
+			<div class="leadText">
+				<h2>CREDITS</h2>
+			</div>
+
+			<div class="grid-container">
+				<div class="circle-image">
+					<div class="avatar">
+						<img src="BETILINKstatic/betiAvatar.png" alt="Circle 1">
+					</div>
+					<div class="circle-caption"><strong>BETI</strong><br>Rapper<br>Creative Director</div>
+				</div>
+				<div class="circle-image">
+					<div class="avatar">
+						<img src="BETILINKstatic/georgeAvatar.jpg" alt="Circle 2">
+					</div>
+					<div class="circle-caption"><strong>George Symonds</strong><br>Producer<br>Creative Director</div>
+				</div>
+				<div class="circle-image">
+					<div class="avatar">
+						<img src="Images/computerman.png" alt="Circle 3">
+					</div>
+					<div class="circle-caption"><strong>Alexandre Allix</strong><br>Producer<br>Keys</div>
+				</div>
+				<div class="circle-image">
+					<div class="avatar">
+						<img src="Images/computerman.png" alt="Circle 4">
+					</div>
+					<div class="circle-caption"><strong>Woosil</strong><br>Mix & Master Engineer<br>Saxophone</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<br><br><br>
 
+	<!-- gridstyle -->
+	<style>
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
 
+		.avatar {
+			width: 170px;
+			height: 170px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		.circle-image {
+
+			position: relative;
+			margin: auto;
+		}
+
+		.circle-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		.circle-caption {
+			margin-top: 10px;
+			text-align: center;
+			/* margin-top: 20px; */
+			z-index: 10;
+		}
+	</style>
+
+	<br><br>
 	<div class="fixedBottomButtons">
 		<div class="footerText">
-			℗ 1Earth 2024
+			BETI ℗ 1Earth 2024
 		</div>
 
 		<!-- <div id="bottom">
@@ -179,7 +354,7 @@
 
 	<!-- overlay with GIF -->
 	<div class="overlay">
-		<img src="/Images/BETI/back.gif" alt="Overlay GIF" style="width: 100%; height: 100%;">
+		<img src="BETILINKstatic/back.gif" alt="Overlay GIF" style="width: 100%; height: 100%;">
 	</div>
 
 	<!-- content container -->
@@ -187,8 +362,8 @@
 		<!-- your existing content -->
 	</div>
 
-		<!-- your existing script tag -->
-		<script type="text/javascript" src="linktree/mainBAD.js"></script>
+	<!-- your existing script tag -->
+	<script type="text/javascript" src="linktree/mainBAD.js"></script>
 
 	<script>
 		// Wait for the window to load
