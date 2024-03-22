@@ -18,7 +18,7 @@ function processData(rows) {
         <div class="innerTableContent">
             <h2 style="flex: 1; margin: 0; vertical-align: top;">${row[0]}</h2><br><br>
             <img class="secondLine" src="/linktree/white share logo.png" alt="Small Image">
-            <img src="${row[2]}" style="flex: 0 0 100px; object-fit: cover; height: 100px; width: 100px;"><br>
+            <img src="${row[2]}" style="flex: 0 0 100px;  max-width: 15vw; object-fit: cover; height: auto; width: 100px;"><br>
         </div>
     </a><br>`
 

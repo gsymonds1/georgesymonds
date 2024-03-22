@@ -42,7 +42,11 @@ body {
 
 
 h1 {
-    line-height: normal;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* padding: 10px; */
+    font-size: 30px;
+    color: white;
 }
 
 h2 {
@@ -51,12 +55,13 @@ h2 {
     margin-top: 20px;
     margin-bottom: 40px;
     /* padding: 10px; */
-    font-size: 30px;
+    font-size: 20px;
     color: white;
 }
 
 h2 a {
     color: white;
+   
 }
 
 h3 {
