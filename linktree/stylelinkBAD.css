@@ -304,7 +304,7 @@ ol {
 
 .secondLine {
     position: absolute;
-    left: 20px;
+    left: 6px;
     margin: 0px;
     margin-top: 2px;
     opacity: 50%;
@@ -355,6 +355,21 @@ ol {
     box-shadow: 0 4px 8px rgba(253, 211, 39, 0.6);
     /* Adjust values as needed */
     background-color: rgb(0 0 0 / 60%)
+}
+
+
+.innerTableContent2 {
+    display: flex;
+    align-items: grid;
+    border: 1px solid white;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding:12px;
+    margin-left: 44px;
+    box-shadow: 0 4px 8px rgba(253, 211, 39, 0.6);
+    /* Adjust values as needed */
+    background-color: rgb(0 0 0 / 60%);
+    margin-left: 0px;
 }
 
 .innerContainer{

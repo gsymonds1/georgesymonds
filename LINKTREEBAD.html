@@ -52,6 +52,7 @@
 		#contentContainer {
 			opacity: 0;
 			padding-right: 10px;
+			margin-left: -20px;
 			/* initial opacity */
 			transition: opacity 2s ease-in;
 			/* 2 seconds fade in transition */
@@ -134,7 +135,7 @@
 				<div id="green_box"></div>
 			</div>
 		</header> -->
-		
+
 
 		<style>
 			.image-container {
@@ -161,52 +162,52 @@
 			}
 		</style>
 
-<style>
-    .containetitle {
-        width: 80%;
-        margin: 0 auto;
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
+		<style>
+			.containetitle {
+				width: 80%;
+				margin: 0 auto;
+				border: 1px solid #ccc;
+				padding: 10px;
+			}
 
-    .containertitle img {
-        margin-top: 10px;
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-</style>
+			.containertitle img {
+				margin-top: 10px;
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		</style>
 
-<div class="containertitle">
-    <img id="image" src="BETILINKstatic/NSAtxt.png" alt="Responsive Image">
-</div>
+		<div class="containertitle">
+			<img id="image" src="BETILINKstatic/NSAtxt.png" alt="Responsive Image">
+		</div>
 
-<script>
-    // JavaScript code to swap images
-    document.addEventListener("DOMContentLoaded", function() {
-        var images = ["BETILINKstatic/NSAtxt.png", "BETILINKstatic/BETItxt.png"];
-        var timeDistribution = [0.8, 0.2]; // 80% for first image, 20% for second image
-        var imageElement = document.getElementById("image");
+		<script>
+			// JavaScript code to swap images
+			document.addEventListener("DOMContentLoaded", function () {
+				var images = ["BETILINKstatic/NSAtxt.png", "BETILINKstatic/BETItxt.png"];
+				var timeDistribution = [0.8, 0.2]; // 80% for first image, 20% for second image
+				var imageElement = document.getElementById("image");
 
-        function swapImage() {
-            var random = Math.random(); // Generate a random number between 0 and 1
+				function swapImage() {
+					var random = Math.random(); // Generate a random number between 0 and 1
 
-            // Determine which image to display based on the random number and time distribution
-            var currentIndex = random < timeDistribution[0] ? 0 : 1;
+					// Determine which image to display based on the random number and time distribution
+					var currentIndex = random < timeDistribution[0] ? 0 : 1;
 
-            // Update the image source
-            imageElement.src = images[currentIndex];
-        }
+					// Update the image source
+					imageElement.src = images[currentIndex];
+				}
 
-        setInterval(swapImage, 3000); // Change image every 3 seconds (adjust as needed)
-    });
-</script>
+				setInterval(swapImage, 3000); // Change image every 3 seconds (adjust as needed)
+			});
+		</script>
 
 
 
 		<p>
 		<div id="container" class="logo">
-			<img src="BETILINKstatic/BETILOGOwhiteLOGO.png"A 1" class="logo"
+			<img src="BETILINKstatic/BETILOGOwhiteLOGO.png" A 1" class="logo"
 				style="mix-blend-mode: darken; display: flex; justify-content: center; align-items: center; position: relative; margin-bottom: 0px;">
 		</div>
 		</p>
@@ -280,7 +281,7 @@
 				</div>
 				<div class="circle-image">
 					<div class="avatar">
-						<img src="Images/computerman.png" alt="Circle 3">
+						<img src="BETILINKstatic/alexAvatar.png" alt="Circle 3">
 					</div>
 					<div class="circle-caption"><strong>Alexandre Allix</strong><br>Producer<br>Keys</div>
 				</div>
@@ -330,6 +331,13 @@
 	</style>
 
 	<br><br>
+	<a href="mailto:maya.ngoma06@gmail.com" style='text-decoration: none; display: flex; justify-content: center;'>
+		<div class="innerTableContent2" style="text-align: center;">
+			<h2 style="margin: 0;">Contact</h2>
+		</div>
+	</a>
+
+	<br><br><br>
 	<div class="fixedBottomButtons">
 		<div class="footerText">
 			BETI ℗ 1Earth 2024
